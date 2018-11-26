@@ -1,7 +1,19 @@
 #clients{
   text-align: center;
+  padding-top: $mobile-header;
 
-  > div article{
-    margin-bottom: $spacing-l;
+  > div {
+    @include breakpoint(tablet) {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    article{
+      margin-bottom: $spacing-l;
+
+      img{
+        max-width: 100%;
+      }
+    }
   }
 }

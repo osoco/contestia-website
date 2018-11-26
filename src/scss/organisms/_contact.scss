@@ -1,4 +1,14 @@
-#contact{
+#contact {
   text-align: center;
+  padding-top: $mobile-header;
 
+  @include breakpoint(tablet) {
+    >div {
+      display: flex;
+
+      >.video {
+        width: 75%;
+      }
+    }
+  }
 }

@@ -1,11 +1,16 @@
 .video{
-  position: relative;
-  padding: 0 0 57.25% 0;  
-  iframe {
-    position: absolute;
-    width: 100%!important;
-    height: 100%!important;
-    left: 0;
-    top: 0;
+  @include breakpoint(tablet) {
+    position: relative;
+    padding: 0 0 57.25% 0;  
+    iframe {
+      position: absolute;
+      width: 100%!important;
+      height: 100%!important;
+      left: 0;
+      top: 0;
+    }
+  }
+  @include breakpoint(desktop) {
+    padding: 0;
   }
 }

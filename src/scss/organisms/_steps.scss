@@ -1,21 +1,35 @@
 #steps {
-  h1{
-    margin-bottom: $spacing-xxxl;
-  }
+  padding-top: $mobile-header;
   text-align: center;
 
-  >article {
-    margin-bottom: $spacing-xxl;
+  h1 {
+    margin-bottom: $spacing-xxxl;
+  }
 
-    >span {
-      display: block;
-      width: 80px;
-      margin: $spacing-s auto;
+  >div {
+    @include breakpoint(tablet) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    >article {
+      margin-bottom: $spacing-xxl;
+
+      @include breakpoint(tablet) {
+        width: 32%;
+      }
+
+      >span {
+        display: block;
+        width: 80px;
+        margin: $spacing-s auto;
+      }
     }
   }
 
+
   .icon {
-    width: 80px;
+    height: 85px;
     margin-bottom: $spacing-l;
   }
 }

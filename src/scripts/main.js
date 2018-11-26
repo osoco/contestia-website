@@ -1,9 +1,14 @@
 @import './libs/jquery-3.3.1.min.js';
 @import './libs/glide.js';
 
-$('.burger').click(function () {
+$('.burger, .menu a').on('click touch',function (e) {
+  e.preventDefault();
+  $('.burger, .menu').toggleClass('on');
+});
+
+$('.tooltip').on('click touch', function (e) {
+  e.preventDefault();
   $(this).toggleClass('on');
-  $('.menu').toggleClass('on');
 });
 
 var glide = new Glide('.slider', {
