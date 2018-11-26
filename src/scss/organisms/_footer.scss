@@ -1,0 +1,25 @@
+.main__footer{
+  padding: $spacing-xl 0;
+  background-color: darken($color-primary, $dark);
+  text-align: center;
+  p {
+    color: $color-white;
+
+  }
+  ul{
+    margin:0;
+    padding:0;
+    
+    li {
+
+      a{
+        color: $color-white;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        padding: $spacing-xs 0;
+      }
+    }
+
+  }
+}

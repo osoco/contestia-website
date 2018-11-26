@@ -1,0 +1,39 @@
+//- Glide slider
+//-
+//- @docs: https://glidejs.com/docs/
+//-
+//- @example
+//-   +glide({controls:true, bullets: 3})(class='slider')
+//-     +glide__slide
+//-       img(src='https://bit.ly/2oewMAa')
+//-
+//- @ dependencies: Añadir librería y iniciar el componente en main.js
+//-
+//----------------------------------------------------------------------------------------------------------------
+
+mixin glide(options)
+  .glide&attributes(attributes)    
+    .glide__track(data-glide-el='track')
+      ul.glide__slides
+        if block
+          block        
+        else
+          Please define slides with +glide__slide 
+      if options.controls
+        .glide__arrows(data-glide-el='controls')
+          button.glide__arrow.glide__arrow--left(data-glide-dir='<') prev
+          button.glide__arrow.glide__arrow--right(data-glide-dir='>') next
+      if options.bullets
+        - var bullets = options.bullets
+        - var n = 0
+        .glide__bullets(data-glide-el='controls[nav]')
+          while n < bullets          
+            button.glide__bullet(data-glide-dir='=' + n  )
+            - n++
+
+mixin glide__slide()
+  li.glide__slide
+    if block
+      block
+    else
+      Please define content to show here

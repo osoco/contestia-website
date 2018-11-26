@@ -1,0 +1,28 @@
+{
+  "name": "mumi",
+  "version": "1.0.0",
+  "description": "MUMI Base",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-js-import": "^1.0.6",
+    "gulp-plumber-notifier": "0.0.3",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1",
+    "gulp-wrap": "^0.14.0",
+    "install": "^0.12.2",
+    "npm": "^6.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@elchiconube",
+  "license": "unlicensed"
+}

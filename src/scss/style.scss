@@ -1,0 +1,75 @@
+/***
+ *  🎨 STYLES
+ *
+ ***/
+
+
+ /***
+ *  ⚙ SUBATOMS
+ *
+ ***/
+
+ @import "subatoms/_normalize.scss";
+ @import "subatoms/_layout.scss";
+ @import "subatoms/_colors.scss";
+ @import "subatoms/_spacing.scss";
+ @import "subatoms/_mixins.scss";
+ @import "subatoms/_animations.scss";
+ @import "subatoms/_fonts.scss";
+ @import "subatoms/_typography.scss";
+ 
+/***
+ *  ⚛️ ATOMS
+ *
+ ***/
+
+ @import "atoms/_global.scss";
+ @import "atoms/_headings.scss";
+ @import "atoms/_icons.scss";
+ @import "atoms/_texts.scss";
+ @import "atoms/_links.scss";
+ @import "atoms/_lists.scss";
+ @import "atoms/_buttons.scss";
+ @import "atoms/_inputs.scss";
+ @import "atoms/_labels.scss";
+ @import "atoms/_selects.scss";
+ @import "atoms/_textareas.scss";
+ @import "atoms/_images.scss";
+ @import "atoms/_video.scss";
+ @import "atoms/_burger.scss";
+ @import "atoms/_lang.scss";
+ @import "atoms/_step.scss";
+ @import "atoms/_tooltip.scss";
+ @import "atoms/_hr.scss";
+
+
+ /***
+ *  🛴 MOLECULES
+ *
+ ***/
+ 
+ @import "molecules/_glide.scss";
+ @import "molecules/_forms.scss";
+ @import "molecules/_menu.scss";
+
+ 
+/***
+ *  🛵 ORGANISMS
+ *
+ ***/
+ @import "organisms/_steps.scss";
+ @import "organisms/_map.scss";
+ @import "organisms/_introduction.scss";
+ @import "organisms/_clients.scss";
+ @import "organisms/_price.scss";
+ @import "organisms/_contact.scss";
+ @import "organisms/_header.scss";
+ @import "organisms/_footer.scss";
+ @import "organisms/_main.scss";
+
+
+ /***
+ *  🚗 PAGES
+ *
+ ***/
+

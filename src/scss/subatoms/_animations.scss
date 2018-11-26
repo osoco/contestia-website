@@ -1,0 +1,14 @@
+/***
+ *  🎦 Animations 
+ *
+ *  Librería de animaciones y efectos
+ *
+ *  Uso: @include animation (blink, $duration, $timing, $delay, $count)
+ *
+ ***/
+
+ @include keyframes(blink) {
+  50% {
+    opacity: 0;
+  }
+}

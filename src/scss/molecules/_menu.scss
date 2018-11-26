@@ -1,0 +1,41 @@
+nav.menu {
+  position: fixed;
+  background: darken($color-primary, $dark);
+  left: 0;
+  width: 80%;
+  height: 100vh;
+  transform: translateX(-105%);
+  transition: all 300ms ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .12);
+
+  ul {
+    margin: $spacing-m 0 0 0;
+    padding: 0;
+
+    li {
+      a:not(.button) {
+        font-size: $mobile-font-size-xxl;
+        color: $color-white;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: $spacing-m 0 $spacing-m $spacing-l;
+        display: block;
+
+        &.active {
+          font-family: $font-secondary;
+        }
+
+      }
+
+      .button {
+        margin: $spacing-m 0 $spacing-m $spacing-l;
+
+      }
+    }
+  }
+
+
+  &.on {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,21 @@
+#steps {
+  h1{
+    margin-bottom: $spacing-xxxl;
+  }
+  text-align: center;
+
+  >article {
+    margin-bottom: $spacing-xxl;
+
+    >span {
+      display: block;
+      width: 80px;
+      margin: $spacing-s auto;
+    }
+  }
+
+  .icon {
+    width: 80px;
+    margin-bottom: $spacing-l;
+  }
+}

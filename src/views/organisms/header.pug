@@ -1,0 +1,8 @@
+header.main__header
+  .container
+    +burger()
+    .lang
+      p #[a(href='#' title='Switch to English') EN] |  #[a(href='#' title='Switch to Spanish' class='active') ES]
+    a(class='logo' href='/' title='Home')
+      +logo()
+    +menu()

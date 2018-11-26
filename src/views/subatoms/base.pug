@@ -1,0 +1,31 @@
+doctype html
+html(lang='ES')
+    head        
+        include ../atoms/atoms
+        include ../molecules/molecules
+        meta(charset='UTF-8')
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        block title
+            title Project title
+        block description
+            meta(description='Project description')
+        block keywords
+            meta(content='OSOCO, PWA')
+        link(rel='shortcut icon', href='/img/favicon.ico')
+        link(rel='stylesheet', href='/css/style.css')
+
+
+        //[if gt IE 10]><link rel="stylesheet" type="text/css" href="css/ie.css" /><![endif]
+        //[if gte IE 11]><link rel="stylesheet" type="text/css" href="css/ie.css" /><![endif]
+    body
+        //[if lt IE 8]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]
+        include ../organisms/header
+        main.main__content
+            block content
+        include ../organisms/footer
+        script(src='/js/main.js')
+
+
+        
+

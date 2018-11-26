@@ -1,0 +1,14 @@
+.lang {
+  float: right;
+  padding-top: $spacing-xs;
+  
+  a {
+    color: $color-white;
+    text-decoration: none;
+
+    &.active {
+      font-family: $font-secondary;
+    }
+
+  }
+}
