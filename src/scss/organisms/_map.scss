@@ -1,5 +1,15 @@
-#map{
+#map {
   text-align: center;
   padding-top: $mobile-header;
+  margin-bottom: $layout-s ;
 
+  @include breakpoint(tablet) {
+    
+    display: flex;
+    justify-content: space-between;
+
+    >div {
+      width: 49%;
+    }
+  }
 }

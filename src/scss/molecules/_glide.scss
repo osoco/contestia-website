@@ -53,8 +53,38 @@ $glide-modifier-separator: '--' !default;
     flex-shrink: 0;
     white-space: normal;
     user-select: none;
+    position: relative;
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: transparent;
+
+    /* Personalización de los slides */
+    >div {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding-bottom: $spacing-xl;
+
+      @include breakpoint(tablet) {
+        text-align: left;
+        min-height: 400px;
+      }
+
+      >h1 {
+        // margin: 0;
+        color: $color-white;
+        font-size: $mobile-font-size-head-3;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+
+        @include breakpoint(tablet) {
+          font-size: $tablet-font-size-head-1;
+        }
+
+        @include breakpoint(desktop) {
+          font-size: $desktop-font-size-head-1;
+        }
+
+      }
+    }
 
     a {
       user-select: none;
@@ -63,8 +93,18 @@ $glide-modifier-separator: '--' !default;
       -ms-user-select: none;
     }
 
-    > img {
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
       width: 100%;
+      height: 100%;
+
+      @include breakpoint(tablet) {
+        height: auto;
+      }
+
+
     }
   }
 
@@ -101,8 +141,13 @@ $glide-modifier-separator: '--' !default;
     transform: translateY(-50%);
     line-height: 1;
 
-    &:focus { outline: none; }
-    &:hover { border-color: white; }
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      border-color: white;
+    }
 
     &#{$sm}left {
       left: 2em;
@@ -120,7 +165,7 @@ $glide-modifier-separator: '--' !default;
   &#{$se}bullets {
     position: absolute;
     z-index: 2;
-    bottom: 2em;
+    bottom: 1.5em;
     left: 50%;
     display: inline-flex;
     list-style: none;

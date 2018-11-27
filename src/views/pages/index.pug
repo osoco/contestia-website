@@ -9,10 +9,19 @@ block description
 block content  
   +glide({controls:false, bullets: 3})(class='slider')
     +glide__slide
+      div.container
+        h1 Lorem ipsum dolor sit amet
+        p #[a(href='#contacto' class='button' title='Ver video') Ver video]
       img(src='img/slider-1.jpg')
     +glide__slide 
+      div.container
+        h1 Lorem ipsum dolor sit amet
+        p #[a(href='#contacto' class='button' title='Ver video') Ver video]
       img(src='img/slider-1.jpg')
     +glide__slide
+      div.container
+        h1 Lorem ipsum dolor sit amet
+        p #[a(href='#contacto' class='button' title='Ver video') Ver video]
       img(src='img/slider-1.jpg')
   
   section#introduction.container
@@ -38,7 +47,6 @@ block content
     p ¿Tienes un uso parecido que no encaja del todo con nuestros usos? No te preocupes. #[a(href='#' title='Contáctanos') Contáctanos]
 
     p #[button(class='button') Solicitar una demo]
-
 
   section#steps.container
     h1 Cómo funciona
@@ -120,12 +128,14 @@ block content
           input(type='submit' name='name' value='Enviar' )
 
   section#map.container
-    h1 Más cerca de lo que piensas
-    p Si lo prefieres puedes llamarnos por teléfono o venir a nuestras oficinas de Madrid:
-    p Edificio Ferbocar. Avenida de Quitapesares, 17. Planta 1 Izquierda, 28670 Villaviciosa de Odón, Madrid
-    p #[a(href='#' class='button' title='Cómo llegar') Cómo llegar]
+    div 
+      h1 Más cerca de lo que piensas
+      p Si lo prefieres puedes llamarnos por teléfono o venir a nuestras oficinas de Madrid:
+      p Edificio Ferbocar. Avenida de Quitapesares, 17. Planta 1 Izquierda, 28670 Villaviciosa de Odón, Madrid
+      p #[a(href='https://bit.ly/2r4qDb2' class='button' title='Cómo llegar' target='_blank') Cómo llegar]
 
-    p Tel. +34 912 19 60 76
-    p Email #[a(href='mailto:info@contestia.es' title='Enviar correo') info@contestia.es].
-
+      p Tel. +34 912 19 60 76
+      p Email #[a(href='mailto:info@contestia.es' title='Enviar correo') info@contestia.es].
+    div
+      a(href='https://bit.ly/2r4qDb2' title='Cómo llegar' target='_blank'): img(src='img/map.jpg' alt='Mapa oficina Contestia')
 

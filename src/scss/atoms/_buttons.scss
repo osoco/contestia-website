@@ -17,6 +17,7 @@
 	padding: $spacing-m $spacing-xl;
 	text-decoration: none;
 	font-size: $mobile-font-size-l;
+	transition: all 200ms ease-in-out;
 
 	&:visited {
 		color: $color-white;
@@ -30,7 +31,8 @@
 
 	@include breakpoint(desktop) {
 		&:hover {
-			background-color: $color-tertiary;
+			background-color: darken($color-secondary, $dark);
+			color: $color-white;
 		}
 
 		&:pressed {}
