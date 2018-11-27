@@ -18,7 +18,7 @@ gulp.task('default', ['css', 'js', 'views', 'fonts'], () => {
   gulp.watch("src/scripts/**/*.js", ['js']);
   gulp.watch("src/scss/**/*.scss", ['css']);
   gulp.watch("src/views/**/*.pug", ['views']);
-  gulp.watch("dist/*.html").on('change', browserSync.reload);
+  gulp.watch("dist/**/*").on('change', browserSync.reload);
 });
 
 gulp.task('fonts', () => {

@@ -1,3 +1,6 @@
 .main__content{
-  margin-top: 55px;
+  margin-top: $mobile-header;
+  @include breakpoint(tablet) {
+    margin-top: $tablet-header;
+  }
 }

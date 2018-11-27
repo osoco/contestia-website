@@ -1,6 +1,14 @@
-#price{
+#price {
   text-align: center;
   padding-top: $mobile-header;
 
+  @include breakpoint(tablet) {
+    text-align: left;
+    padding-top: $tablet-header;
+     article {
+      width: 32%;
+    }
+    
+  }
 
 }

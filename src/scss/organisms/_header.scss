@@ -6,4 +6,7 @@
   position: fixed;
   width: 100%;
   z-index: $z-index-xxl;
+  @include breakpoint(tablet) {
+    height: auto;
+  }
 }

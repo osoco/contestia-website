@@ -2,6 +2,10 @@
   padding-top: $mobile-header;
   text-align: center;
 
+  @include breakpoint(tablet) {
+    padding-top: $tablet-header;
+  }
+
   h1 {
     margin-bottom: $spacing-xxxl;
   }

@@ -1,17 +1,21 @@
-#clients{
+#clients {
   text-align: center;
   padding-top: $mobile-header;
 
-  > div {
+  @include breakpoint(tablet) {
+    padding-top: $tablet-header;
+  }
+
+  >div {
     @include breakpoint(tablet) {
       display: flex;
       justify-content: space-between;
     }
-  
-    article{
+
+    article {
       margin-bottom: $spacing-l;
 
-      img{
+      img {
         max-width: 100%;
       }
     }

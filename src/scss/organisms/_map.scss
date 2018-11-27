@@ -1,15 +1,22 @@
 #map {
   text-align: center;
   padding-top: $mobile-header;
-  margin-bottom: $layout-s ;
+  margin-bottom: $layout-s;
 
   @include breakpoint(tablet) {
-    
+    text-align: left;
+    padding-top: $tablet-header;
     display: flex;
     justify-content: space-between;
 
-    >div {
-      width: 49%;
+    >article {
+      width: 32%;
+    }
+    > figure {
+      width: 64%;
+      img {
+        width: 100%;
+      }
     }
   }
 }

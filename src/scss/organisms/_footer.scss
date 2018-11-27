@@ -1,23 +1,43 @@
-.main__footer{
+.main__footer {
   padding: $spacing-xl 0;
   background-color: darken($color-primary, $dark);
   text-align: center;
+
+  @include breakpoint(tablet) {
+    text-align: left;
+
+    >div {
+      display: flex;
+      justify-content: flex-start;
+
+      >div {
+        width: 50%;
+      }
+    }
+  }
+
   p {
     color: $color-white;
-
   }
-  ul{
-    margin:0;
-    padding:0;
-    
-    li {
 
-      a{
-        color: $color-white;
-        text-decoration: none;
-        text-align: center;
-        display: block;
-        padding: $spacing-xs 0;
+  ul {
+    margin: 0;
+    padding: 0;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    li a {
+      color: $color-white;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      padding: $spacing-xs 0;
+
+      @include breakpoint(tablet) {
+        padding: 0 0 0 $spacing-l;
       }
     }
 

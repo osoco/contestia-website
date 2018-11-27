@@ -1,0 +1,25 @@
+section#contact.container
+  h1 Contacto
+  div
+    div.video
+      iframe(src='https://player.vimeo.com/video/149002095' frameborder='0' webkitallowfullscreen='' mozallowfullscreen='' allowfullscreen='')
+
+    form(action="")
+      div
+        label(for="name") Nombre o Empresa
+        +tooltip('¿Cómo deberíamos de llamarte?')
+        input(type='text' name='name' placeholder='Nombre/Empresa')
+      div
+        label(for="email") Email de contacto
+        +tooltip('Este dato sólo lo utilizaremos para ponernos en contacto contigo y no lo vamos a compartir con terceros')
+        input(type='email' name='email' placeholder='Email')
+      div
+        label(for="msg") Mensaje
+        textarea(name='msg' placeholder='¿En qué te podemos ayudar?')
+      div.checkbox
+        input(name='conditions' type='checkbox')
+        label(for="conditions") Acepto #[a(href='/privacidad.html' title='Política de privacidad') política de privacidad]
+      div
+        small Si lo prefieres puedes contactar con nosotros en #[a(href='mailto:info@contestia.es' title='Enviar correo') info@contestia.es].
+      div
+        input(type='submit' name='name' value='Enviar' )

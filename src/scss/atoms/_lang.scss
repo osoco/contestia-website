@@ -1,14 +1,22 @@
 .lang {
   float: right;
   padding-top: $spacing-xs;
-  
-  a {
-    color: $color-white;
-    text-decoration: none;
 
-    &.active {
-      font-family: $font-secondary;
+  @include breakpoint(tablet) {
+    float: none;
+    text-align: right;
+  }
+
+  p {
+    margin: 0;
+
+    a {
+      color: $color-white;
+      text-decoration: none;
+
+      &.active {
+        font-family: $font-secondary;
+      }
     }
-
   }
 }

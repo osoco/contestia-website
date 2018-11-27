@@ -6,9 +6,10 @@
   margin-left: auto;
   margin-right: auto;
 
-  @include breakpoint(desktop) {
+  @include breakpoint(tablet) {
     left: 0;
     cursor: pointer;
+    display: none;
   }
 
 
@@ -36,6 +37,7 @@
     right: 0px;
     margin-top: -5px;
     opacity: 1;
+    transition: all .3s ease-in-out;
 
     &::before {
       position: absolute;
@@ -62,10 +64,5 @@
       transition: all .3s ease-in-out;
     }
 
-    transition: all .3s ease-in-out;
   }
 }
-
-
-
-.burger-menu {}

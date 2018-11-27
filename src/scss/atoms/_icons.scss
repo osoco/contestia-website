@@ -4,8 +4,14 @@
  *
  ***/
 
- .icon{
-   width: 150px;
-   margin: 0 auto;
-   display: block;
- }
+.icon {
+  width: 150px;
+  margin: 0 auto;
+  display: block;
+
+  @include breakpoint(tablet) {
+    margin: 0;
+    display: inline-block;
+
+  }
+}
