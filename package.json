@@ -18,6 +18,8 @@
     "gulp-uglify": "^3.0.1",
     "gulp-wrap": "^0.14.0",
     "install": "^0.12.2",
+    "jstransformer-clean-css": "^2.1.0",
+    "jstransformer-scss": "^1.0.0",
     "npm": "^6.4.1"
   },
   "scripts": {

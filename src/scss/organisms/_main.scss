@@ -1,6 +1,8 @@
-.main__content{
+.main__content {
   margin-top: $mobile-header;
+
   @include breakpoint(tablet) {
     margin-top: $tablet-header;
   }
+  
 }

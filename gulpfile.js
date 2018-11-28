@@ -8,7 +8,6 @@ var plumberNotifier = require('gulp-plumber-notifier');
 var jsImport = require('gulp-js-import');
 var imagemin = require('gulp-imagemin');
 
-
 gulp.task('default', ['css', 'js', 'views', 'fonts'], () => {
   browserSync.init({
     server: "./dist"

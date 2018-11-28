@@ -1,4 +1,4 @@
-#introduction {
+.introduction {
   text-align: center;
   padding-top: $mobile-header;
 
@@ -8,21 +8,22 @@
     background: url('../img/selection.svg') no-repeat left bottom;
     background-size: 250px;
 
-    > div {
+    >div {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      > article {
+
+      >article {
         width: 32%;
       }
 
-      > section {
+      >section {
         width: 64%;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
 
-        > article {
+        >article {
           text-align: center;
           width: 45%;
           text-align: left;
@@ -31,13 +32,13 @@
 
       }
 
-      > p {
+      >p {
         margin: $spacing-xl 0 0 0;
         text-align: center;
         width: 100%;
       }
 
-      
+
     }
   }
 }

@@ -5,10 +5,11 @@
   @include breakpoint(tablet) {
     text-align: left;
     padding-top: $tablet-header;
-     article {
+
+    article {
       width: 32%;
     }
-    
+
   }
 
 }

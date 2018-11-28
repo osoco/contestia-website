@@ -7,7 +7,23 @@ block description
   meta(description='Welcome to Moomin')
 
 block content  
-  +glide({controls:false, bullets: 3})(class='slider')
+  +glide({controls:false, bullets: 3, name:'slider'})
+    +glide__slide
+      div.container
+        h1 Lorem ipsum dolor sit amet
+        p #[a(href='#contacto' class='button' title='Ver video') Ver video]
+      img(src='img/slider-1.jpg')
+    +glide__slide 
+      div.container
+        h1 Lorem ipsum dolor sit amet
+        p #[a(href='#contacto' class='button' title='Ver video') Ver video]
+      img(src='img/slider-1.jpg')
+    +glide__slide
+      div.container
+        h1 Lorem ipsum dolor sit amet
+        p #[a(href='#contacto' class='button' title='Ver video') Ver video]
+      img(src='img/slider-1.jpg')
+
     +glide__slide
       div.container
         h1 Lorem ipsum dolor sit amet
