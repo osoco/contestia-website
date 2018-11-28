@@ -1,4 +1,10 @@
-nav#menu {
+/***
+ *  🛴 MENU
+ *
+ *
+ ***/
+
+#menu {
   position: fixed;
   background: darken($color-primary, $dark);
   left: 0;
@@ -41,7 +47,7 @@ nav#menu {
 
         @include breakpoint(tablet) {
           font-size: $tablet-font-size-l;
-          padding: 0 $spacing-m 0 0 ;
+          padding: 0 $spacing-m 0 0;
         }
 
         &.active {

@@ -1,3 +1,10 @@
+/***
+ *  🛵 FOOTER
+ *
+ ***/
+
+@import "../subatoms/_variables.scss";
+
 .main__footer {
   padding: $spacing-xl 0;
   background-color: darken($color-primary, $dark);

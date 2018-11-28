@@ -1,9 +1,11 @@
 /***
- *  ⚛️ Global
+ *  ⚛️ GLOBAL
  *
  *  Global styles
  *
  ***/
+
+ @import "../subatoms/_variables.scss";
 
 html {
   font-family: $font-primary;
@@ -16,9 +18,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.svg {
-  fill: #de0222;
-}
 
 .container {
   max-width: $container;

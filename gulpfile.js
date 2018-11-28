@@ -5,7 +5,6 @@ var browserSync = require('browser-sync').create();
 var autoprefixer = require('gulp-autoprefixer');
 var pug = require('gulp-pug');
 var plumberNotifier = require('gulp-plumber-notifier');
-var jsImport = require('gulp-js-import');
 var imagemin = require('gulp-imagemin');
 
 gulp.task('default', ['css', 'js', 'views', 'fonts'], () => {
@@ -43,9 +42,6 @@ gulp.task('images', () =>
 gulp.task('js', () => {
   gulp.src('src/scripts/main.js')
     .pipe(plumberNotifier())
-    .pipe(jsImport({
-      hideConsole: false
-    }))
     .pipe(gulp.dest('dist/js/'))
 });
 
