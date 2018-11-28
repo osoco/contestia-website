@@ -8,7 +8,7 @@
  *  ⚙ SUBATOMS
  *
  ***/
-//  @import "subatoms/_normalize.scss"; SHELL
+//  @import "subatoms/_normalize.scss"; 🐢
  @import "subatoms/_layout.scss";
  @import "subatoms/_colors.scss";
  @import "subatoms/_spacing.scss";
@@ -22,7 +22,7 @@
  *
  ***/
 
-//  @import "atoms/_global.scss"; SHELL
+//  @import "atoms/_global.scss"; 🐢
  @import "atoms/_headings.scss";
  @import "atoms/_icons.scss";
  @import "atoms/_texts.scss";
@@ -47,7 +47,7 @@
  *
  ***/
  
- @import "molecules/_glide.scss";
+//  @import "molecules/_glide.scss"; Añadido al componente y mostrado en linea 
  @import "molecules/_forms.scss";
  @import "molecules/_menu.scss";
 
@@ -62,9 +62,9 @@
  @import "organisms/_clients.scss";
  @import "organisms/_price.scss";
  @import "organisms/_contact.scss";
-//  @import "organisms/_header.scss"; SHELL
-//  @import "organisms/_footer.scss"; SHELL
-//  @import "organisms/_main.scss"; SHELL
+//  @import "organisms/_header.scss"; 🐢
+//  @import "organisms/_footer.scss"; 🐢
+//  @import "organisms/_main.scss"; 🐢
 
 
  /***
