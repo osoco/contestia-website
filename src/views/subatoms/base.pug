@@ -19,7 +19,7 @@ html(lang='ES')
         link(rel='stylesheet', href='/css/style.css')
         
         //- LLamamos al shell para que cargue en linea
-        style
+        style(data-cache='static', data-type='text/css' data-path='/css/shell.css')
             include:clean-css:scss ../../scss/shell.scss
 
         //[if gt IE 10]><link rel="stylesheet" type="text/css" href="css/ie.css" /><![endif]
@@ -31,6 +31,7 @@ html(lang='ES')
             block content
         include ../organisms/footer
         script(src='/js/main.js')
+        script(src='/sw.js')
 
 
         

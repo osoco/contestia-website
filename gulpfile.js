@@ -7,12 +7,13 @@ var pug = require('gulp-pug');
 var plumberNotifier = require('gulp-plumber-notifier');
 var imagemin = require('gulp-imagemin');
 
-gulp.task('default', ['css', 'js', 'views', 'fonts'], () => {
+gulp.task('default', ['css', 'js', 'sw', 'views', 'fonts'], () => {
   browserSync.init({
     server: "./dist"
   });
 
   gulp.watch("src/fonts/*}", ['fonts']);
+  gulp.watch("src/service-workers/sw.js", ['sw']);
   gulp.watch("src/scripts/**/*.js", ['js']);
   gulp.watch("src/scss/**/*.scss", ['css']);
   gulp.watch("src/views/**/*.pug", ['views']);
@@ -39,6 +40,12 @@ gulp.task('images', () =>
   .pipe(gulp.dest('dist/img/'))
 );
 
+gulp.task('sw', () => {
+  gulp.src('src/service-workers/sw.js')
+    .pipe(plumberNotifier())
+    .pipe(gulp.dest('dist/'))
+});
+
 gulp.task('js', () => {
   gulp.src('src/scripts/main.js')
     .pipe(plumberNotifier())
@@ -62,6 +69,7 @@ gulp.task('css', () => {
 
 gulp.task('watch', () => {
   gulp.watch('src/fonts/*', [fonts])
+  gulp.watch('src/service-workers/sw.js', [sw]);
   gulp.watch('src/scripts/**/*.js', [js]);
   gulp.watch('src/scss/**/*.scss', [css]);
   gulp.watch('src/views/**/*.pug', [views]);
