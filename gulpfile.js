@@ -61,7 +61,7 @@ gulp.task('views', ['data'], () => {
         JSON.parse(fs.readFileSync('src/data/data.json'))
       ))
       .pipe(pug({
-        pretty: true,
+        pretty: false,
         data: {lang:lang}
       }))
       .pipe(gulp.dest('dist/'+lang+'/'))      

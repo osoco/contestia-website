@@ -2,11 +2,11 @@ section#contact.container
   h1 Contacto
   div
     div.video
-      iframe(src='https://player.vimeo.com/video/149002095' frameborder='0' webkitallowfullscreen='' mozallowfullscreen='' allowfullscreen='')
+      iframe(src='https://player.vimeo.com/video/149002095')
     +form()
-      +form__element({type:'text', name:'name', tooltip:'¿Cómo deberiamos llamarte?', placeholder:'Nombre/Empresa', label:'Nombre o empresa', required:'true'})
-      +form__element({type:'email', name:'email', tooltip:'Este dato sólo lo utilizaremos para ponernos en contacto contigo y no lo vamos a compartir con terceros', placeholder:'Email', label:'Email', required:'true'})
-      +form__element({type:'textarea', name:'msg', placeholder:'¿En qué te podemos ayudar?', label:'Mensaje', required:'true'})
+      +form__element({type:'text', name:'name', tooltip:'¿Cómo deberiamos llamarte?', placeholder:'Nombre/Empresa', label:'Nombre o empresa', required:'required'})
+      +form__element({type:'email', name:'email', tooltip:'Este dato sólo lo utilizaremos para ponernos en contacto contigo y no lo vamos a compartir con terceros', placeholder:'Email', label:'Email', required:'required'})
+      +form__element({type:'textarea', name:'msg', placeholder:'¿En qué te podemos ayudar?', label:'Mensaje', required:'required'})
       +form__element({type:'checkbox', name:'privacy', label:'Acepto la política de privacidad' })
       - var values =['Pedir presupuesto','Quiero una demostración', 'Otros']
       +form__element({type:'select', name:'selector', options:values })

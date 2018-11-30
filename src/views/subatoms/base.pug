@@ -3,7 +3,7 @@ include ../atoms/atoms
 include ../molecules/molecules
 
 doctype html
-html(lang='ES')
+html(lang=lang)
     head
         meta(charset='UTF-8')
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
@@ -11,9 +11,9 @@ html(lang='ES')
         block title
             title Contestia || Procesos de selección fáciles
         block description
-            meta(description='Contestia te ayuda a definir y seleccionar los mejores candidatos para cualquier proceso de selección')
+            meta(name="description" content='Contestia te ayuda a definir y seleccionar los mejores candidatos para cualquier proceso de selección')
         block keywords
-            meta(content='Contestia, SAAS, Candidatos, Concursos, Eventos')
+            meta(name="keywords" content='Contestia, SAAS, Candidatos, Concursos, Eventos')
         link(rel='shortcut icon', href='/img/favicon.ico')
         link(rel='stylesheet', href='/css/style.css')
         

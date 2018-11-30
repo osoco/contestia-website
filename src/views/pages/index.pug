@@ -1,43 +1,37 @@
 extends ../subatoms/base.pug
 
-block title
-  title Welcome to Moomin
-
-block description
-  meta(description='Welcome to Moomin')
-
 block content    
   +glide({controls:false, bullets: 3, name:'slider'})
     +glide__slide
       div.container
         h1 Lorem ipsum dolor sit amet
         p #[a(href='#contacto' class='button' title='Ver video') Ver video]
-      img(src='/img/slider-1.jpg')
+      img(src='/img/slider-1.jpg', alt='Imagen de slider')
     +glide__slide 
       div.container
         h1 Lorem ipsum dolor sit amet
         p #[a(href='#contacto' class='button' title='Ver video') Ver video]
-      img(src='/img/slider-1.jpg')
+      img(src='/img/slider-1.jpg', alt='Imagen de slider')
     +glide__slide
       div.container
         h1 Lorem ipsum dolor sit amet
         p #[a(href='#contacto' class='button' title='Ver video') Ver video]
-      img(src='/img/slider-1.jpg')
+      img(src='/img/slider-1.jpg', alt='Imagen de slider')
     +glide__slide
       div.container
         h1 Lorem ipsum dolor sit amet
         p #[a(href='#contacto' class='button' title='Ver video') Ver video]
-      img(src='/img/slider-1.jpg')
+      img(src='/img/slider-1.jpg', alt='Imagen de slider')
     +glide__slide 
       div.container
         h1 Lorem ipsum dolor sit amet
         p #[a(href='#contacto' class='button' title='Ver video') Ver video]
-      img(src='/img/slider-1.jpg')
+      img(src='/img/slider-1.jpg', alt='Imagen de slider')
     +glide__slide
       div.container
         h1 Lorem ipsum dolor sit amet
         p #[a(href='#contacto' class='button' title='Ver video') Ver video]
-      img(src='/img/slider-1.jpg')
+      img(src='/img/slider-1.jpg', alt='Imagen de slider')
       
   include ../organisms/introduction
   include ../organisms/steps

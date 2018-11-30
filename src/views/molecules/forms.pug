@@ -28,23 +28,23 @@ mixin form__element(options)
 			if options.tooltip
 				+tooltip(options.tooltip)
 			if (options.type === 'textarea')
-				textarea(name=options.name, placeholder=options.placeholder, required=options.required)
+				textarea(id=options.name, name=options.name, placeholder=options.placeholder, required=options.required)
 			else 
-				input(name=options.name, type=options.type, placeholder=options.placeholder, required=options.required)
+				input(id=options.name, name=options.name, type=options.type, placeholder=options.placeholder, required=options.required)
 	if (options.type === 'checkbox')
 		.checkbox
-			input(name=options.name, type='checkbox', required=options.required)
+			input(id=options.name, name=options.name, type='checkbox', required=options.required)
 			label(for=options.name)= options.label
 	if (options.type === 'select')
 		.select
 			label(for=options.name)= options.label
-			select(name=options.name)
+			select(id=options.name, name=options.name)
 				if options.options
 					each text in options.options
 						option(value=convertToClass(text))= text				
 	if (options.type === 'submit')
 		.actions
-			input(type='submit' name=options.name value=options.value )
+			input(type='submit' id=options.name, name=options.name value=options.value )
 
 			
 -  function convertToClass(s) { return s.replace(' ', '-').toLowerCase(); };
