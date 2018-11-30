@@ -1,12 +1,12 @@
 section#map.container
-  article 
-    h1 Más cerca de lo que piensas
-    p Si lo prefieres puedes llamarnos por teléfono o venir a nuestras oficinas de Madrid:
-    p Edificio Ferbocar. Avenida de Quitapesares, 17. Planta 1 Izquierda, 28670 Villaviciosa de Odón, Madrid
-    p #[a(href='https://bit.ly/2r4qDb2' class='button' title='Cómo llegar' target='_blank') Cómo llegar]
+  article
+    h1= MAP.HEAD[lang]
+    p= MAP.PARAGRAPH1[lang]
+    p= MAP.PARAGRAPH2[lang]
+    p #[a(href='https://bit.ly/2r4qDb2' class='button' title= MAP.BUTTON[lang] target='_blank')= MAP.BUTTON[lang]]
 
     p Tel. +34 912 19 60 76
-    p Email #[a(href='mailto:info@contestia.es' title='Enviar correo') info@contestia.es].
+    p Email #[a(href='mailto:info@contestia.es' title='Contestia Email') info@contestia.es].
   figure
-    a(href='https://bit.ly/2r4qDb2' title='Cómo llegar' target='_blank'): img(src='img/map.jpg' alt='Mapa oficina Contestia')
+    a(href='https://bit.ly/2r4qDb2' title= MAP.BUTTON[lang] target='_blank'): img(src='/img/map.jpg' alt='Mapa oficina Contestia')
 

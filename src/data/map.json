@@ -1,0 +1,18 @@
+{
+  "HEAD": {
+    "en": "Closer than you think",
+    "es": "Más cerca de lo que piensas"
+  },
+  "PARAGRAPH1":{
+    "en": "If you prefer you can call us by phone or come to our offices in Madrid:",
+    "es": "Si lo prefieres puedes llamarnos por teléfono o venir a nuestras oficinas de Madrid:"
+  },
+  "PARAGRAPH2":{
+    "en": "Edificio Ferbocar. Avenida de Quitapesares, 17. Planta 1 Izquierda, 28670 Villaviciosa de Odón, Madrid",
+    "es": "Edificio Ferbocar. Avenida de Quitapesares, 17. Planta 1 Izquierda, 28670 Villaviciosa de Odón, Madrid"
+  },
+  "BUTTON":{
+    "en": "How to arrive",
+    "es": "Cómo llegar"
+  }    
+}
