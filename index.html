@@ -96,13 +96,13 @@
                     <li><a href="#" class="es active" title="Español"><span>Español</span></a></li>
                     <li><a href="#" class="en" title="Inglés"><span>Inglés</span></a></li>
                 </ul>
-        		<nav class="main-menu">
+        		<nav class="main-menu" id="main-menu">
         			<ul>
-        				<li><a href="#fbody" class="active">Inicio</a></li>
-        				<li><a href="#como-funciona">Cómo funciona</a></li>
-        				<li><a href="#caso-exito">Casos de éxito</a></li>
-                        <li><a href="#demo">Contacto</a></li>
-        				<li><a href="#demo"><strong>Solicita una demo</strong></a></li>
+        				<li><a href="#section0">Inicio</a></li>
+        				<li><a href="#section1">Cómo funciona</a></li>
+        				<li><a href="#section2">Casos de éxito</a></li>
+                        <li><a href="#section3">Contacto</a></li>
+        				<li><a href="#section3"><strong>Solicita una demo</strong></a></li>
         			</ul>
         		</nav>
             </div>
@@ -111,7 +111,7 @@
     <!-- ==== End header ==== -->
     <!-- ==== content ==== -->
     	<main>
-    		<div class="welcome">
+    		<div class="welcome" id="section0">
                 <div class="media">
                     <div class="flx-embed"><div style="position:relative; height:0; padding-bottom:56.25%; width:100%"><iframe style="position:absolute; top:0; left:0; width:100%; height:100%;" src="https://media.flixel.com/cinemagraph/cjwp35w322gjwwzirmht?hd=true" frameborder="0" allowfullscreen allow='autoplay'></iframe></div></div>
                 </div>
@@ -142,7 +142,7 @@
                     </ul>
                 </div>
             </div>
-    		<section class="como-funciona" id="como-funciona">
+    		<section class="como-funciona" id="section1">
                 <div class="content">
         			<h1 class="t-l2">¿Cómo funciona?</h1>
         			<ol>
@@ -178,7 +178,7 @@
         			<a href="#demo"><strong>Solicita una demo</strong></a>
                 </div>
     		</div>
-    		<div class="caso-exito" id="caso-exito">
+    		<div class="caso-exito" id="section2">
     			<article class="content">
 	    			<h1 class="t-l2">Cómo BBVA utilizó nuestra plataforma para sus concursos de Open Talent</h1>
                     <div class="media">
@@ -192,7 +192,7 @@
 	    			</blockquote>
     			</article>
     		</div>
-    		<div class="demo" id="demo">
+    		<div class="demo" id="section3">
                 <div class="content">
         			<h2 class="t-l2">Contacta con nosotros</h2>
         			<form>
@@ -254,6 +254,48 @@ $(".menu").click(function() {
     return window.pageYOffset || document.documentElement.scrollTop;
     }
 });
+</script>
+</script>
+<script>
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    
+    //smoothscroll
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top+2
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('#main-menu a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('#main-menu ul li a').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+}
 </script>
 </div>
 </body>
