@@ -486,8 +486,6 @@ a strong {
   -o-transition: 0.5s ease-in-out all;
   transition: 0.5s ease-in-out all;
   text-align: center; }
-  .header.toggle {
-    position: static; }
   @media screen and (min-width: 1280px) {
     .header {
       padding: 5px 0 0 0; } }
@@ -554,12 +552,12 @@ a strong {
     text-align: left; }
     @media screen and (max-width: 960px) {
       .header .navigations {
-        visibility: none;
+        visibility: hidden;
         width: 0;
         top: 50px;
-        position: absolute; }
+        position: fixed; }
         .header .navigations.toggle {
-          position: absolute;
+          visibility: visible;
           height: calc(100vh - 50px);
           bottom: 0;
           width: 210px;
