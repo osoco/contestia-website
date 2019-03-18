@@ -148,7 +148,7 @@ a {
   padding: 20px; }
 
 main {
-  margin-top: 50px;
+  margin-top: 48px;
   position: relative; }
   @media screen and (min-width: 960px) {
     main {
@@ -271,6 +271,17 @@ a strong {
   font-size: 1.4rem;
   white-space: nowrap; }
 
+.submit:hover, a:hover strong {
+  -webkit-box-shadow: inset 0 -3.25em 0 0 #fff;
+  box-shadow: inset 0 -3.25em 0 0 #fff;
+  color: #000;
+  -webkit-transition: 0.4s ease-in-out all;
+  -moz-transition: 0.4s ease-in all;
+  -webkit-transition: 0.4s ease-in all;
+  -o-transition: 0.4s ease-in all;
+  transition: 0.4s ease-in all;
+  cursor: pointer; }
+
 .welcome {
   padding-top: 0;
   height: 90vh; }
@@ -351,16 +362,16 @@ a strong {
   max-width: 990px; }
 
 .como-funciona ol li {
-  padding-left: 60px; }
+  padding-left: 50px; }
   @media screen and (min-width: 800px) {
     .como-funciona ol li {
       padding-left: 120px; } }
   .como-funciona ol li::before {
-    font-size: 3rem;
+    font-size: 2rem;
     border: 4px solid;
     border-radius: 60px;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     font-weight: 800;
     font-family: Arial, Helvetica, sans-serif;
     display: -webkit-box;
@@ -400,9 +411,13 @@ a strong {
       -ms-flex: 1;
       flex: 1; } }
 
-.caso-exito .media {
-  float: left;
-  margin-right: 20px; }
+@media screen and (min-width: 960px) {
+  .caso-exito .media {
+    float: left;
+    margin-right: 20px; } }
+
+.caso-exito .media img {
+  width: 100%; }
 
 .caso-exito article > p {
   font-size: 1.4rem;
@@ -420,6 +435,9 @@ a strong {
   .caso-exito blockquote span {
     font-size: 1.4rem;
     color: #888; }
+
+.demo .content {
+  text-align: center; }
 
 .demo form {
   max-width: 800px;
@@ -478,7 +496,7 @@ a strong {
   width: 100%;
   color: #fff;
   z-index: 1000;
-  height: 50px;
+  height: 48px;
   overflow: hidden;
   -webkit-transition: 0.5s ease-in-out all;
   -moz-transition: 0.5s ease-in-out all;
@@ -553,14 +571,14 @@ a strong {
       .header .navigations {
         visibility: hidden;
         width: 0;
-        top: 50px;
+        top: 48px;
         position: fixed; }
         .header .navigations.toggle {
           visibility: visible;
           height: calc(100vh - 50px);
           bottom: 0;
           width: 210px;
-          top: 50px;
+          top: 48px;
           padding: 10px 20px;
           right: 0;
           display: -webkit-box;
@@ -598,6 +616,19 @@ a strong {
           padding-bottom: 13px; } }
       .header nav a.active {
         border-bottom: 2px solid; }
+        .header nav a.active.l1 {
+          border-bottom: 0; }
+          .header nav a.active.l1 strong {
+            -webkit-box-shadow: inset 0 -3.25em 0 0 #fff;
+            box-shadow: inset 0 -3.25em 0 0 #fff;
+            color: #000;
+            -webkit-transition: 0.4s ease-in-out all;
+            -moz-transition: 0.4s ease-in all;
+            -webkit-transition: 0.4s ease-in all;
+            -o-transition: 0.4s ease-in all;
+            transition: 0.4s ease-in all; }
+      .header nav a:hover {
+        border-bottom: 2px solid #ccc; }
   .header.fixed-header {
     height: 50px; }
     @media screen and (min-width: 960px) {
