@@ -74,12 +74,42 @@
 }
 .features { 
 	background:$_colorNeutro;
+	ul li {
+		&::before {
+	    	width: 25px;
+		    display: block;
+		    float: left;
+		    margin-right: 1rem;
+		}
+		&.concursos::before {
+    		content: url("../img/concurso.svg");
+    	}
+    	&.eventos::before {
+    		content: url("../img/evento.svg");
+    	}
+    	&.rrhh::before {
+    		content: url("../img/rrhh.svg");
+    	}
+    	&.otros::before {
+    		content: url("../img/otros.svg");
+    	}
+	}
 	@include respond-to-device(xmd, false) {
 		ul {
 			display: grid;
 		    grid-template-columns: 1fr 1fr;
 		    grid-template-rows: auto auto;
-		    li {padding-right: 20px;}
+		    li {
+		    	padding-right: 20px;
+		    	padding-left:80px;
+		    	&::before {
+		    	width: 45px;
+			    display: block;
+			    float: left;
+			    position: absolute;
+			    left: 0;
+		    	}
+		    }
 		}
 	}
 }
@@ -110,6 +140,7 @@
 				    left: $_padding/2;
 				    width: 60px;
 			    	height: 60px;
+			    	font-size: 3rem;
 			    }
 			}
 			p { color: $_colorGris;}
@@ -136,7 +167,10 @@
 			float: left;
 			margin-right: $_margin;
 		}
-		img {width: 100%;}
+		img {
+			width: 100%;
+			max-width: 620px;
+		}
 	}
 	article > p { 
 		font-size: 1.4rem; 
@@ -206,4 +240,6 @@
 		}
 	}
 }
+
+.Page main p + h2 {margin-top: $_margin*2;}
 

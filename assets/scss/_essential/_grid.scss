@@ -11,4 +11,7 @@
     max-width: 1146px;
     margin: 0 auto;
     padding: $_padding;
+    .Page main & {
+    	max-width: 900px;
+    }
 }

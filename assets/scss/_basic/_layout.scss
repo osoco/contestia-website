@@ -1,6 +1,9 @@
 main {
 	margin-top: 48px;		
-	@include respond-to-device(slg, false) {margin-top: 90px;}
+	@include respond-to-device(slg, false) {
+		margin-top: 90px;
+		.Page & { margin-top: 130px;}
+	}
 	> * {
 		padding: $_padding 0;
 		@include respond-to-device(xsm, false) { padding: 3*$_padding 0;}

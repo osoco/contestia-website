@@ -10,6 +10,7 @@ h1, h2, h3 {
 	font-weight: 800; 
 	line-height: 1.2;
 	letter-spacing: -0.2px;
+	.Page main & {margin-bottom: $_margin}
 }
 .t-l2 {
 	font-size: 3rem; 
