@@ -1,0 +1,95 @@
+// -----------------------------------------------------------------------
+// VARIABLES
+// -----------------------------------------------------------------------
+
+// TABLE OF CONTENTS:
+
+// - 00 + PATHS
+// - 01 + FONTS
+// - 02 + COLORS
+// - 03 + GENERIC MEASURES
+// - 04 + SIZES MAP
+// - 05 + BREAKPOINTS MAP
+// - 06 + BOX-SHADOWS MAP
+// - 08 + Z-INDEX
+// - 08 + ROLES MAP
+
+// - 0A + MEDIA-QUERIES CONTROL
+// - 0A + MEDIA-QUERIES CONTROL
+
+$_mediaQueries:     true  !default;
+$_needMobile:       true  !default;
+$_needAMP:       	false  !default;
+$_needDesktop:      true  !default;
+$_pseudoClasses:    true  !default;
+$_needApp:          false !default;
+$_needBrowser:      true  !default;
+
+// - 00 + PATHS
+$_imgPathCore: "" !default;
+$_fontsPathCore: "../fonts" !default;
+
+
+// - 01 + FONTS
+$_fontText:     'Raleway', sans-serif;
+$_fontTitle:    'Raleway', sans-serif !default;
+$_fontIcons:  "FontAwesome",  Arial, Helvetica, sans-serif !default;
+
+// - 02 + COLORS
+// -- value by default for a color --
+
+// CORPORATIVOS
+
+$_colorCorporativo1: #101010 !default; 
+$_colorCorporativo2: #b2b2b2 !default; 
+
+
+// GENÉRICOS
+
+$_colorNegro:            #000 !default; 
+$_colorBlanco:           #fff !default; 
+$_colorGris:             #888 !default; 
+$_colorFilete:           #ddd !default; 
+
+$_colorBase:        $_colorCorporativo1 !default; 
+$_colorLink:        $_colorBase !default;
+$_colorFeatured:    $_colorCorporativo1 !default;
+$_colorNeutro:      $_colorCorporativo2 !default;
+
+
+$_colorText:       #454545 !default; 
+$_colorNeutro:     #EDECEC; 
+$_colorTitle:      $_colorCorporativo1; 
+
+
+// TOOL Y SOCIAL MEDIA
+// ===================================================
+$_colorFacebook      : #3b5998;
+$_colorFacebookLike  : #4C63A5;
+$_colorTwitter       : #1b95e0;
+$_colorGooglePlus    : #dc4e41;
+$_colorGoogle    	 : #dc4e41;
+$_colorEmail         : $_colorCorporativo1;
+$_colorTools         : $_colorCorporativo1;
+$_colorPinterest     : #bd081c;
+$_colorLinkedin      : #0077b5;
+$_colorTumblr        : #35465c;
+$_colorWhatsapp      : #4BC557;
+$_colorYouTube       : #cd201f;
+$_colorInstagram     : #3f729b;
+$_colorFlickr        : #0063dc;
+$_colorTelegram      : #0088cc;
+$_colorSkype         : #00aff0;
+$_colorViber         : #8f5db7;
+$_colorVine			 : #00b488;
+$_colorVK			 : #45668e;
+$_colorMeneame		 : #e26615;
+
+
+// - 03 + GENERIC MEASURES
+$_padding:      20px        !default;
+$_margin:       $_padding   !default;
+$_indent:       50px;
+
+
+

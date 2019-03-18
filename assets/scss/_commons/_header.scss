@@ -1,0 +1,206 @@
+
+.header{
+	background: $_colorCorporativo1;
+	color: $_colorBlanco;
+	padding:5px $_padding/2;
+ 	z-index: 10;
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color:#fff;
+    z-index: 1000;
+    height: 50px;
+    overflow: hidden;
+    -webkit-transition: 0.5s ease-in-out all;
+    -moz-transition: 0.5s ease-in-out all;
+    transition: 0.5s ease-in-out all;
+    text-align:center;
+    &.toggle {position: static;}
+	@include respond-to-device(xl, false) { padding:5px 0 0 0; }
+	@include respond-to-device(slg, false) {height: 94px;}
+	.content {
+		padding:0;
+		display: flex;
+	    align-items: center;
+	    justify-content: space-between;
+	}
+
+	.logo { 
+		flex: 1;
+		display: inline-block;
+		text-align: left;
+		img { 
+			width: 190px; 
+			@include respond-to-device(slg, false) { width: 270px; }
+		}
+	}
+
+	
+	.languages {
+		text-align: right;
+		margin-bottom: $_margin;
+		margin-top: $_margin;
+		white-space: nowrap;
+		@include respond-to-device(slg, false) {margin-top: 0;}
+		li { 
+			display: inline-block;
+			text-transform: uppercase;
+			+ li::before {
+				content: "|";
+				margin-right: 5px;
+				color:$_colorCorporativo2;
+			}
+			a {
+				span {color: $_colorCorporativo2;}
+				&.active span{ color: $_colorBlanco; }
+				@include respond-to-device(slg, false) { 
+					span { 
+					  position: absolute;
+					  width: 1px;
+					  height: 1px;
+					  margin: -1px;
+					  padding: 0;
+					  overflow: hidden;
+					  clip: rect(0, 0, 0, 0);
+					  border: 0; 
+					} 
+					&.es::before {content: "ES"}
+					&.en::before {content: "EN"}
+				}
+			}
+		}
+	}
+	.menu > span {@extend %ph-sr-only;}
+
+	.navigations {
+		background: $_colorCorporativo1 ;
+		text-align: left;
+		@include respond-to-device(false, slg ) { 
+			visibility: none; 
+			width: 0;
+			top: 50px;
+			position: absolute;
+			&.toggle {
+				position: absolute;
+			    height: calc(100vh - 50px);
+			    bottom: 0;
+			    width: 210px;
+			    top: 50px;
+			    padding: $_padding/2 $_padding;
+			    right: 0;
+			    display: flex;
+			    z-index: 8;
+			    flex-direction: column-reverse;
+			    justify-content: flex-end;
+			    -webkit-transition: 0.5s ease-in-out all;
+    			-moz-transition: 0.5s ease-in-out all;
+    			transition: 0.5s ease-in-out all;
+			}
+		}
+	}
+	nav {
+		padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+		li {
+			display: inline-block;
+			white-space: nowrap;
+			+ li {
+				margin:0 0 0 $_margin;
+				@include respond-to-device(false, slg) {
+					margin: $_margin 0 0 0;
+					&:last-child { padding-top: $_padding; }
+				}
+			}
+		}
+
+		a {
+			font-size: 1.6rem; 
+			text-transform: uppercase;
+			@include respond-to-device(slg, false) { padding-bottom:13px; }
+			&.active {border-bottom:2px solid;}
+		}
+	}
+
+	&.fixed-header {
+		height: 50px;
+		.languages { @extend %ph-sr-only; }
+		.logo img {
+		 @include respond-to-device(slg, false) { 
+		 	width: 200px; 
+		 	-webkit-transition: 0.5s ease-in-out all;
+		    -moz-transition: 0.5s ease-in-out all;
+		    transition: 0.5s ease-in-out all;
+		 } 
+		}
+	}
+}
+
+.hamburger {
+  width: 34px;
+  height: 28px;
+  position: relative;
+  margin: 5px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  @include respond-to-device(slg, false) { display: none; }
+	span {
+	  display: block;
+	  position: absolute;
+	  height: 3px;
+	  width: 100%;
+	  background: $_colorBlanco;
+	  border-radius: 3px;
+	  opacity: 1;
+	  left: 0;
+	  -webkit-transform: rotate(0deg);
+	  -moz-transform: rotate(0deg);
+	  -o-transform: rotate(0deg);
+	  transform: rotate(0deg);
+	  -webkit-transition: .25s ease-in-out;
+	  -moz-transition: .25s ease-in-out;
+	  -o-transition: .25s ease-in-out;
+	  transition: .25s ease-in-out;
+	  &.child1 { 
+	  	top: 0px; 
+	  	.menu.toggle & { 
+	  		top: 10px;
+			width: 0%;
+			left: 50%;
+		}
+	  }
+	  &.child2, &.child3 { 
+	  	top: 11px; 
+	  }
+	  &.child2 {
+	  	.menu.toggle & { 
+	  	  -webkit-transform: rotate(45deg);
+		  -moz-transform: rotate(45deg);
+		  -o-transform: rotate(45deg);
+		  transform: rotate(45deg); 
+		}
+	  }
+	  &.child3 {
+	  	.menu.toggle & { 
+		 -webkit-transform: rotate(-45deg);
+		  -moz-transform: rotate(-45deg);
+		  -o-transform: rotate(-45deg);
+		  transform: rotate(-45deg);
+		}
+	  }
+	  &.child4 { 
+	  	top: 22px;
+	  	.menu.toggle & { 
+		  top: 10px;
+		  width: 0%;
+		  left: 50%;
+		}
+	  }
+	}
+}

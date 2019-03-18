@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------
+// MIXINS: REFERENCES
+// -----------------------------------------------------------------------
+
+
+// RESPOND TO DEVICE
+// -----------------------------------------------------------------------
+// MIXINS: RESPOND-TO
+// -----------------------------------------------------------------------
+@function get-size($size) {
+
+    @if map-has-key($_WIDTH, $size) {
+        @return map-get($_WIDTH, $size);
+    } @else {
+        @warn #{$Warning-1};
+        @debug "$size: " + $size;
+    }
+}
+
+@mixin respond-to-browser($need-browser: true, $needAMP: false) {
+    @if $_pseudoClasses and $need-browser {
+        @content;
+    } @else {
+        @if $needAMP {
+            @content;
+        }
+    }
+}
+
+
+
+

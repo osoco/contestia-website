@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------
+// STANDARD GRID
+// -----------------------------------------------------------------------
+
+.container {
+    position: relative;
+    width: 100%;
+}
+.content {
+    @extend %ph-clearfix;
+    max-width: 1146px;
+    margin: 0 auto;
+    padding: $_padding;
+}

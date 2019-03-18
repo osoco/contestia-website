@@ -1,0 +1,46 @@
+
+a {
+	&:link, &:visited, &:hover, &:active { color: $_colorLink; }
+}
+
+
+// ICONOS REDES SOCIALES GENÉRICOS
+
+@each $red, $name in $_SOCIAL {
+  .#{$name} {
+  	@include set-icon(#{$name}, $position: before);
+  }
+}
+
+// FORMS
+
+input.input, textarea {
+	display:block;
+	font-size: 1.5rem;
+	color:$_colorText;
+	width: 100%;
+	background: $_colorBlanco;
+	padding: $_padding/2;
+	border-radius: 5px;
+	border: 1px solid$_colorCorporativo1;
+	margin-bottom: $_margin;
+}
+
+::-webkit-input-placeholder {color: lighten($_colorText, 10%);}
+:-moz-placeholder {color: lighten($_colorText, 10%);} /* FF 18 */
+::-moz-placeholder {color: lighten($_colorText, 10%);} /* FF 19+ */
+:-ms-input-placeholder {color: lighten($_colorText, 10%);}
+
+label { font-size: 1.5rem; }
+
+.top {position: absolute; bottom: 0; right: 0;}
+a strong {
+	text-transform: none;
+	border: 1px solid;
+	padding: 8px $_padding;
+	font-weight: normal;
+	font-size: 1.4rem;
+	white-space: nowrap;
+}
+
+

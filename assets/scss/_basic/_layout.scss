@@ -1,0 +1,9 @@
+main {
+	margin-top: 50px;		
+	@include respond-to-device(slg, false) {margin-top: 90px;}
+	> * {
+		padding: $_padding 0;
+		@include respond-to-device(xsm, false) { padding: 3*$_padding 0;}
+	}
+	position: relative;
+}

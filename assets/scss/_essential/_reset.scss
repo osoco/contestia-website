@@ -1,0 +1,95 @@
+// @import "compass/reset";
+
+::-moz-selection {
+ 
+}
+::selection {
+  
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+	background: transparent;
+	box-sizing:border-box;
+}
+#{headings(all)},
+th,
+td,
+caption {
+	font-weight: normal;
+}
+li {
+	list-style: none;
+	position: relative;
+}
+a img {
+	border: 0;
+}
+th,
+td {
+	vertical-align: top;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+address { 
+	font-style: normal; 
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+pre {
+	display: block;
+}
+blockquote,
+q {
+	quotes: none;
+}
+ins {
+	background-color: #ccc;
+	color: #000;
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+	border-bottom: 1px dotted;
+	cursor: help;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+input,
+select {
+	vertical-align: middle;
+}
+a {text-decoration: none;}
+@include respond-to-browser() { 
+	@include respond-to-device(slg, false) {
+		a:hover { opacity: .8;	}
+	}
+}

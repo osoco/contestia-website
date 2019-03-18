@@ -1,0 +1,82 @@
+// -----------------------------------------------------------------------
+// MIXINS: EFFECTS
+// -----------------------------------------------------------------------
+
+
+@mixin font-smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+
+// - 03 + TRANSFORM
+
+@mixin placeholder($phSize: false, $phColor: false, $phFont: $_fontAlternative, $phPadding: $_padding) {
+
+    input::-webkit-input-placeholder { 
+       font-size:  $phSize;
+       color: $phColor;
+       font-family: $phFont;
+       padding: $phPadding;
+    }
+
+    input:-moz-placeholder { 
+       font-size:  $phSize;
+       color: $phColor;
+       font-family: $phFont;
+       padding: $phPadding;
+    }
+
+    input::-moz-placeholde{ 
+       font-size:  $phSize;
+       color: $phColor;
+       font-family: $phFont;
+       padding: $phPadding;
+    }
+
+    input:-ms-input-placeholder { 
+       font-size:  $phSize;
+       color: $phColor;
+       font-family: $phFont;
+       padding: $phPadding;
+    }
+    
+}
+
+/// Hide visually but still be available to screenreaders
+/// @group Main
+/// @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+/// @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+/// @author Jonathan Snook
+///
+/// @ignore 1. For long content, line feeds are not interpreted as spaces and small width causes content to wrap 1 word per line:
+/// @ignore https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+@mixin fs-visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap; // [1]
+  width: 1px;
+}
+
+/// Undo visually hidden styles
+/// @group Main
+@mixin fs-undo-visually-hidden {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: normal;
+  width: auto;
+}

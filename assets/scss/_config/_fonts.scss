@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------
+// FONTS
+// -----------------------------------------------------------------------
+
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('#{$_fontsPathCore}/font-awesome/fontawesome-webfont.eot');
+	src: url('#{$_fontsPathCore}/font-awesome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+	url('#{$_fontsPathCore}/font-awesome/fontawesome-webfont.woff2') format('woff2'),
+	url('#{$_fontsPathCore}/font-awesome/fontawesome-webfont.woff') format('woff');
+	font-weight: 400;
+	font-style: italic;
+	font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('#{$_fontsPathCore}/Raleway/raleway-extrabold-webfont.woff2') format('woff2'),
+         url('#{$_fontsPathCore}/Raleway/raleway-extrabold-webfont.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('#{$_fontsPathCore}/Raleway/raleway-regular-webfont.woff2') format('woff2'),
+         url('#{$_fontsPathCore}/Raleway/raleway-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

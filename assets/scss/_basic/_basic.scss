@@ -1,0 +1,204 @@
+// -----------------------------------------------------------------------
+// ESSENTIAL CONTROLLER
+// -----------------------------------------------------------------------
+@import "layout";
+@import "typography";
+@import "ui";
+
+.header, .banner, .demo, .footer {
+	 @extend %ph-negative;
+}
+
+.welcome {
+	$_welcomeheight: 90vh;
+	padding-top: 0;
+	height: $_welcomeheight;
+	.media {
+		overflow: hidden;
+		height: $_welcomeheight;
+		position: absolute;
+		width: 100%;
+		&::before {
+			content: "";
+			background:#00000082;
+			position: absolute;
+			width: 100%;
+			height:100%;
+			z-index: 5;
+		}
+
+		@include respond-to-device(false, md) { 
+			.flx-embed {display: none;}
+			/* photo from Fernando Reyes https://unsplash.com/photos/fSTaf7ebl_o */
+			background: url("../img/fernando-reyes-unsplash.jpg") no-repeat ;
+			background-size: cover;
+		}
+	}
+	.content {
+		position: relative;
+		z-index: 6;
+		color: $_colorBlanco;
+		display: flex;
+    	flex-direction: column;
+    	align-items: center;
+    	justify-content: center;
+    	height: $_welcomeheight;
+
+    	h2, p {
+    		text-align: center;
+    		max-width: 600px;
+    	}
+    	.t-l2 {	
+    		&::after {
+    			content: "";
+    			border-bottom:2px solid;
+    			width: 30%;
+    			display: block;
+    			margin: $_margin auto 0;
+    		}
+    		@include respond-to-device(xmd, false) {
+    			font-size: 3.6rem;
+		    }
+    	}
+	}
+	@include respond-to-device(md, lg) { 
+		$_welcomeheight: 452px;
+		height: $_welcomeheight;
+		.media, .content { height: $_welcomeheight;}
+	}
+	@include respond-to-device(lg, false) { 
+		$_welcomeheightD: 622px;
+		height: $_welcomeheightD;
+		.media, .content { height: $_welcomeheightD;}
+	}
+}
+.features { 
+	background:$_colorNeutro;
+	@include respond-to-device(xmd, false) {
+		ul {
+			display: grid;
+		    grid-template-columns: 1fr 1fr;
+		    grid-template-rows: auto auto;
+		    li {padding-right: 20px;}
+		}
+	}
+}
+
+.como-funciona {
+	.content {
+   	 max-width: 990px;
+	}
+	ol {
+		@extend %ph-list-ol;
+		li {
+			padding-left: $_padding*3;
+			@include respond-to-device(xmd, false) { padding-left: $_padding*6; }
+			&::before {
+				font-size: 3rem;
+			    border: 4px solid;
+			    border-radius: 60px;
+			    width: 40px;
+			    height: 40px;
+			    font-weight: 800;
+			    font-family: Arial, Helvetica, sans-serif;
+			    display: flex;
+				align-items: center;
+				justify-content: center;
+				position: absolute;
+				left: 0;
+			    @include respond-to-device(xmd, false) { 
+				    left: $_padding/2;
+				    width: 60px;
+			    	height: 60px;
+			    }
+			}
+			p { color: $_colorGris;}
+		}
+	}
+}
+
+.banner {
+	.content {
+		.t-l2 {margin-bottom: $_margin/2}
+		@include respond-to-device(slg, false) {
+			display: flex;
+			align-items: center;
+			display: flex;
+    		max-width: 990px;
+    		> div {flex:1;}
+		}
+	}
+}
+
+.caso-exito {
+	.media {
+		float: left;
+		margin-right: $_margin;
+	}
+	article > p { 
+		font-size: 1.4rem; 
+		color: $_colorGris;
+    	line-height: 1.5;
+	}
+	blockquote { 
+		text-align: center;
+		p {
+			font-style: italic;
+		    font-family: auto;
+		    font-size: 2.5rem;
+		    line-height: 1.2;
+		    padding: 0 $_padding;
+		}
+		span {
+			font-size: 1.4rem;
+			color: $_colorGris;
+		}
+	}
+}
+
+.demo {
+	text-align: center;
+	form {
+		max-width: 800px;
+    	margin: 0 auto $_margin*3;
+    	> div{
+    		text-align: left;
+			@include respond-to-device(xmd, false) {
+				display: grid;
+				grid-column-gap: $_padding;
+			    grid-template-columns: 1fr 1fr;
+			    grid-template-rows: auto auto;
+		   		 .message {grid-column:  1 / span 2;}
+		   	}
+		}
+		input.input, textarea {color: $_colorText;}
+		.submit {
+			text-transform: none;
+			border: 1px solid;
+			padding: 8px $_padding;
+			font-weight: normal;
+			font-size: 1.4rem;
+			white-space: nowrap;
+		}
+	}
+	.location::before {
+		content: url(../img/location.svg);
+	    width: 1.8rem;
+	    margin-right: 10px;
+	    display: inline-block;
+	}
+}
+.footer {
+	font-size: 1.6rem;
+	.content {
+		border-top:2px solid $_colorBlanco;
+		small {font-size: 1.6rem;}
+		nav {
+			float: right;
+			li {margin-left: $_margin;
+				display: inline-block;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,53 @@
+// -----------------------------------------------------------------------
+// ELEMENT PLACEHOLDERS
+// -----------------------------------------------------------------------
+
+// TABLE OF CONTENTS:
+
+// - 01 + PH-LIST-OL
+// - 02 + PH-LIST-UL
+// - 03 + PH-BUTTONS
+
+// - 01 + PH-LIST-OL
+%ph-list-ol {
+    counter-reset: item;
+
+    li {    
+
+        &::before {
+            content: counter(item);
+            counter-increment: item;
+        }
+    }
+}
+
+// - 02 + PH-LIST-UL
+%ph-list-ul {
+
+    li {
+        padding-left: $_padding*1.5;
+
+        &::before {
+            font-size: 1.2rem;
+            font-family: $_fontText;
+            padding-right: 5px;
+        }
+        &:last-child {
+            padding-bottom: 0; 
+        }
+    }
+}
+
+// - 02 + PH-BUTTONS
+
+%ph-close {
+    @include set-icon(close, 30px, $_colorBlanco);   
+}
+
+%ph-search {
+    @include set-icon(search, 30px, $_colorBlanco);
+    span { display: none; }   
+}
+
+
+

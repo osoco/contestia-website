@@ -1,0 +1,120 @@
+// -----------------------------------------------------------------------
+// MIXINS: BUILDERS
+// -----------------------------------------------------------------------
+
+// TABLE OF CONTENTS:
+
+// - 00 + SET-LAYOUT
+// - 01 + SET-FONT
+
+
+// - 00 + SET-LAYOUT
+
+// Set this box to define size, float and his own margin.
+    // $max-width:  max width
+    // $width:      width of my box
+    // $float:      float of my box
+    // $margin:     margin of my own box
+
+@mixin set-layout($max-width, $width: 100%, $float: false, $margin: 0 auto) {
+
+    @if $width {
+        width: $width;
+    }
+
+    @if map-get($_WIDTH, $max-width) != null {
+        max-width: map-get($_WIDTH, $max-width);
+    } @else {
+        max-width: $max-width;
+    }
+
+    @if $float {
+        float: $float;
+    }
+
+    @if $margin {
+        margin: $margin;
+    }
+}
+
+// - 00 + SET-FONT
+
+// Set this element to define his font.
+    // $font-size:      size for this font
+    // $line-height:    line height for this element
+    // $font-family:    font family for this element
+    // $color:          color for this element
+    // $letter-spacing: letter spacing for this element
+    // $font-weight:    weight for this font
+    // $text-transform: transform text for this element
+
+@mixin set-font($font-size: false, $line-height: false, $font-family: false, $color: false, 
+                $letter-spacing: false, $font-weight: false, $text-transform: false, $text-align: false) {
+    @if $color {
+        color: $color;
+    }
+    @if $font-family {
+        font-family: $font-family;
+    }
+    @if $font-size {
+        font-size: $font-size;
+    }
+    @if $font-weight {
+        font-weight: $font-weight;
+    }
+    @if $letter-spacing {
+        letter-spacing: $letter-spacing;
+    }
+    @if $line-height {
+        line-height: $line-height;
+    }
+    @if $text-transform {
+        text-transform: $text-transform;
+    }
+    @if $text-align {
+        text-align: $text-align;
+    }
+}
+
+
+ @mixin set-icon($icon: false, $font-size: false,  $color: false, $leyenda: false, $position: before) {    
+    @include font-smoothing();
+
+    @if $color {
+        color: $color;
+    }
+    @if $font-size {
+        font-size: $font-size;
+    }
+
+    @if $position == before {
+        &::before { 
+         font-family:  $_fontIcons; 
+
+          @if $leyenda {
+                content: "#{map-get($_ICONS, $icon)}" " " "#{$leyenda}";
+          } 
+          @else {
+            content: "#{map-get($_ICONS, $icon)}";
+        }       
+            margin-right: 5px;
+            display: inline-block;
+        }
+    }
+    @if $position == after {
+        &::after { 
+            font-family:  $_fontIcons;
+            
+            @if $leyenda {
+                content: "#{$leyenda}"  " "  "#{map-get($_ICONS, $icon)}";
+            } 
+            @else {
+                content: "#{map-get($_ICONS, $icon)}";
+            }                 
+                margin-left: 5px;
+                display: inline-block;
+        }
+    }
+
+ }
+

@@ -1,0 +1,70 @@
+// -----------------------------------------------------------------------
+// MIXINS: MEDIA-QUERIES
+// -----------------------------------------------------------------------
+//BREAKPOINT XS - XTRA SMALL DEVICES / MOBILE
+//@include respond-to-device(lg, false) 
+
+//BREAKPOINT XXL - XTRA LARGE DEVICES / DESKTOP
+// @include respond-to-device(false, lg) 
+
+//BREAKPOINT XXL - XTRA LARGE DEVICES / DESKTOP
+// @include respond-to-device(false, lg) 
+
+
+@mixin respond-to-device( $min-width: false, $max-width: false,
+                          $need-mobile: false, $need-AMP: false, $need-desktop: false,
+                          $media: screen 
+    ) {
+
+    $min: 0;
+    $max: 0;
+
+    @if $_mediaQueries or $need-mobile or $need-AMP or $need-desktop {
+
+        @if $media and ($min-width or $max-width) {
+            @if $min-width and $max-width {
+
+                @if map-has-key($_BP, $min-width) {
+                    $min: map-get($_BP, $min-width);
+                } @else {
+                    $min: $min-width;
+                }
+
+                @if map-has-key($_BP, $max-width) {
+                    $max: map-get($_BP, $max-width);
+                } @else {
+                    $max: $max-width;
+                }
+
+               @media #{$media} and (min-width: $min) and (max-width: $max) {
+                   @content;
+               }
+            }
+            @else if $min-width {
+                @if map-has-key($_BP, $min-width) {
+                    $min: map-get($_BP, $min-width);
+                } @else {
+                    $min: $min-width;
+                }
+
+               @media #{$media} and (min-width: $min) {
+                   @content;
+               }
+            }
+            @else if $max-width {
+                @if map-has-key($_BP, $max-width) {
+                    $max: map-get($_BP, $max-width);
+                } @else {
+                    $max: $max-width;
+                }
+
+               @media #{$media} and (max-width: $max) {
+                   @content;
+               }
+            }
+            @else {
+            }
+        }
+    }
+}
+
