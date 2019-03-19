@@ -227,19 +227,6 @@
 	    display: inline-block;
 	}
 }
-.footer {
-	font-size: 1.6rem;
-	.content {
-		border-top:2px solid $_colorBlanco;
-		small {font-size: 1.6rem;}
-		nav {
-			float: right;
-			li {margin-left: $_margin;
-				display: inline-block;
-			}
-		}
-	}
-}
 
 .Page main p + h2 {margin-top: $_margin*2;}
 

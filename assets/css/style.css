@@ -34,7 +34,7 @@
   .header a:link, .banner a:link, .demo a:link, .footer a:link, .header a:visited, .banner a:visited, .demo a:visited, .footer a:visited, .header a:hover, .banner a:hover, .demo a:hover, .footer a:hover, .header a:active, .banner a:active, .demo a:active, .footer a:active {
     color: #fff; }
 
-.header .menu > span, .header.fixed-header .languages {
+.top span, .header .menu > span, .header.fixed-header .languages {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -266,8 +266,12 @@ label {
 
 .top {
   position: absolute;
-  bottom: 0;
-  right: 0; }
+  bottom: -20px;
+  right: 20px; }
+  .top::before {
+    content: url("../img/up.svg");
+    display: block;
+    width: 24px; }
 
 a strong {
   text-transform: none;
@@ -501,18 +505,6 @@ a strong {
   margin-right: 10px;
   display: inline-block; }
 
-.footer {
-  font-size: 1.6rem; }
-  .footer .content {
-    border-top: 2px solid #fff; }
-    .footer .content small {
-      font-size: 1.6rem; }
-    .footer .content nav {
-      float: right; }
-      .footer .content nav li {
-        margin-left: 20px;
-        display: inline-block; }
-
 .Page main p + h2 {
   margin-top: 40px; }
 
@@ -734,7 +726,18 @@ a strong {
         left: 50%; }
 
 .footer {
-  background: #101010; }
-  .footer > small {
-    padding: 20px;
-    display: block; }
+  text-align: center;
+  background: #101010;
+  font-size: 1.6rem; }
+  .Home .footer .content {
+    border-top: 2px solid #fff; }
+  .footer .content small {
+    font-size: 1.6rem; }
+  .footer .content nav li {
+    margin-left: 20px;
+    display: inline-block; }
+  @media screen and (min-width: 640px) {
+    .footer {
+      text-align: left; }
+      .footer .content nav {
+        float: right; } }

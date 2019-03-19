@@ -33,7 +33,17 @@ input.input, textarea {
 
 label { font-size: 1.5rem; }
 
-.top {position: absolute; bottom: 0; right: 0;}
+.top {
+	position: absolute;
+	bottom: -$_margin; 
+	right: $_margin;
+	&::before {
+		content: url("../img/up.svg");
+		display: block;
+		width: 24px;
+	}
+	span { @extend %ph-sr-only;}
+}
 a strong {
 	text-transform: none;
 	border: 1px solid;
