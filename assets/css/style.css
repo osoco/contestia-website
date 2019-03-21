@@ -717,12 +717,18 @@ a strong {
 
 .demo .content {
   text-align: center; }
+  .demo .content p {
+    margin-bottom: 10px; }
 
 .demo form {
   max-width: 800px;
-  margin: 0 auto 60px; }
+  margin: 20px auto 30px; }
+  @media screen and (min-width: 800px) {
+    .demo form {
+      margin: 20px auto 60px; } }
   .demo form > div {
-    text-align: left; }
+    text-align: left;
+    margin-bottom: 20px; }
     @media screen and (min-width: 800px) {
       .demo form > div {
         display: -ms-grid;

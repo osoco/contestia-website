@@ -204,12 +204,15 @@
 .demo {
 	.content {
 		text-align: center;
+		p {margin-bottom: $_margin/2;}
 	}
 	form {
 		max-width: 800px;
-    	margin: 0 auto $_margin*3;
+    	margin: $_margin auto $_margin*1.5;
+    	@include respond-to-device(xmd, false) {margin: $_margin auto $_margin*3;}
     	> div{
     		text-align: left;
+    		margin-bottom: $_margin;
 			@include respond-to-device(xmd, false) {
 				display: grid;
 				grid-column-gap: $_padding;
