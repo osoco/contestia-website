@@ -188,7 +188,7 @@
             	                <h2 class="t-l2">Cuéntanos tus necesidades</h2>
             			<p>Cuéntanos qué necesitas y hablemos sobre cómo Contestia puede ayudarte, o si en tu caso no tiene sentido.</p>
                                 <p>Podemos prepararte una demo y un presupuesto personalizado sin ningún compromiso.</p>		  
-        			<form name="contact" method="POST" data-netlify="true">
+       			<form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" >
                         <div>
                             <div class="organization">
                                 <label for="name-company" id="organization">Nombre o Empresa:</label>
@@ -201,7 +201,8 @@
                             <div class="message">
                                 <label for="details" id="message">Qué quieres contarnos:</label>
                                 <textarea name="message" id="details" rows="5" aria-labelledby="message"></textarea>
-                            </div> 
+                            </div>
+                            <div data-netlify-recaptcha="true"></div>			    
                          </div>      
                             <input class="submit" type="submit" value="Enviar">
             			</form>	
