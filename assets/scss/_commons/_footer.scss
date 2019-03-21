@@ -3,9 +3,22 @@
 // -----------------------------------------------------------------------
 
 .footer {
+	text-align: center;
 	background: $_colorCorporativo1;
-	> small {
-		padding: $_padding;
-		display: block;
+	font-size: 1.6rem;
+	.content {
+		.Home & {border-top:2px solid $_colorBlanco;}
+		small { font-size: 1.6rem; }		
+		nav {
+			li {
+				margin-left: $_margin;
+				display: inline-block;
+			}
+		}
+	}
+
+	@include respond-to-device(xsm, false) { 
+		text-align: left; 
+		.content nav { float: right; }
 	}
 }
