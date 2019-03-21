@@ -69,6 +69,7 @@
 					&.en::before {content: "EN"}
 				}
 			}
+			a:link, a:visited, a:hover, a:active {text-decoration: none;}
 		}
 	}
 	.menu > span {@extend %ph-sr-only;}
@@ -113,10 +114,12 @@
 			}
 		}
 
-		a {
+		a:link, a:visited, a:hover, a:active {
 			font-size: 1.6rem; 
 			text-transform: uppercase;
+			text-decoration: none;
 			@include respond-to-device(slg, false) { padding-bottom:13px; }
+			//&.l1 {}
 			&.active {
 				border-bottom:2px solid;
 				&.l1 {
@@ -129,12 +132,15 @@
 					}
 				}
 			}
-			&:hover {border-bottom: 2px solid #ccc;}
+			&:hover {
+				border-bottom: 2px solid #ccc;
+				&.l1 { border-bottom: 0;}
+			}
 		}
 	}
 
 	&.fixed-header {
-		height: 50px;
+		height: 48px;
 		.languages { @extend %ph-sr-only; }
 		.logo img {
 		 @include respond-to-device(slg, false) { 

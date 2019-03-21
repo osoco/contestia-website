@@ -5,9 +5,7 @@
 @import "typography";
 @import "ui";
 
-.header, .banner, .demo, .footer {
-	 @extend %ph-negative;
-}
+.header, .banner, .demo, .footer { @extend %ph-negative; }
 
 .welcome {
 	$_welcomeheight: 90vh;
@@ -18,6 +16,14 @@
 		height: $_welcomeheight;
 		position: absolute;
 		width: 100%;
+
+		background: url("../img/fernando-reyes-desk.jpg") no-repeat ;
+		background-size: cover;
+		.flx-embed {
+			position: relative;
+	    	transform: translateY(-50%);
+	    	top: 50%;
+		}
 		&::before {
 			content: "";
 			background:#00000082;
@@ -26,6 +32,7 @@
 			height:100%;
 			z-index: 5;
 		}
+
 
 		@include respond-to-device(false, md) { 
 			.flx-embed {display: none;}
@@ -162,6 +169,7 @@
 }
 
 .caso-exito {
+	background:#f7f7f7;
 	.media {
 		@include respond-to-device(slg, false) {
 			float: left;
