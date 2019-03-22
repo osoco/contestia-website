@@ -25,9 +25,9 @@
 %ph-negative { 
 	background: $_colorCorporativo1; 
 	color:$_colorBlanco;
-	* { color:$_colorBlanco;}
+	* { color:$_colorCorporativo2;}
 	a:link, a:visited, a:hover, a:active {
-		color:$_colorBlanco;	
+		color:$_colorBlanco;	text-decoration: underline;
 	}
 }
 
