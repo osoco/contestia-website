@@ -1,11 +1,6 @@
 // @import "compass/reset";
 
-::-moz-selection {
- 
-}
-::selection {
-  
-}
+
 
 * {
 	margin: 0;
@@ -16,7 +11,7 @@
 	background: transparent;
 	box-sizing:border-box;
 }
-#{headings(all)},
+// #{headings(all)},
 th,
 td,
 caption {
@@ -88,8 +83,8 @@ select {
 	vertical-align: middle;
 }
 a {text-decoration: none;}
-@include respond-to-browser() { 
-	@include respond-to-device(slg, false) {
-		a:hover { opacity: .8;	}
-	}
-}
+// @include respond-to-browser() { 
+// 	@include respond-to-device(slg, false) {
+// 		a:hover { opacity: .8;	}
+// 	}
+// }
