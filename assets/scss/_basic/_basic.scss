@@ -119,7 +119,10 @@
 	}
 	background:$_colorNeutro;
 	ul {
-		font-size: 1.5em;
+		font-size: 1.2em;
+		@include respond-to-device(xmd, false) {
+			font-size: 1.5em;
+		}
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
@@ -212,17 +215,21 @@
 
 .caso-exito {
 	background:#f7f7f7;
-	.media {
+	.columns{
 		@include respond-to-device(slg, false) {
-			float: left;
-			margin-right: $_margin;
+			display: flex;
+			> div{
+				flex-basis: 100%;
+			}	
 		}
+	}
+	.media {
 		img {
 			width: 100%;
 			max-width: 620px;
 		}
 	}
-	article > p { 
+	article p { 
 		font-size: 1.4rem; 
 		color: $_colorGris;
     	line-height: 1.5;

@@ -750,7 +750,7 @@ a strong {
   margin-bottom: 20px;
 }
 .features ul {
-  font-size: 1.5em;
+  font-size: 1.2em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -758,6 +758,11 @@ a strong {
   gap: 20px;
   width: 100%;
   margin-top: 40px;
+}
+@media screen and (min-width: 800px) {
+  .features ul {
+    font-size: 1.5em;
+  }
 }
 .features ul li {
   background-color: #fff;
@@ -852,16 +857,18 @@ a strong {
   background: #f7f7f7;
 }
 @media screen and (min-width: 960px) {
-  .caso-exito .media {
-    float: left;
-    margin-right: 20px;
+  .caso-exito .columns {
+    display: flex;
+  }
+  .caso-exito .columns > div {
+    flex-basis: 100%;
   }
 }
 .caso-exito .media img {
   width: 100%;
   max-width: 620px;
 }
-.caso-exito article > p {
+.caso-exito article p {
   font-size: 1.4rem;
   color: #888;
   line-height: 1.5;
