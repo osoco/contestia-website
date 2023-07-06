@@ -82,7 +82,9 @@
 	}
 }
 .beneficios{
-	background:$_colorNeutro;
+	background-color:#f2f2f2;
+	background-image: url(/assets/img/hexagono.svg);
+	background-size: 20px;
 	.beneficiosList{
 		display: flex;
 		flex-direction: column;
@@ -91,6 +93,7 @@
 		margin: calc($_padding * 2 ) 0;
 		> div{
 			border: 1px solid $_colorBlanco;
+			background-color:#f2f2f2;
 			border-radius: $_borderRadius;
 			padding: calc($_padding * 2) $_padding $_padding ;
 			flex-basis: 100%;
@@ -139,6 +142,7 @@
 }
 
 .como-funciona {
+	background-color: $_colorBlanco;
 	ol {
 		@extend %ph-list-ol;
 		li {

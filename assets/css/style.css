@@ -439,7 +439,7 @@ a {
   font-size: 1.6rem;
 }
 .Home .footer .content {
-  border-top: 2px solid #fff;
+  border-top: 2px solid #888;
 }
 .footer .content small {
   font-size: 1.4rem;
@@ -458,6 +458,7 @@ a {
 }
 
 main {
+  background-color: #fff;
   margin-top: 48px;
   position: relative;
 }
@@ -466,7 +467,7 @@ main {
     margin-top: 90px;
   }
   .Page main {
-    margin-top: 130px;
+    padding-top: 50px;
   }
 }
 main > * {
@@ -487,6 +488,7 @@ body {
   font-size: 1.8rem;
   line-height: 1.4;
   color: #454545;
+  background-color: #101010;
 }
 
 h1, h2, h3 {
@@ -709,7 +711,9 @@ a strong {
 }
 
 .beneficios {
-  background: #EDECEC;
+  background-color: #f2f2f2;
+  background-image: url(/assets/img/hexagono.svg);
+  background-size: 20px;
 }
 .beneficios .beneficiosList {
   display: flex;
@@ -720,6 +724,7 @@ a strong {
 }
 .beneficios .beneficiosList > div {
   border: 1px solid #fff;
+  background-color: #f2f2f2;
   border-radius: 4px;
   padding: 40px 20px 20px;
   flex-basis: 100%;
@@ -770,6 +775,9 @@ a strong {
   border-radius: 1em;
 }
 
+.como-funciona {
+  background-color: #fff;
+}
 .como-funciona ol li {
   padding-left: 50px;
   padding-bottom: 40px;
