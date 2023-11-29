@@ -4,10 +4,11 @@ body {
 	font-size: 1.8rem;
 	line-height:1.4;
 	color: $_colorText;
+	background-color: $_colorNegro;
 }
 h1, h2, h3 { 
-	font-family:'Raleway', sans-serif; 
-	font-weight: 100; 
+	font-family:'Exo', sans-serif; 
+	font-weight: normal; 
 	line-height: 1.2;
 	letter-spacing: -0.2px;
 	.Page main & {margin-bottom: $_margin}

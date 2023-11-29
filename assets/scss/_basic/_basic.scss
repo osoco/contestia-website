@@ -5,7 +5,7 @@
 @import "typography";
 @import "ui";
 
-.header, .banner, .demo, .footer { @extend %ph-negative; }
+// .header, .banner, .demo, .footer { @extend %ph-negative; }
 
 .welcome {
 	$_welcomeheight: 90vh;
@@ -103,7 +103,7 @@
 		.img{
 			text-align: center;
 			margin-bottom: $_padding;
-			svg{
+			>*{
 				max-width: 150px;
 				fill: $_colorCorporativo4;
 			}
@@ -114,26 +114,38 @@
 	}
 }
 .features { 
+	color: $_colorBlanco;
+	background:$_colorCorporativo3;
 	h2{
 		margin-bottom: $_padding;
+		color: $_colorBlanco;
 	}
-	background:$_colorNeutro;
+	p{color: $_colorCorporativo1;}
 	ul {
-		font-size: 1.2em;
 		@include respond-to-device(xmd, false) {
 			font-size: 1.5em;
 		}
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 		gap: $_padding;
 		width: 100%;
-		margin-top: calc($_padding * 2);
 		li{
-			background-color: $_colorBlanco;
-			padding:0 $_padding;
-			border-radius: 1em
+			font-size: 2rem;
+			padding:calc($_padding/2) $_padding;
+			padding: $_padding;
+			border-radius: $_borderRadius;
+			text-align: center;
+			line-height: 1.1em;
+			font-family: 'Exo';
+			img{
+				width: 100%;	
+				max-width: 200px;
+				background-color: $_colorBlanco;
+				border-radius: 50%;
+				border: 10px solid $_colorCorporativo2;
+				padding: .5em;
+				margin-bottom: 1em;
+				}
 		}
 	}
 }
@@ -151,14 +163,14 @@
 				&::before{top: -20px;}
 				&:nth-child(2n){
 					margin-left: auto;
-					border-left: 5px solid $_colorCorporativo5;
+					border-left: 5px solid $_colorCorporativo3;
 					width: calc(50% + 5px);
 				}
 				&:nth-child(2n + 1){
 					padding-left: initial;
 					padding-right: $_padding*4.5;
 					text-align: right;
-					border-right: 5px solid $_colorCorporativo5;
+					border-right: 5px solid $_colorCorporativo3;
 					&:last-child{border-color: transparent;}
 					&::before {
 						left: auto;
@@ -168,14 +180,14 @@
 				svg{
 					display: block;
 					position: absolute;
-					fill: $_colorCorporativo5;
+					fill: $_colorCorporativo3;
 					max-width: 433px;
 				}
 			}
 			
 			&::before {
 				font-size: 2rem;
-				color: $_colorCorporativo5;
+				color: $_colorCorporativo3;
 			    border: 4px solid;
 			    border-radius: 60px;
 			    width: 30px;
@@ -251,8 +263,10 @@
 }
 
 .demo {
+	background-color: $_colorCorporativo4s;
 	.content {
 		text-align: center;
+		a{color: $_colorCorporativo3;}
 		p {margin-bottom: $_margin/2;}
 	}
 	form {
@@ -272,12 +286,20 @@
 		}
 		input.input, textarea {color: $_colorText;}
 		.submit {
-			text-transform: none;
-			border: 1px solid;
-			padding: 8px $_padding;
-			font-weight: normal;
-			font-size: 1.4rem;
-			white-space: nowrap;
+			color: $_colorBlanco;
+			font-size: 18px;
+			background-color: $_colorCorporativo3;
+			padding: .5em 1em;
+			border-radius: $_borderRadius;
+			transition: all .2s ease-in-out;
+			transform: scale(1.0);
+			display: inline-block;
+			&:hover{
+				transition: all .2s ease-in-out;
+				transform: scale(1.1);
+				background-color: $_colorCorporativo3;
+			}
+			
 		}
 	}
 	.location::before {

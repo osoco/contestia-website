@@ -18,24 +18,33 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Exo";
+  src: url("/assets/fonts/exo/Exo-Regular.woff2") format("woff2"), url("/assets/fonts/exo/Exo-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Exo";
+  src: url("/assets/fonts/exo/Exo-Light.woff2") format("woff2"), url("/assets/fonts/exo/Exo-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Exo";
+  src: url("/assets/fonts/exo/Exo-Bold.woff2") format("woff2"), url("/assets/fonts/exo/Exo-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 .content::before, .content::after {
   content: "";
   display: table;
 }
 .content::after {
   clear: both;
-}
-
-.header, .banner, .demo, .footer {
-  background: #101010;
-  color: #fff;
-}
-.header *, .banner *, .demo *, .footer * {
-  color: #b2b2b2;
-}
-.header a:link, .banner a:link, .demo a:link, .footer a:link, .header a:visited, .banner a:visited, .demo a:visited, .footer a:visited, .header a:hover, .banner a:hover, .demo a:hover, .footer a:hover, .header a:active, .banner a:active, .demo a:active, .footer a:active {
-  color: #fff;
-  text-decoration: underline;
 }
 
 .top span, .header.fixed-header .languages, .header .menu > span {
@@ -170,7 +179,7 @@ a {
 }
 
 .header {
-  background: #101010;
+  background: #000;
   color: #fff;
   padding: 5px 10px;
   z-index: 10;
@@ -178,7 +187,6 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  color: #fff;
   z-index: 1000;
   height: 48px;
   overflow: hidden;
@@ -219,7 +227,7 @@ a {
   }
 }
 .header .languages {
-  display: none;
+  font-size: 12px;
   text-align: right;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -237,13 +245,10 @@ a {
 .header .languages li + li::before {
   content: "|";
   margin-right: 5px;
-  color: #b2b2b2;
+  color: #F394D3;
 }
 .header .languages li a span {
-  color: #b2b2b2;
-}
-.header .languages li a.active span {
-  color: #fff;
+  color: #F394D3;
 }
 @media screen and (min-width: 960px) {
   .header .languages li a span {
@@ -263,11 +268,13 @@ a {
     content: "EN";
   }
 }
+.header .languages li a.active {
+  font-weight: bold;
+}
 .header .languages li a:link, .header .languages li a:visited, .header .languages li a:hover, .header .languages li a:active {
   text-decoration: none;
 }
 .header .navigations {
-  background: #101010;
   text-align: left;
 }
 @media screen and (max-width: 960px) {
@@ -278,6 +285,7 @@ a {
     position: fixed;
   }
   .header .navigations.toggle {
+    background-color: #000;
     visibility: visible;
     height: calc(100vh - 50px);
     bottom: 0;
@@ -321,6 +329,7 @@ a {
   font-size: 1.6rem;
   text-transform: uppercase;
   text-decoration: none;
+  color: #4DE3F4;
 }
 @media screen and (min-width: 960px) {
   .header nav a:link, .header nav a:visited, .header nav a:hover, .header nav a:active {
@@ -328,25 +337,25 @@ a {
   }
 }
 .header nav a:link.l1 strong, .header nav a:visited.l1 strong, .header nav a:hover.l1 strong, .header nav a:active.l1 strong {
-  background-color: #ff6600;
+  background-color: #F129AD;
   color: #fff;
-  border-radius: 4px;
-  border-color: #ff6600;
+  border-radius: 25px;
+  border-color: #F129AD;
 }
 .header nav a:link.active, .header nav a:visited.active, .header nav a:hover.active, .header nav a:active.active {
-  color: #ff6600;
-  border-bottom: 2px solid #ff6600;
+  color: #F129AD;
+  border-bottom: 2px solid #F129AD;
 }
 .header nav a:link.active.l1, .header nav a:visited.active.l1, .header nav a:hover.active.l1, .header nav a:active.active.l1 {
   border-bottom: 0;
 }
 .header nav a:link.active.l1 strong, .header nav a:visited.active.l1 strong, .header nav a:hover.active.l1 strong, .header nav a:active.active.l1 strong {
   color: #fff;
-  background-color: #ff6600;
-  border-color: #ff6600;
+  background-color: #F129AD;
+  border-color: #F129AD;
 }
 .header nav a:link:hover, .header nav a:visited:hover, .header nav a:hover:hover, .header nav a:active:hover {
-  border-bottom: 2px solid #ff6600;
+  border-bottom: 2px solid #F129AD;
 }
 .header nav a:link:hover.l1, .header nav a:visited:hover.l1, .header nav a:hover:hover.l1, .header nav a:active:hover.l1 {
   border-bottom: 0;
@@ -435,11 +444,9 @@ a {
 
 .footer {
   text-align: center;
-  background: #101010;
+  color: #fff;
+  background: #260015;
   font-size: 1.6rem;
-}
-.Home .footer .content {
-  border-top: 2px solid #fff;
 }
 .footer .content small {
   font-size: 1.4rem;
@@ -447,6 +454,9 @@ a {
 .footer .content nav li {
   margin-left: 20px;
   display: inline-block;
+}
+.footer .content nav li a {
+  color: #fff;
 }
 @media screen and (min-width: 640px) {
   .footer {
@@ -458,6 +468,7 @@ a {
 }
 
 main {
+  background-color: #fff;
   margin-top: 48px;
   position: relative;
 }
@@ -466,7 +477,7 @@ main {
     margin-top: 90px;
   }
   .Page main {
-    margin-top: 130px;
+    padding-top: 50px;
   }
 }
 main > * {
@@ -487,11 +498,12 @@ body {
   font-size: 1.8rem;
   line-height: 1.4;
   color: #454545;
+  background-color: #000;
 }
 
 h1, h2, h3 {
-  font-family: "Raleway", sans-serif;
-  font-weight: 100;
+  font-family: "Exo", sans-serif;
+  font-weight: normal;
   line-height: 1.2;
   letter-spacing: -0.2px;
 }
@@ -524,7 +536,7 @@ p {
 }
 
 a:link, a:visited, a:hover, a:active {
-  color: #101010;
+  color: #F129AD;
 }
 
 .facebook {
@@ -579,7 +591,7 @@ input.input, textarea {
   background: #fff;
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #101010;
+  border: 1px solid #F3E4EE;
   margin-bottom: 20px;
 }
 
@@ -709,7 +721,9 @@ a strong {
 }
 
 .beneficios {
-  background: #EDECEC;
+  background-color: #f2f2f2;
+  background-image: url(/assets/img/hexagono.svg);
+  background-size: 20px;
 }
 .beneficios .beneficiosList {
   display: flex;
@@ -720,7 +734,8 @@ a strong {
 }
 .beneficios .beneficiosList > div {
   border: 1px solid #fff;
-  border-radius: 4px;
+  background-color: #f2f2f2;
+  border-radius: 25px;
   padding: 40px 20px 20px;
   flex-basis: 100%;
   box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.05);
@@ -733,9 +748,9 @@ a strong {
   text-align: center;
   margin-bottom: 20px;
 }
-.beneficios .beneficiosList .img svg {
+.beneficios .beneficiosList .img > * {
   max-width: 150px;
-  fill: #00b2d5;
+  fill: #9A2D6A;
 }
 @media screen and (min-width: 800px) {
   .beneficios .beneficiosList {
@@ -744,20 +759,21 @@ a strong {
 }
 
 .features {
-  background: #EDECEC;
+  color: #fff;
+  background: #F129AD;
 }
 .features h2 {
   margin-bottom: 20px;
+  color: #fff;
+}
+.features p {
+  color: #F3E4EE;
 }
 .features ul {
-  font-size: 1.2em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
   width: 100%;
-  margin-top: 40px;
 }
 @media screen and (min-width: 800px) {
   .features ul {
@@ -765,11 +781,27 @@ a strong {
   }
 }
 .features ul li {
+  font-size: 2rem;
+  padding: 10px 20px;
+  padding: 20px;
+  border-radius: 25px;
+  text-align: center;
+  line-height: 1.1em;
+  font-family: "Exo";
+}
+.features ul li img {
+  width: 100%;
+  max-width: 200px;
   background-color: #fff;
-  padding: 0 20px;
-  border-radius: 1em;
+  border-radius: 50%;
+  border: 10px solid #F394D3;
+  padding: 0.5em;
+  margin-bottom: 1em;
 }
 
+.como-funciona {
+  background-color: #fff;
+}
 .como-funciona ol li {
   padding-left: 50px;
   padding-bottom: 40px;
@@ -787,14 +819,14 @@ a strong {
   }
   .como-funciona ol li:nth-child(2n) {
     margin-left: auto;
-    border-left: 5px solid #ffc107;
+    border-left: 5px solid #F129AD;
     width: calc(50% + 5px);
   }
   .como-funciona ol li:nth-child(2n+1) {
     padding-left: initial;
     padding-right: 90px;
     text-align: right;
-    border-right: 5px solid #ffc107;
+    border-right: 5px solid #F129AD;
   }
   .como-funciona ol li:nth-child(2n+1):last-child {
     border-color: transparent;
@@ -806,13 +838,13 @@ a strong {
   .como-funciona ol li svg {
     display: block;
     position: absolute;
-    fill: #ffc107;
+    fill: #F129AD;
     max-width: 433px;
   }
 }
 .como-funciona ol li::before {
   font-size: 2rem;
-  color: #ffc107;
+  color: #F129AD;
   border: 4px solid;
   border-radius: 60px;
   width: 30px;
@@ -888,8 +920,14 @@ a strong {
   color: #888;
 }
 
+.demo {
+  background-color: #AEEEF5;
+}
 .demo .content {
   text-align: center;
+}
+.demo .content a {
+  color: #F129AD;
 }
 .demo .content p {
   margin-bottom: 10px;
@@ -922,12 +960,19 @@ a strong {
   color: #454545;
 }
 .demo form .submit {
-  text-transform: none;
-  border: 1px solid;
-  padding: 8px 20px;
-  font-weight: normal;
-  font-size: 1.4rem;
-  white-space: nowrap;
+  color: #fff;
+  font-size: 18px;
+  background-color: #F129AD;
+  padding: 0.5em 1em;
+  border-radius: 25px;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1);
+  display: inline-block;
+}
+.demo form .submit:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+  background-color: #F129AD;
 }
 .demo .location::before {
   content: url(../img/location.svg);
@@ -946,9 +991,9 @@ a strong {
 }
 .buttons-cta a {
   color: #fff;
-  background-color: #ff6600;
+  background-color: #F129AD;
   padding: 0.5em 1em;
-  border-radius: 4px;
+  border-radius: 25px;
   transition: all 0.2s ease-in-out;
   transform: scale(1);
   display: inline-block;

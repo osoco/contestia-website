@@ -1,6 +1,6 @@
 
 .header{
-	background: $_colorCorporativo1;
+	background: $_colorNegro;
 	color: $_colorBlanco;
 	padding:5px $_padding/2;
  	z-index: 10;
@@ -8,7 +8,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    color:#fff;
     z-index: 1000;
     height: 48px;
     overflow: hidden;
@@ -42,7 +41,8 @@
 
 	
 	.languages {
-		display: none;
+		// display: none;
+		font-size: 12px;
 		text-align: right;
 		margin-bottom: $_margin;
 		margin-top: $_margin;
@@ -58,7 +58,6 @@
 			}
 			a {
 				span {color: $_colorCorporativo2;}
-				&.active span{ color: $_colorBlanco; }
 				@include respond-to-device(slg, false) { 
 					span { 
 					  position: absolute;
@@ -73,6 +72,7 @@
 					&.es::before {content: "ES"}
 					&.en::before {content: "EN"}
 				}
+				&.active{font-weight: bold;}
 			}
 			a:link, a:visited, a:hover, a:active {text-decoration: none;}
 		}
@@ -80,7 +80,6 @@
 	.menu > span {@extend %ph-sr-only;}
 
 	.navigations {
-		background: $_colorCorporativo1 ;
 		text-align: left;
 		@include respond-to-device(false, slg ) { 
 			visibility: hidden; 
@@ -88,6 +87,7 @@
 			top: 48px;
 			position: fixed;
 			&.toggle {
+				background-color: $_colorNegro;
 				visibility: visible;
 			    height: calc(100vh - 50px);
 			    bottom: 0;
@@ -124,6 +124,7 @@
 			font-size: 1.6rem; 
 			text-transform: uppercase;
 			text-decoration: none;
+			color: $_colorCorporativo3s;
 			@include respond-to-device(slg, false) { padding-bottom:13px; }
 			&.l1 {
 				strong{
