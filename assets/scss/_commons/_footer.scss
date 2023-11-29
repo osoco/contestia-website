@@ -4,15 +4,16 @@
 
 .footer {
 	text-align: center;
-	background: $_colorCorporativo1;
+	color: $_colorBlanco;
+	background: $_colorCorporativo5;
 	font-size: 1.6rem;
 	.content {
-		.Home & {border-top:2px solid $_colorGris;}
 		small { font-size: 1.4rem; }		
 		nav {
 			li {
 				margin-left: $_margin;
 				display: inline-block;
+				a{color: $_colorBlanco;}
 			}
 		}
 	}

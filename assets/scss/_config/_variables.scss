@@ -40,11 +40,17 @@ $_fontIcons:  "FontAwesome",  Arial, Helvetica, sans-serif !default;
 
 // CORPORATIVOS
 
-$_colorCorporativo1: #101010 !default; 
-$_colorCorporativo2: #b2b2b2 !default; 
-$_colorCorporativo3: #ff6600 !default; 
-$_colorCorporativo4: #00b2d5 !default; 
-$_colorCorporativo5: #ffc107 !default;
+$_colorCorporativo1: #F3E4EE !default; 
+$_colorCorporativo2: #F394D3 !default; 
+$_colorCorporativo3: #F129AD !default; 
+$_colorCorporativo4: #9A2D6A !default; 
+$_colorCorporativo5: #260015 !default;
+
+$_colorCorporativo1s: #196788 !default; 
+$_colorCorporativo2s: #149FD6 !default; 
+$_colorCorporativo3s: #4DE3F4 !default; 
+$_colorCorporativo4s: #AEEEF5 !default; 
+$_colorCorporativo5s: #F37507 !default;
 
 
 // GENÉRICOS
@@ -55,14 +61,14 @@ $_colorGris:             #888 !default;
 $_colorFilete:           #ddd !default; 
 
 $_colorBase:        $_colorCorporativo1 !default; 
-$_colorLink:        $_colorBase !default;
+$_colorLink:        $_colorCorporativo3 !default;
 $_colorFeatured:    $_colorCorporativo1 !default;
 $_colorNeutro:      $_colorCorporativo2 !default;
 
 
 $_colorText:       #454545 !default; 
 $_colorNeutro:     #EDECEC; 
-$_colorTitle:      $_colorCorporativo1; 
+$_colorTitle:      $_colorCorporativo2; 
 
 
 // TOOL Y SOCIAL MEDIA
@@ -93,7 +99,7 @@ $_colorMeneame		 : #e26615;
 $_padding:      20px        !default;
 $_margin:       $_padding   !default;
 $_indent:       50px;
-$_borderRadius: 4px;
+$_borderRadius: 25px;
 
 
 
