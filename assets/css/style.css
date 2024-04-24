@@ -792,7 +792,7 @@ a strong {
 .features ul li img {
   width: 100%;
   max-width: 200px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
   border: 10px solid #F394D3;
   padding: 0.5em;
@@ -972,7 +972,7 @@ a strong {
 .demo form .submit:hover {
   transition: all 0.2s ease-in-out;
   transform: scale(1.1);
-  background-color: #F129AD;
+  color: #F129AD;
 }
 .demo .location::before {
   content: url(../img/location.svg);
@@ -1001,4 +1001,4 @@ a strong {
 .buttons-cta a:hover {
   transition: all 0.2s ease-in-out;
   transform: scale(1.1);
-}/*# sourceMappingURL=style.css.map */
+}

@@ -143,7 +143,7 @@
 			img{
 				width: 100%;	
 				max-width: 200px;
-				background-color: $_colorBlanco;
+				background-color: rgba($_colorBlanco, .80);
 				border-radius: 50%;
 				border: 10px solid $_colorCorporativo2;
 				padding: .5em;
@@ -301,7 +301,7 @@
 			&:hover{
 				transition: all .2s ease-in-out;
 				transform: scale(1.1);
-				background-color: $_colorCorporativo3;
+				color: $_colorCorporativo3;
 			}
 			
 		}
