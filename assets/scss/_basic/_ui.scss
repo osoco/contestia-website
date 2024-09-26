@@ -31,8 +31,6 @@ input.input, textarea {
 ::-moz-placeholder {color: lighten($_colorText, 10%);} /* FF 19+ */
 :-ms-input-placeholder {color: lighten($_colorText, 10%);}
 
-label { font-size: 1.5rem; }
-
 .top {
 	position: absolute;
 	bottom: -$_margin; 
@@ -49,7 +47,6 @@ a strong {
 	border: 1px solid;
 	padding: 8px $_padding;
 	font-weight: normal;
-	font-size: 1.4rem;
 	white-space: nowrap;
 }
 

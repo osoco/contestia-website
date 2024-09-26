@@ -8,14 +8,6 @@
 // - 01 + FONTS
 // - 02 + COLORS
 // - 03 + GENERIC MEASURES
-// - 04 + SIZES MAP
-// - 05 + BREAKPOINTS MAP
-// - 06 + BOX-SHADOWS MAP
-// - 08 + Z-INDEX
-// - 08 + ROLES MAP
-
-// - 0A + MEDIA-QUERIES CONTROL
-// - 0A + MEDIA-QUERIES CONTROL
 
 $_mediaQueries:     true  !default;
 $_needMobile:       true  !default;
@@ -31,8 +23,8 @@ $_fontsPathCore: "../fonts" !default;
 
 
 // - 01 + FONTS
-$_fontText:     'Raleway', sans-serif;
-$_fontTitle:    'Raleway', sans-serif !default;
+$_fontText:     'Roboto', sans-serif; 
+$_fontTitle:    'Roboto', sans-serif !default;
 $_fontIcons:  "FontAwesome",  Arial, Helvetica, sans-serif !default;
 
 // - 02 + COLORS
@@ -66,7 +58,7 @@ $_colorFeatured:    $_colorCorporativo1 !default;
 $_colorNeutro:      $_colorCorporativo2 !default;
 
 
-$_colorText:       #454545 !default; 
+$_colorText:       #5B3E67 !default; 
 $_colorNeutro:     #EDECEC; 
 $_colorTitle:      $_colorCorporativo2; 
 
@@ -96,7 +88,7 @@ $_colorMeneame		 : #e26615;
 
 
 // - 03 + GENERIC MEASURES
-$_padding:      20px        !default;
+$_padding:      1em        !default;
 $_margin:       $_padding   !default;
 $_indent:       50px;
 $_borderRadius: 25px;

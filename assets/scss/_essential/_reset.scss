@@ -83,6 +83,7 @@ select {
 	vertical-align: middle;
 }
 a {text-decoration: none;}
+img{max-width: 100%;}
 // @include respond-to-browser() { 
 // 	@include respond-to-device(slg, false) {
 // 		a:hover { opacity: .8;	}

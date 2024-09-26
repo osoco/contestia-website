@@ -1,13 +1,12 @@
 main {
 	background-color: $_colorBlanco;
-	margin-top: 48px;		
+	// padding-top: 48px;		
 	@include respond-to-device(slg, false) {
-		margin-top: 90px;
+		// padding-top: 90px;
 		.Page & { padding-top: 50px;}
 	}
 	> * {
-		padding: $_padding 0;
-		@include respond-to-device(xsm, false) { padding: 3*$_padding 0;}
+		padding: max(7vw, $_padding) 0;
 	}
 	position: relative;
 }

@@ -53,7 +53,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Contestia">
 <meta property="fb:app_id" content="">
-
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
 <script type="application/ld+json">
     {
         "@context": "http://schema.org/",
@@ -95,7 +95,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- ==== header ==== -->
     <header class="header">
         <div class="content">
-    	    <h1 class="logo"><a href="/index.html"><img src="assets/img/logoContestia.svg" alt="Contestia"></a></h1>
+    	    <h1 class="logo"><a href="#inicio"><img src="assets/img/logoContestia.svg" alt="Contestia"></a></h1>
             <button class="menu">
                 <span>Menú</span>
                 <div class="hamburger">
@@ -115,8 +115,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         				<li><a href="#inicio" class="active">Home</a></li>
                         <li><a href="#seccion-beneficios">BENEFITS</a></li>
         				<li><a href="#section-funciona">HOW IT WORKS</a></li>
-                        <li><a href="#seccion-uso">CASE STUDIES</a></li>
-        				<li><a href="#section-contacto" class="l1"><strong>Request a demo</strong></a></li>
+                        <li><a href="#seccion-integration">INTEGRATION</a></li>
+                        <li><a href="#seccion-testimonials">TESTIMONIALES</a></li>
+        				<li><div class="btn js-openLightBox">Request a demo</div></li>
         			</ul>
         		</nav>
             </div>
@@ -126,32 +127,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- ==== content ==== -->
     	<main>
     		<section class="welcome" id="inicio">
-                <div class="media">
-                    <!-- <div class="flx-embed"><div style="position:relative; height:0; padding-bottom:56.25%; width:100%"><iframe style="position:absolute; top:0; left:0; width:100%; height:100%;" src="https://media.flixel.com/cinemagraph/ruw52upfe5saqmy5s7xc?hd=true" frameborder="0" allowfullscreen allow='autoplay'></iframe></div></div> -->
-                    <!-- <div class="flx-embed"><div style="position:relative; height:0; padding-bottom:56.28%; width:100%"><iframe style="position:absolute; top:0; left:0; width:100%; height:100%;" src="https://media.flixel.com/cinemagraph/xw33fd117mjqcmcg2ke5?hd=true" frameborder="0" allowfullscreen allow='autoplay'></iframe></div></div> -->
-                    <div class="flx-embed"><div style="position:relative; height:0; padding-bottom:56.25%; width:100%"><iframe style="position:absolute; top:0; left:0; width:100%; height:100%;" src="https://media.flixel.com/cinemagraph/l4bls97oulua6bwqgojf?hd=true" frameborder="0" allowfullscreen allow='autoplay'></iframe></div></div>
-                </div>
                 <div class="content">
-                    <h2 class="t-l2">A simple approach to handle complex processes</h2>
-                    <p>Boost your challenges to the next level with our innovation management platform. Whether you're organizing an awards program, a competition, or an open call, our software is designed to simplify and optimize every step of the process.</p>
-                    <div class="buttons-cta">
-                        <a href="#section-contacto" class="l1">Request a demo</a>
+                    <!-- <div class="welcome-img"></div> -->
+                     <div>
+                        <dotlottie-player src="assets/video/Maquinaria.json" 
+                            background="transparent" 
+                            speed="1" 
+                            style="width: 100%; height: 100%" 
+                            direction="1" 
+                            playMode="normal" loop autoplay></dotlottie-player>
+                    </div>
+                    <div>
+                        <h2><span>Leave the</span> <span>challenges</span> <span class="ooo-title-small">for participants,</span><span> make your</span><span> work easy</span></h2>
+                        <div class="buttons-cta">
+                            <div class="btn js-openLightBox">Request a demo</div>
+                        </div>
                     </div>
                 </div>
     		</section>
             <section class="beneficios" id="seccion-beneficios">
                 <div class="content">
-                    <h2 class="t-l2">Benefits</h2>
+                    <h2>Benefits</h2>
                     <p>Discover the benefits of our innovation management software:</p>
-                    <div class="beneficiosList">
-                        <div>
+                    <div class="beneficiosList ">
+                        <div class="animate-element oculto">
                             <div class="img">
                                 <img src="assets/img/icon-clock.png" alt="">
                             </div>
                             <h3>Save time and resources</h3>
                             <p>Our software simplifies the entire process of tender management, from launching to winners' selection, which saves you valuable time and resources.</p>
                         </div>
-                        <div>
+                        <div class="animate-element oculto">
                             <div class="img">
                                 <img src="assets/img/icon-participa.png" alt="">
                                 </div>
@@ -159,14 +165,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <p>With an intuitive interface and a hassle-free registration process, you will attract more participants and increase participation in your competitions.</p>
 
                         </div>
-                        <div>
+                        <div class="animate-element oculto">
                             <div class="img">
                                 <img src="assets/img/icon-decisipones.png" alt="">
                             </div>
                             <h3>Make informed decisions</h3>
                             <p>Gain valuable information on the performance of your challenges with real-time statistics and detailed analysis, allowing you to make informed decisions for future programs.</p>
                         </div>
-                        <div>
+                        <div class="animate-element oculto">
                             <div class="img">
                                 <img src="assets/img/icon-adapta.png" alt="">
                                 </div>
@@ -176,86 +182,247 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
                 <div class="buttons-cta">
-                    <a href="#section-contacto" class="l1">Request a demo</a>
+                    <div class="btn js-openLightBox">Request a demo</div>
                 </div>
             </section>
     		<section class="como-funciona" id="section-funciona">
-                <div class="content">
-        			<h1 class="t-l2">How does it work?</h1>
-        			<ol>
-        				<li>
-        					<h2 class="t-l3">Launch the competition</h2>
-        					<p>Create and customize your challenge on our easy-to-use platform.
-                            </p>
-                            <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.28 100">
-                                <path d="m437.56,5.82c.92-2.6,3.77-3.96,6.37-3.04,2.6.92,3.97,3.77,3.06,6.37-.09.27-9.35,27.4,5.18,47.88,11.51,16.23,34.76,24.45,69.1,24.45h335.1s0-9.96,0-9.96l25.9,14.96-25.9,14.96v-9.96s-335.1,0-335.1,0c-37.82,0-63.83-9.67-77.31-28.75-17.5-24.77-6.86-55.62-6.4-56.92Z"/>
-                              </svg>
-        				</li>
-        				<li>
-        					<h2 class="t-l3">Participants registration</h2>
-        					<p>Customize the registration form to obtain additional relevant data for your contest.</p>
-                            <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.28 100">
-                                <path d="m444.71,4.37c-.92-2.6-3.77-3.96-6.37-3.04-2.6.92-3.97,3.77-3.06,6.37.09.27,9.35,27.4-5.18,47.88-11.51,16.23-34.76,24.45-69.1,24.45H25.9v-9.96L0,85.04l25.9,14.96v-9.96h335.1c37.82,0,63.83-9.67,77.31-28.75,17.5-24.77,6.86-55.62,6.4-56.92Z"/>
-                              </svg>
-        				</li>
-        				<li>
-        					<h2 class="t-l3">Track statistics in real time</h2>
-        					<p>Gain valuable insight into the performance of your challenge through real-time statistics. Go to track the progress of your competition and get a clear view of its success.</p>
-                            <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.28 100">
-                                <path d="m437.56,5.82c.92-2.6,3.77-3.96,6.37-3.04,2.6.92,3.97,3.77,3.06,6.37-.09.27-9.35,27.4,5.18,47.88,11.51,16.23,34.76,24.45,69.1,24.45h335.1s0-9.96,0-9.96l25.9,14.96-25.9,14.96v-9.96s-335.1,0-335.1,0c-37.82,0-63.83-9.67-77.31-28.75-17.5-24.77-6.86-55.62-6.4-56.92Z"/>
-                              </svg>
-        				</li>
-        				<li>
-        					<h2 class="t-l3">Management of rounds and evaluators</h2>
-        					<p>Organises and manages evaluation rounds efficiently. Assigns tasks to evaluators and establishes schedules for each round.</p>
-                            <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.28 100">
-                                <path d="m444.71,4.37c-.92-2.6-3.77-3.96-6.37-3.04-2.6.92-3.97,3.77-3.06,6.37.09.27,9.35,27.4-5.18,47.88-11.51,16.23-34.76,24.45-69.1,24.45H25.9v-9.96L0,85.04l25.9,14.96v-9.96h335.1c37.82,0,63.83-9.67,77.31-28.75,17.5-24.77,6.86-55.62,6.4-56.92Z"/>
-                              </svg>
-        				</li>
-        				<li>
-        					<h2 class="t-l3">Announcement of results</h2>
-        					<p>Communicates results to participants in a clear and timely manner. Download a results report and keep participants in a secure database for future calls.</p>
-        				</li>
-        			</ol>
+                <div class="section-content-01">
+                    <div class="content">
+                                        <h2>How does it work?</h2>
+                            <h3>Launch</h3>
+                            <p>The Widget focuses on providing a fully customizable form that seamlessly integrates with your existing systems. This widget allows you to personalize every aspect of your communication, from branding to content, ensuring that your audience receives tailored messages that resonate. With flexible integration options, the widget adapts to your specific needs, enhancing user engagement right from the start.</p>
+                            <ul class="stack-cards js-stack-cards">
+                                <li data-theme="default" class="stack-cards__item js-stack-cards__item animate-element">
+                                <div>
+                                    <h4>Fully Customizable Form</h4>
+                                    <div class="stack-card-content">
+                                        <div>
+                                            <p>The fully customizable form is designed to meet the unique needs of your business. This feature allows complete control over the form's layout, fields, and aesthetics, ensuring it aligns perfectly with your brand identity. Whether you need to collect specific information or cater to a particular audience, you can tailor the form to suit any requirement. This flexibility helps in creating a user-friendly interface that can lead to higher completion rates and more accurate data collection.</p>
+                                        </div>
+                                        <div class="stack-card-img animate-element oculto">
+                                            <dotlottie-player src="assets/video/AddCuestion.json" 
+                                                background="transparent" 
+                                                speed="1" 
+                                                style="width: 100%; height: 100%" 
+                                                direction="1" 
+                                                playMode="normal" loop autoplay></dotlottie-player>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+                    
+                                <li data-theme="default" class="stack-cards__item js-stack-cards__item animate-element">
+                                <div>
+                                    <h4>Tailored Integration</h4>
+                                    <div class="stack-card-content">
+                                        <div>
+                                            <p>Tailored integration ensures that the widget seamlessly connects with your existing platforms and workflows. This integration is designed to be hassle-free, supporting a wide range of APIs and services. Whether you're integrating with CRM systems, marketing platforms, or customer databases, the widget adapts to your technological ecosystem. This coherence between systems reduces the learning curve for your team and minimizes disruption, leading to a smoother operation and enhanced user experience.</p>
+                                        </div>
+                                        <div class="stack-card-img animate-element">
+                                            <img src="assets/img/tailoredIntegration.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+                    
+                                <li data-theme="default" class="stack-cards__item js-stack-cards__item animate-element">
+                                <div>
+                                    <h4>Personalized Communications</h4>
+                                    <div class="stack-card-content">
+                                        <div>
+                                            <p>Personalized communications enable you to engage with your audience in a more meaningful and effective way. This feature leverages user data to customize each interaction, from the language and tone of messages to the timing and channel of delivery. By tailoring communications to the individual preferences and behaviors of users, your messages are more likely to resonate, increasing engagement and fostering stronger relationships. This personal touch can significantly enhance customer satisfaction and loyalty.</p>
+                                        </div>
+                                        <div class="stack-card-img animate-element">
+                                            <img src="assets/img/personalizedCommunications.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+                            </ul>
+                    </div>
                 </div>
-                <div class="buttons-cta">
-                    <a href="#section-contacto" class="l1">Request a demo</a>
-                </div>
+                    <div class="section-content-02">
+                        <div class="content">
+                            <h3>COLLECT</h3>
+                                <p>Our backoffice system streamlines your workflow with automation, enabling efficient data collection and management. It's designed to be data-driven, providing you with actionable insights to make informed decisions. Plus, with the upcoming AI Tag Generator feature, you'll be able to categorize and analyze data more intelligently, taking your operations to the next level.</p>
+                                <ul class="stack-cards js-stack-cards">
+                                    <li data-theme="default" class="stack-cards__item js-stack-cards__item animate-element">
+                                        <h4>Automated Workflows</h4>
+                                        <div class="stack-card-content">
+                                            <div>
+                                                <p>The fully customizable form is designed to meet the unique needs of your business. This feature allows complete control over the form's layout, fields, and aesthetics, ensuring it aligns perfectly with your brand identity. Whether you need to collect specific information or cater to a particular audience, you can tailor the form to suit any requirement. This flexibility helps in creating a user-friendly interface that can lead to higher completion rates and more accurate data collection.</p>
+                                            </div>
+                                            <div class="stack-card-img animate-element">
+                                                <img src="assets/img/createNewRound.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                        
+                                    <li data-theme="default" class="stack-cards__item js-stack-cards__item animate-element">
+                                        <h4>Data-Driven</h4>
+                                        <div class="stack-card-content">
+                                            <div>
+                                                <p>The data-driven feature of Contestia emphasizes the power of analytics to refine and guide your operations. This capability involves collecting, analyzing, and utilizing data to make informed decisions and improve outcomes. With comprehensive analytics tools, you can track performance metrics, user engagement, and operational efficiency. These insights allow you to identify trends, predict outcomes, and adjust strategies in real-time, thereby optimizing the effectiveness of your contests and ensuring that your decisions are backed by solid data.</p>
+                                            </div>
+                                            <div class="stack-card-img animate-element">
+                                                <img src="assets/img/analytics.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                        
+                                    <li data-theme="default" class="stack-cards__item js-stack-cards__item animate-element">
+                                        <h4>Coming Soon – AI Tag Generator</h4>
+                                        <div class="stack-card-content">
+                                            <div>
+                                                <p>The upcoming AI Tag Generator is an innovative feature set to revolutionize how data is categorized and utilized in Contestia. This tool will use artificial intelligence to automatically generate tags for data entries, significantly speeding up the organization and retrieval of information. By leveraging machine learning algorithms, the AI Tag Generator will provide accurate, context-aware tagging, making data easier to manage and analyze. This feature promises to enhance data usability and accessibility, enabling more sophisticated analyses and more personalized user experiences.</p>
+                                            </div>
+                                            <div class="stack-card-img animate-element">
+                                                <img src="assets/img/tags.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    </ul>
+                        </div>
+                    </div>
+                    <div class="section-content-03">
+                        <div class="content">
+                            <h3>EVALUATE</h3>
+                                <p>Evaapp is a powerful tool for matching applications with the right evaluators. It’s driven by data to provide observability into the evaluation process, ensuring that the best candidates are selected. With deep insights at your fingertips, you can make decisions with confidence and precision, enhancing the overall effectiveness of your evaluations.</p>
+                                <ul class="stack-cards js-stack-cards">
+                                    <li data-theme="default" class="stack-cards__item js-stack-cards__item animate-element">
+                                        <h4>Successful Application Match-Making</h4>
+                                        <div class="stack-card-content">
+                                        <div>
+                                            <p>Evaapp is designed to optimize the match-making process between applications and opportunities or evaluators, ensuring successful outcomes. This feature uses a sophisticated algorithm to assess the compatibility of candidates with specific criteria or opportunities, enhancing the accuracy of matches. It considers various factors, including applicant qualifications, past experiences, and specific requirements of the opportunity, to ensure a high success rate. This targeted approach not only improves the efficiency of the selection process but also increases satisfaction among both applicants and evaluators by aligning expectations and capabilities.</p>
+                                        </div>
+                                        <div class="stack-card-img">
+                                            <dotlottie-player src="assets/video/autoAssign.json" 
+                                                background="transparent" 
+                                                speed="1" 
+                                                style="width: 100%; height: 100%" 
+                                                direction="1" 
+                                                playMode="normal" loop autoplay></dotlottie-player>
+                                        </div>
+                                        </div>
+                                    </li>
+                        
+                                    <li data-theme="default" class="stack-cards__item js-stack-cards__item animate-element">
+                                        <h4>Data-Driven Observability</h4>
+                                        <div class="stack-card-content">
+                                        <div>
+                                            <p>Data-driven observability in Evaapp provides a comprehensive view of the entire application process, allowing for real-time monitoring and management. This feature enables you to track evaluator’s activity, and assess the overall performance of the match-making process. By integrating data from various touchpoints, Evaapp offers a holistic view of operations, identifying bottlenecks and opportunities for improvement. This level of observability ensures that decisions are informed and that the system remains transparent and accountable.</p>
+                                        </div>
+                                        <div class="stack-card-img"></div>
+                                        </div>
+                                    </li>
+                        
+                                    <li data-theme="default" class="stack-cards__item js-stack-cards__item animate-element">
+                                        <h4>Get Insights</h4>
+                                        <div class="stack-card-content">
+                                        <div>
+                                            <p>The "Get Insights" feature in Evaapp is crucial for extracting valuable feedback from the grades and comments provided by evaluators on each application. This tool analyzes evaluator feedback to give you a comprehensive understanding of an application's strengths and weaknesses as perceived by the evaluators.</p>
+                                        </div>
+                                        <div class="stack-card-img"></div>
+                                        </div>
+                                    </li>
+                                    </ul>
+                        </div>
+                    </div>
+                    <div class="buttons-cta">
+                        <div class="btn js-openLightBox">Request a demo</div>
+                    </div>
     		</section>
-            <section class="features" id="seccion-uso">
+            <section class="integration" id="seccion-integration">
                 <div class="content">
-                    <h2 class="t-l2">Case studies</h2>
-                    <p>All-in-one platform to manage the whole process: Launch, registration, evaluation and selection of ideas.</p>
-                    <ul>
-                        <li>
-                            <div><img src="assets/img/birrete.png" alt=""></div>
-                            Grants & Scholarships
-                        </li>       
-                        <li>
-                            <div><img src="assets/img/puzzle.png" alt=""></div>
-                            Corporate co-innovation
-                        </li>   
-                        <li>
-                            <div><img src="assets/img/edit.png" alt=""></div>
-                            Call for papers
-                        </li>  
-                        <li>
-                            <div><img src="assets/img/bombilla.png" alt=""></div>
-                            Open Innovation challenges
-                        </li> 
-                        <li>
-                            <div><img src="assets/img/cohete.png" alt=""></div>
-                            Startup challenges and scouting
-                        </li>
-                    </ul>
+                    <h2>Integration</h2>
+                    <img src="assets/img/integration.svg" alt="">
                 </div>
             </section>
-    		<div class="demo" id="section-contacto">
+            <section class="testimonials" id="seccion-testimonials">
                 <div class="content">
-            	        <h2 class="t-l2">Tell us your needs</h2>
-            			<p>Tell us what you need and let's talk about how Contestia can help you,</p>
-                        <p>We can provide you with a demo and a personalized quote without obligation..</p>		  
-       			<form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" >
+                    <h2>Testimonials</h2>
+                    <div class="card-container">
+                        <!-- Primera fila de cards -->
+                        <div class="card animate-element">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="assets/img/testimonio01.jpg" alt="Imagen 1">
+                                </div>
+                                <div class="card-back">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam similique aperiam atque error repellat asperiores tempore, fugit eveniet impedit minima. Non similique voluptates, obcaecati officiis consectetur praesentium ratione nulla! Harum.</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="card animate-element">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="assets/img/testimonio02.jpg" alt="Imagen 2">
+                                </div>
+                                <div class="card-back">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam similique aperiam atque error repellat asperiores tempore, fugit eveniet impedit minima. Non similique voluptates, obcaecati officiis consectetur praesentium ratione nulla! Harum.</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="card animate-element">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="assets/img/testimonio03.jpg" alt="Imagen 3">
+                                </div>
+                                <div class="card-back">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam similique aperiam atque error repellat asperiores tempore, fugit eveniet impedit minima. Non similique voluptates, obcaecati officiis consectetur praesentium ratione nulla! Harum.</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Segunda fila de cards -->
+                        <div class="card animate-element">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="assets/img/testimonio04.jpg" alt="Imagen 4">
+                                </div>
+                                <div class="card-back">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam similique aperiam atque error repellat asperiores tempore, fugit eveniet impedit minima. Non similique voluptates, obcaecati officiis consectetur praesentium ratione nulla! Harum.</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="card animate-element">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="assets/img/testimonio05.jpg" alt="Imagen 5">
+                                </div>
+                                <div class="card-back">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam similique aperiam atque error repellat asperiores tempore, fugit eveniet impedit minima. Non similique voluptates, obcaecati officiis consectetur praesentium ratione nulla! Harum.</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="card animate-element">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="assets/img/testimonio06.jpg" alt="Imagen 6">
+                                </div>
+                                <div class="card-back">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam similique aperiam atque error repellat asperiores tempore, fugit eveniet impedit minima. Non similique voluptates, obcaecati officiis consectetur praesentium ratione nulla! Harum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <a href="#fbody" class="top" title="subir" ><span>Top</span></a>
+        </main>
+        <div class="lightbox">
+            <div class="demo" id="section-contacto">
+                <div class="js-openLightBox btn-close"><div>X</div></div>
+                <h2>Tell us your needs</h2>
+                <div class="content">
+                    <div class="form">
+                        <p>Tell us what you need and let's talk about how Contestia can help you,</p>
+                        <p>We can provide you with a demo and a personalized quote without obligation..</p>
+                        <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" >
                         <div>
                             <div class="organization">
                                 <label for="name-company" id="organization">Name or Company:</label>
@@ -269,16 +436,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <label for="details" id="message">What you want to tell us::</label>
                                 <textarea name="message" id="details" rows="5" aria-labelledby="message"></textarea>
                             </div>
-                            <div data-netlify-recaptcha="true"></div>			    
-                         </div>      
+                            <div data-netlify-recaptcha="true"></div>
+                            </div>
                             <input class="submit" type="submit" value="Enviar">
-            			</form>	
-        			<p><a href="https://goo.gl/maps/rbLXACdvKit"  target="_blank" class="location">We are in Madrid,</a> so don't hesitate to come and visit us.</p>
-                    <p>Or you can write to us at: <a href="mailto:hola@contestia.es">hola@contestia.es</a></p>
-                 </div>
-    		</div>
-            <a href="#fbody" class="top" title="subir" ><span>Top</span></a>
-        </main>
+                        </form>
+                        <p><a href="https://goo.gl/maps/rbLXACdvKit"  target="_blank" class="location">We are in Madrid,</a> so don't hesitate to come and visit us.</p>
+                        <p>Or you can write to us at: <a href="mailto:hola@contestia.es">hola@contestia.es</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- ==== End content ==== -->
     </div>
     <!-- ==== End container ==== -->
@@ -297,75 +464,115 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 </footer> 
     <!-- ==== End footer ==== -->
+<script src="assets/js/stacking-cards.js"></script>
 <script>
-$(".menu").click(function() {
-   $(this).toggleClass("toggle");
-   $(".navigations").toggleClass("toggle")
-   $(".header").toggleClass("toggle")
-});
-$(".main-menu a").click(function() {
-    $(".menu").removeClass("toggle");
-    $(".navigations").removeClass("toggle");
-    $(".header").removeClass("toggle");
-});
+    $(document).ready(function () {
 
-</script>
+        // Cacheo de selectores que se usan varias veces
+        const $menu = $(".menu");
+        const $navigations = $(".navigations");
+        const $header = $(".header");
+        const $mainMenuLinks = $(".main-menu a");
+        const $animateElements = $(".animate-element");
+        const $window = $(window);
+        const $body = $('body');
 
-<script>
-    $(window).scroll(function(){
-        if ($(window).scrollTop() >= 300) {
-            $('header').addClass('fixed-header');
-        }
-        else {
-            $('header').removeClass('fixed-header');
+        // Función para alternar la visibilidad del menú
+        function toggleMenu() {
+            $menu.toggleClass("toggle");
+            $navigations.toggleClass("toggle");
+            $header.toggleClass("toggle");
         }
 
-    function getCurrentScroll() {
-    return window.pageYOffset || document.documentElement.scrollTop;
-    }
-});
-</script>
-</script>
-<script>
-$(document).ready(function () {
-    $(document).on("scroll", onScroll);
-    
-    //smoothscroll
-    $('a[href^="#"]').on('click', function (e) {
-        e.preventDefault();
-        $(document).off("scroll");
-        
-        $('a').each(function () {
-            $(this).removeClass('active');
-        })
-        $(this).addClass('active');
-      
-        var target = this.hash,
-            menu = target;
-        $target = $(target);
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top+2
-        }, 500, 'swing', function () {
-            window.location.hash = target;
-            $(document).on("scroll", onScroll);
+        // Al hacer clic en el menú
+        $menu.click(toggleMenu);
+
+        // Al hacer clic en un enlace del menú principal, cerrar el menú
+        $mainMenuLinks.click(function () {
+            $menu.removeClass("toggle");
+            $navigations.removeClass("toggle");
+            $header.removeClass("toggle");
         });
-    });
-});
 
-function onScroll(event){
-    var scrollPos = $(document).scrollTop();
-    $('#main-menu a').each(function () {
-        var currLink = $(this);
-        var refElement = $(currLink.attr("href"));
-        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('#main-menu ul li a').removeClass("active");
-            currLink.addClass("active");
+        // Función para animar scroll a una sección
+        function smoothScrollTo(target) {
+            $('html, body').stop().animate({
+                'scrollTop': $(target).offset().top
+            }, 500, 'swing', function () {
+                window.location.hash = target;
+                $document.on("scroll", onScroll);
+            });
         }
-        else{
-            currLink.removeClass("active");
+
+        // Navegación suave al hacer clic en un enlace con href="#"
+        $('a[href^="#"]').on('click', function (e) {
+            e.preventDefault();
+
+            $document.off("scroll");  // Desactivar la función de scroll temporalmente
+
+            // Quitar la clase 'active' de todos los enlaces
+            $('a').removeClass('active');
+
+            // Añadir la clase 'active' al enlace actual
+            $(this).addClass('active');
+
+            // Desplazar suavemente hacia la sección
+            smoothScrollTo(this.hash);
+        });
+
+        // Función para abrir/cerrar el Lightbox
+        $(".js-openLightBox").on("click", function () {
+            $body.toggleClass('openLB');
+        });
+
+        // Función que comprueba si al menos el 33% del elemento es visible en el viewport
+        function isElementInViewport(el) {
+            const elementTop = $(el).offset().top;
+            const elementHeight = $(el).outerHeight();
+            const elementBottom = elementTop + elementHeight;
+            const viewportTop = $window.scrollTop();
+            const viewportBottom = viewportTop + $window.height();
+
+            const threshold = elementHeight * 0.33; // Cambiado a 33%
+
+            return elementBottom - threshold > viewportTop && elementTop + threshold < viewportBottom;
         }
+
+        // Función que revisa la visibilidad de los elementos con la clase "animate-element"
+        function checkVisibility() {
+            $animateElements.each(function () {
+                const $this = $(this);
+                if (isElementInViewport($this)) {
+                    $this.removeClass('oculto').addClass('visible');
+                } else {
+                    $this.removeClass('visible').addClass('oculto');
+                }
+            });
+        }
+
+        // Ejecutar al hacer scroll y al cargar la página
+        $window.on('scroll resize', checkVisibility);
+        checkVisibility(); // Para que se ejecute al cargar la página
+
+        // Función que detecta el scroll actual y resalta el enlace del menú correspondiente
+        function onScroll() {
+            const scrollPos = $window.scrollTop();
+
+            $mainMenuLinks.each(function () {
+                const $currLink = $(this);
+                const refElement = $($currLink.attr("href"));
+
+                if (refElement.length && refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                    $mainMenuLinks.removeClass("active");
+                    $currLink.addClass("active");
+                }
+            });
+        }
+
+        // Monitorizar el scroll para cambiar la clase activa del menú
+        const $document = $(document);
+        $document.on("scroll", onScroll);
     });
-}
 </script>
 </div>
 </body>

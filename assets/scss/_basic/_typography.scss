@@ -1,25 +1,25 @@
-html {font-size: 62.5%;}
+html {font-size: max(1.125rem,1.25vw);}
 body {
-	font-family:'Raleway', sans-serif;
-	font-size: 1.8rem;
-	line-height:1.4;
+	font-family:'Roboto', sans-serif;
 	color: $_colorText;
 	background-color: $_colorNegro;
+	line-height: 1.45;
 }
-h1, h2, h3 { 
+h1, h2, h3, h4 { 
 	font-family:'Exo', sans-serif; 
-	font-weight: normal; 
-	line-height: 1.2;
+	font-weight: bold; 
 	letter-spacing: -0.2px;
 	.Page main & {margin-bottom: $_margin}
 }
+h2{
+	font-size: max(2.5rem,4vw);
+	text-align: center;
+}
 .t-l2 {
-	font-size: 3.5rem; 
 	margin-bottom: $_margin;
 	@include respond-to-device(xsm, false) {margin-bottom: $_margin*2;}
 }
 .t-l3 {
-	font-size: 2.5rem; 
 	margin-bottom: $_margin/2;
 	@include respond-to-device(xsm, false) {margin-bottom: $_margin;}
 }

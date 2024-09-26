@@ -5,17 +5,51 @@
 .buttons-cta{
     text-align: center;
     margin: $_margin 0;
-    a{
-        color: $_colorBlanco;
-        background-color: $_colorCorporativo3;
-        padding: .5em 1em;
-        border-radius: $_borderRadius;
+}
+.btn{
+    color: $_colorBlanco;
+    background-color: $_colorCorporativo3;
+    cursor: pointer;
+    padding: .5em 1em;
+    border-radius: $_borderRadius;
+    transition: all .2s ease-in-out;
+    transform: scale(1.0);
+    display: inline-block;
+    &:hover{
         transition: all .2s ease-in-out;
-        transform: scale(1.0);
+        transform: scale(1.1);
+    }
+}
+.btn-close{
+    padding: .5em;
+    text-align: right;
+    div{
         display: inline-block;
-        &:hover{
-            transition: all .2s ease-in-out;
-            transform: scale(1.1);
-        }
+        font-size: 1.4em;
+        font-weight: bold;
+        cursor: pointer;
+        color: #F129AD;
+        background-color: #fff;
+        border-radius: 50%;
+        width: 1.4em;
+        text-align: center;
+    }
+
+}
+.lightbox{
+    top: -1000vh;
+    position: fixed;
+    background-color: $_colorCorporativo4s;
+    z-index: 1000;
+    width: 100svw;
+    height: 100svh;
+    transition: opacity .5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    .openLB &{
+        top: 0;
+        opacity: 1;
+        transition: opacity .5s ease-in-out;
+        pointer-events: all;
     }
 }
