@@ -190,7 +190,7 @@ body{
 				}
 			}
 			.stack-card-img{
-				filter: drop-shadow(5px 5px 20px #000);
+				filter: drop-shadow(5px 5px 20px #160f2c);
 				transform: rotate(4deg);
 				grid-column-start: 1;
 				grid-row-start: 1;
@@ -412,7 +412,27 @@ body{
 	.content{display: grid};
 	h2{margin-bottom: 4vw;}
 	img{margin: auto;}
-
+	ul{
+		justify-content: center;
+		font-size: 2em;
+		display: flex;
+		flex-wrap: wrap;
+		li{
+			display: flex;
+			align-items: center;
+			img{
+				height: 2em;
+				margin-right: .3em;
+			}
+			&:not(:last-child){
+				&::after{
+					content: ", ";
+					display: inline;
+					padding-right: .5em;
+				}
+			}
+		}
+	}
 }
 // Seccion Testimonios
 .testimonials{
@@ -500,9 +520,24 @@ body{
 			color: #fff;
 			transform: rotateY(180deg);
 			padding: 1em 2em;
+			font-size: clamp(14px, 1.2vw, 50px);
+			font-weight: 100;
 			p{
 				text-align: center;
-				font-style: italic;
+				&.testimonio{
+					font-style: italic;
+					&::after, &::before{
+						font-size: 1.2em;
+						display: inline-block;
+						content: '"';
+					}
+				}
+				strong{
+					display: block;
+				}
+				small{
+					font-size: .8em;
+				}
 			}
 		}
 		&.oculto{
