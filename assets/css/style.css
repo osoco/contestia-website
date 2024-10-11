@@ -117,7 +117,7 @@ q {
 
 ins {
   background-color: #ccc;
-  color: #000;
+  color: #160f2c;
   text-decoration: none;
 }
 
@@ -172,7 +172,7 @@ img {
 }
 
 .header {
-  background: #000;
+  background: #160f2c;
   color: #fff;
   padding: 5px 0.5em;
   z-index: 10;
@@ -270,7 +270,7 @@ img {
     position: fixed;
   }
   .header .navigations.toggle {
-    background-color: #000;
+    background-color: #160f2c;
     visibility: visible;
     height: calc(100vh - 50px);
     bottom: 0;
@@ -464,7 +464,7 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   color: #5B3E67;
-  background-color: #000;
+  background-color: #160f2c;
   line-height: 1.45;
 }
 
@@ -598,7 +598,7 @@ a strong {
 
 .submit:hover {
   box-shadow: inset 0 -3.25em 0 0 #fff;
-  color: #000;
+  color: #160f2c;
   -webkit-transition: 0.4s ease-in-out all;
   -moz-transition: 0.4s ease-in all;
   transition: 0.4s ease-in all;
@@ -798,7 +798,7 @@ body h3 + p {
   }
 }
 .como-funciona > .section-content-01 .stack-cards__item:first-child .stack-card-img {
-  filter: drop-shadow(5px 5px 20px #000);
+  filter: drop-shadow(5px 5px 20px #160f2c);
   transform: rotate(4deg);
   grid-column-start: 1;
   grid-row-start: 1;
@@ -991,8 +991,6 @@ body h3 + p {
   transform: rotate(-4deg) translateY(2em);
 }
 .como-funciona .stack-cards__item {
-  position: sticky;
-  top: 10svw;
   min-height: 50vh;
   transform-origin: center;
   color: #5B3E67;
@@ -1001,6 +999,7 @@ body h3 + p {
   box-shadow: 0px -10px 10px 0px rgba(45, 0, 22, 0.2);
   border: 1px solid #160F2C;
   padding: 2vw max(5vw, 20px);
+  margin-bottom: 0.5em;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1017,6 +1016,9 @@ body h3 + p {
 @media screen and (min-width: 768px) {
   .como-funciona .stack-cards__item {
     max-width: 80vw;
+    position: sticky;
+    top: 10svw;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1041,9 +1043,13 @@ body h3 + p {
 }
 .integration ul {
   justify-content: center;
-  font-size: 2em;
   display: flex;
   flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .integration ul {
+    font-size: 2rem;
+  }
 }
 .integration ul li {
   display: flex;
@@ -1164,10 +1170,9 @@ body h3 + p {
 }
 .demo h2 {
   font-size: max(2rem, 4vw);
-  position: fixed;
+  position: sticky;
+  z-index: 2;
   top: 0;
-  left: 0;
-  right: 0;
   padding: 10px 46px 10px 10px;
   background-color: rgba(174, 238, 245, 0.8);
 }
@@ -1175,14 +1180,13 @@ body h3 + p {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 2;
+  z-index: 3;
 }
 .demo .content {
   text-align: center;
   display: grid;
   align-items: center;
   justify-content: center;
-  padding-top: 16vw;
 }
 .demo .content a {
   color: #F129AD;

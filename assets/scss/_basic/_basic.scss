@@ -376,11 +376,6 @@ body{
 	}
 
 	.stack-cards__item {
-		position: sticky;
-		top: 10svw;
-		@include respond-to-device(xmd, false) {
-			top: 8svw;
-		}
 		min-height: 50vh;
 		transform-origin: center;
 		color: #5B3E67;
@@ -389,11 +384,18 @@ body{
 		box-shadow: 0px -10px 10px 0px rgba(45, 0, 22, 0.2);
 		border: 1px solid #160F2C;
 		padding: min(2vw) max(5vw, 20px);
+		margin-bottom: $_padding / 2;
+		@include respond-to-device(xmd, false) {
+			top: 8svw;
+		}
 		@include respond-to-device(xmd, false) {
 			max-width: 90vw;
 		}
 		@include respond-to-device(md, false) {
 			max-width: 80vw;
+			position: sticky;
+			top: 10svw;
+			margin-bottom: 0;
 		}
 		@include respond-to-device(lg, false) {
 			max-width: 70vw;
@@ -414,7 +416,9 @@ body{
 	img{margin: auto;}
 	ul{
 		justify-content: center;
-		font-size: 2em;
+		@include respond-to-device(md, false) {
+			font-size: 2rem;
+		}
 		display: flex;
 		flex-wrap: wrap;
 		li{
@@ -553,10 +557,9 @@ body{
 	height: 100svh;
 	h2{
 		font-size: max(2rem, 4vw);
-		position: fixed;
+		position: sticky;
+		z-index: 2;
 		top: 0;
-		left: 0;
-		right: 0;
 		padding: 10px 46px 10px 10px;
 		background-color: rgba($color: #AEEEF5, $alpha: 0.8);
 	}
@@ -564,14 +567,13 @@ body{
 		position: fixed;
 		top: 0;
 		right: 0;
-		z-index: 2;
+		z-index: 3;
 	}
 	.content {
 		text-align: center;
 		display: grid;
 		align-items: center;
 		justify-content: center;
-		padding-top: 16vw;
 		a{color: $_colorCorporativo3;}
 		p {
 			margin-bottom: $_margin/2;
