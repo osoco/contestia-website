@@ -1147,7 +1147,7 @@ body h3 + p {
   cursor: pointer;
 }
 .testimonials .card .card-back:has(.more-info) {
-  border: 2px solid #F129AD;
+  border: 4px solid #F129AD;
 }
 .testimonials .card .card-back p {
   text-align: center;
