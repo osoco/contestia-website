@@ -1056,7 +1056,7 @@ body h3 + p {
   align-items: center;
 }
 .integration ul li img {
-  height: 2em;
+  height: 1.3em;
   margin-right: 0.3em;
 }
 .integration ul li:not(:last-child)::after {
