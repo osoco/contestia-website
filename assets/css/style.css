@@ -1142,6 +1142,13 @@ body h3 + p {
   font-size: clamp(14px, 1.2vw, 50px);
   font-weight: 100;
 }
+.testimonials .card .card-back .more-info {
+  color: #F129AD;
+  cursor: pointer;
+}
+.testimonials .card .card-back:has(.more-info) {
+  border: 2px solid #F129AD;
+}
 .testimonials .card .card-back p {
   text-align: center;
 }
@@ -1314,9 +1321,60 @@ body h3 + p {
   opacity: 0;
   pointer-events: none;
 }
-.openLB .lightbox {
+.lightbox.open {
   top: 0;
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
   pointer-events: all;
+}
+
+#testimonial-samantha .demo {
+  display: flex;
+}
+#testimonial-samantha .lightbox-content {
+  padding: 2em;
+  border-radius: 15px;
+  overflow: auto;
+  box-shadow: 0px -10px 10px 0px rgba(45, 0, 22, 0.2);
+  background: #fff;
+}
+@media screen and (min-width: 1024px) {
+  #testimonial-samantha .lightbox-content {
+    max-width: 80vw;
+    margin: auto;
+  }
+}
+#testimonial-samantha .lightbox-content p {
+  font-style: italic;
+}
+#testimonial-samantha img {
+  margin: 0 2vw 3vw 0;
+  padding: 1em;
+  background-color: #fff;
+  border-radius: 5px;
+  transform: rotate(3deg);
+  box-shadow: 0px -10px 10px 0px rgba(45, 0, 22, 0.2);
+  border: 1px solid #f2f2f2;
+}
+@media screen and (min-width: 768px) {
+  #testimonial-samantha img {
+    float: left;
+    max-width: 50vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #testimonial-samantha img {
+    margin: 0 2vw 3vw 0;
+    max-width: 25vw;
+  }
+}
+#testimonial-samantha .signature {
+  text-align: right;
+}
+#testimonial-samantha .signature strong {
+  display: block;
+}
+
+.js-open-lightbox {
+  cursor: pointer;
 }

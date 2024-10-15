@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #666;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #666;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 9.91px;
+      }
+    </style>
+  </defs>
+  <g>
+    <rect class="cls-1" x="27.57" y="15.5" width="94.85" height="119.01"/>
+    <path class="cls-2" d="M117.47,20.45v109.09H32.53V20.45h84.94M127.38,10.54H22.62v128.92h104.76V10.54h0Z"/>
+  </g>
+  <g>
+    <path class="cls-1" d="M109.08,93.65c-15.73,0-28.53-12.8-28.53-28.53s12.8-28.53,28.53-28.53,28.53,12.8,28.53,28.53-12.8,28.53-28.53,28.53Z"/>
+    <path class="cls-2" d="M109.08,41.54c13,0,23.58,10.58,23.58,23.58s-10.58,23.58-23.58,23.58-23.58-10.58-23.58-23.58,10.58-23.58,23.58-23.58M109.08,31.63c-18.49,0-33.49,14.99-33.49,33.49s14.99,33.49,33.49,33.49,33.49-14.99,33.49-33.49-14.99-33.49-33.49-33.49h0Z"/>
+  </g>
+  <g>
+    <polyline class="cls-1" points="93.39 65.11 105.47 78.47 121.58 54.73"/>
+    <polyline class="cls-3" points="93.39 65.11 105.47 78.47 121.58 54.73"/>
+  </g>
+  <g>
+    <rect class="cls-2" x="45.07" y="34.75" width="54.77" height="6.73"/>
+    <rect class="cls-2" x="45.07" y="59.34" width="36.24" height="6.73"/>
+    <rect class="cls-2" x="45.07" y="83.29" width="45.41" height="8"/>
+    <rect class="cls-2" x="45.07" y="107.88" width="64.01" height="8"/>
+  </g>
+</svg>

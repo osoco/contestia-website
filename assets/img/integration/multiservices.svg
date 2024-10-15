@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #666;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="75" cy="73.65" r="16.06"/>
+  <g>
+    <circle class="cls-1" cx="75" cy="21.26" r="11.35"/>
+    <rect class="cls-1" x="72.5" y="21.26" width="5" height="53.74"/>
+  </g>
+  <g>
+    <circle class="cls-1" cx="113" cy="37" r="11.35"/>
+    <rect class="cls-1" x="67.13" y="53.5" width="53.74" height="5" transform="translate(-12.07 82.87) rotate(-45)"/>
+  </g>
+  <g>
+    <circle class="cls-1" cx="128.74" cy="75" r="11.35"/>
+    <rect class="cls-1" x="75" y="72.5" width="53.74" height="5"/>
+  </g>
+  <g>
+    <circle class="cls-1" cx="113" cy="113" r="11.35"/>
+    <rect class="cls-1" x="91.5" y="67.13" width="5" height="53.74" transform="translate(-38.94 94) rotate(-45)"/>
+  </g>
+  <g>
+    <circle class="cls-1" cx="75" cy="128.74" r="11.35"/>
+    <rect class="cls-1" x="72.5" y="75" width="5" height="53.74"/>
+  </g>
+  <g>
+    <circle class="cls-1" cx="37" cy="113" r="11.35"/>
+    <rect class="cls-1" x="29.13" y="91.5" width="53.74" height="5" transform="translate(-50.07 67.13) rotate(-45)"/>
+  </g>
+  <g>
+    <circle class="cls-1" cx="21.26" cy="75" r="11.35"/>
+    <rect class="cls-1" x="21.26" y="72.5" width="53.74" height="5"/>
+  </g>
+  <g>
+    <circle class="cls-1" cx="37" cy="37" r="11.35"/>
+    <rect class="cls-1" x="53.5" y="29.13" width="5" height="53.74" transform="translate(-23.2 56) rotate(-45)"/>
+  </g>
+</svg>

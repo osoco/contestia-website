@@ -28,7 +28,7 @@
         font-size: 1.4em;
         font-weight: bold;
         cursor: pointer;
-        color: #F129AD;
+        color: $_colorCorporativo3;
         background-color: #fff;
         border-radius: 50%;
         width: 1.4em;
@@ -46,10 +46,49 @@
     transition: opacity .5s ease-in-out;
     opacity: 0;
     pointer-events: none;
-    .openLB &{
+    &.open{
         top: 0;
         opacity: 1;
         transition: opacity .5s ease-in-out;
         pointer-events: all;
     }
 }
+#testimonial-samantha{
+    .demo{ display: flex;}
+    .lightbox-content{
+        padding: calc($_padding * 2);
+        border-radius: 15px;
+        overflow: auto;
+        box-shadow: 0px -10px 10px 0px rgba(45, 0, 22, 0.2);
+        @include respond-to-device(lg, false) {
+            max-width: 80vw;
+            margin: auto;
+        }
+        background: #fff;
+        p{
+            font-style: italic;
+        }
+    }
+    img{
+        margin: 0 2vw 3vw 0;
+        @include respond-to-device(md, false) {
+            float: left;
+            max-width: 50vw;
+        }
+        @include respond-to-device(lg, false) {
+            margin: 0 2vw 3vw 0;
+            max-width: 25vw;
+        }
+        padding: $_padding;
+        background-color: #fff;
+        border-radius: 5px;
+        transform: rotate(3deg);
+        box-shadow: 0px -10px 10px 0px rgba(45, 0, 22, 0.2);
+        border: 1px solid #f2f2f2;
+    }
+    .signature{
+        text-align: right;
+        strong{display: block;}
+    }
+}
+.js-open-lightbox{cursor: pointer;}

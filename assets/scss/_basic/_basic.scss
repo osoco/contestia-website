@@ -87,7 +87,7 @@ body{
 	text-align: center;
 	h2{
 		color: $_colorCorporativo3s;
-		text-shadow: 0 0 7px #F129AD;
+		text-shadow: 0 0 7px $_colorCorporativo3;
 	}
 	.beneficiosList{
 		display: grid;
@@ -179,7 +179,7 @@ body{
 		background: rgb(255,179,229);
 		background: linear-gradient(0deg, rgba(255,179,229,1) 40%, rgba(255,234,248,1) 100%);
 		h3{
-			color: #F129AD;
+			color: $_colorCorporativo3;
 		}
 		.stack-cards__item:first-child {
 			background-color: #5B3E67;
@@ -526,6 +526,13 @@ body{
 			padding: 1em 2em;
 			font-size: clamp(14px, 1.2vw, 50px);
 			font-weight: 100;
+			.more-info{
+				color: $_colorCorporativo3;
+				cursor: pointer;
+			}
+			&:has(.more-info){
+				border: 2px solid $_colorCorporativo3;
+			}
 			p{
 				text-align: center;
 				&.testimonio{

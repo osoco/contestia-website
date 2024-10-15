@@ -117,7 +117,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         				<li><a href="#section-funciona">HOW IT WORKS</a></li>
                         <li><a href="#seccion-integration">INTEGRATION</a></li>
                         <li><a href="#seccion-testimoniales">TESTIMONIALES</a></li>
-        				<li><div class="btn js-openLightBox">Request a demo</div></li>
+        				<li><div class="btn js-open-lightbox" data-target="requestDemo">Request a demo</div></li>
         			</ul>
         		</nav>
             </div>
@@ -141,7 +141,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div>
                         <h2><span>Leave the</span> <span>challenges</span> <span class="ooo-title-small">for participants,</span><span> make your</span><span> work easy</span></h2>
                         <div class="buttons-cta">
-                            <div class="btn js-openLightBox">Request a demo</div>
+                            <div class="btn js-open-lightbox" data-target="requestDemo">Request a demo</div>
                         </div>
                     </div>
                 </div>
@@ -183,7 +183,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
                 <div class="buttons-cta">
-                    <div class="btn js-openLightBox">Request a demo</div>
+                    <div class="btn js-open-lightbox" data-target="requestDemo">Request a demo</div>
                 </div>
             </section>
     		<section class="como-funciona" id="section-funciona">
@@ -355,7 +355,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </div>
                     <div class="buttons-cta">
-                        <div class="btn js-openLightBox">Request a demo</div>
+                        <div class="btn js-open-lightbox" data-target="requestDemo">Request a demo</div>
                     </div>
     		</section>
             <section class="integration" id="seccion-integration">
@@ -363,12 +363,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>Integration</h2>
                     <!-- <img src="assets/img/integration.svg" alt=""> -->
                     <ul>
-                        <li><img src="assets/img/integration/cloud.svg" loading="lazy" />  Compliant</li>
+                        <li><img src="assets/img/integration/compliant.svg" loading="lazy" />  Compliant</li>
                         <li><img src="assets/img/integration/multi-lingua.svg" loading="lazy" /> Multi-lingual</li>
-                        <li><img src="assets/img/integration/cloud.svg" loading="lazy" /> Multi-device</li>
+                        <li><img src="assets/img/integration/multiservices.svg" loading="lazy" /> Multi-device</li>
                         <li><img src="assets/img/integration/cloud.svg" loading="lazy" /> Cloud Hosting</li>
-                        <li><img src="assets/img/integration/cloud.svg" loading="lazy" /> Multimedia Submission</li>
-                        <li><img src="assets/img/integration/cloud.svg" loading="lazy" /> Multi-country</li>
+                        <li><img src="assets/img/integration/multimedia.svg" loading="lazy" /> Multimedia Submission</li>
+                        <li><img src="assets/img/integration/multicountry.svg" loading="lazy" /> Multi-country</li>
                         <li><img src="assets/img/integration/cloud.svg" loading="lazy" /> Evaluators Insigts</li>
                         <li><img src="assets/img/integration/cloud.svg" loading="lazy" /> Data driven actions</li>
                     </ul>
@@ -384,12 +384,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="card-front">
                                     <img src="assets/img/testimonio01.jpg" alt="Imagen 1">
                                 </div>
-                                <div class="card-back">
+                                <div class="card-back js-open-lightbox" data-target="testimonial-samantha">
                                     <div>
-                                        <p>Hi, I'm Samantha Pidoux, and I’m the communities project manager at Money20/20.</p>
-                                        <p>At Money20/20, we believe that inclusion and diversity are key to driving innovation in the financial services industry. Our initiatives, RiseUp and Amplify, are designed to give women, minorities, and underrepresented professionals a louder voice and more opportunities to succeed.</p>
-                                        <p>Managing these programs comes with its own set of challenges. With hundreds of applications from talented professionals around the world, ensuring a fair, transparent, and efficient selection process is a challenge.This is where Contestia comes in. It’s an innovation management platform that has streamlined our selection process. Contestia allowed us to collect and organize applications, with a centralized portal site that makes the submission process simple for candidates.</p>
-                                        <p>One of the features of Contestia is its customizable evaluation criteria. This enables our mentors to assess candidates for both the RiseUp and Amplify programs in one easy to use platform. The real-time analytics provide transparency throughout the evaluation process, ensuring that every application is fairly reviewed.</p>
+                                        <p>At Money20/20, we believe that inclusion and diversity are key to driving innovation in the financial services industry. Our initiatives, RiseUp and Amplify, are designed to give women, minorities, and underrepresented professionals a louder voice and more opportunities to succeed</p>
+                                        <p class="js-more-info more-info">[...]</p>
+                                        <hr>
+                                        <p class="signature"><strong>Samantha Pidoux</strong>
+                                            <small>Communities Project Manager at Money20/20</small></p>
                                     </div>
                                 </div>
                             </div>
@@ -418,6 +419,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
                                 <div class="card-back">
                                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam similique aperiam atque error repellat asperiores tempore, fugit eveniet impedit minima. Non similique voluptates, obcaecati officiis consectetur praesentium ratione nulla! Harum.</p>
+                                    <hr>
+                                        <p><strong>Nombre Apellidos</strong>
+                                            <small>Cargo</small></p>
                                 </div>
                             </div>
                         </div>
@@ -460,11 +464,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </section>
             <a href="#fbody" class="top" title="subir" ><span>Top</span></a>
         </main>
-        <div class="lightbox">
+        <div id="requestDemo" class="js-lightbox lightbox">
             <div class="demo" id="section-contacto">
-                <div class="js-openLightBox btn-close"><div>X</div></div>
+                <div class="js-close-lightbox btn-close"><div>X</div></div>
                 <h2>Tell us your needs</h2>
-                <div class="content">
+                <div class="content lightbox-content">
                     <div class="form">
                         <p>Tell us what you need and let's talk about how Contestia can help you,</p>
                         <p>We can provide you with a demo and a personalized quote without obligation..</p>
@@ -488,6 +492,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </form>
                         <p><a href="https://goo.gl/maps/rbLXACdvKit"  target="_blank" class="location">We are in Madrid,</a> so don't hesitate to come and visit us.</p>
                         <p>Or you can write to us at: <a href="mailto:hola@contestia.es">hola@contestia.es</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="testimonial-samantha" class="lightbox js-lightbox">
+            <div class="demo">
+                <div class="js-close-lightbox btn-close"><div>X</div></div>
+                <div class="lightbox-content">
+                    <img src="assets/img/testimonio01.jpg" alt="Imagen 1">
+                    <div>
+                        <p>At Money20/20, we believe that inclusion and diversity are key to driving innovation in the financial services industry. Our initiatives, RiseUp and Amplify, are designed to give women, minorities, and underrepresented professionals a louder voice and more opportunities to succeed</p>
+                        <p>Managing these programs comes with its own set of challenges. With hundreds of applications from talented professionals around the world, ensuring a fair, transparent, and efficient selection process is a challenge.This is where Contestia comes in. It’s an innovation management platform that has streamlined our selection process. Contestia allowed us to collect and organize applications, with a centralized portal site that makes the submission process simple for candidates.</p>
+                        <p>One of the features of Contestia is its customizable evaluation criteria. This enables our mentors to assess candidates for both the RiseUp and Amplify programs in one easy to use platform. The real-time analytics provide transparency throughout the evaluation process, ensuring that every application is fairly reviewed.</p>
+                        <p>Managing these programs comes with its own set of challenges. With hundreds of applications from talented professionals around the world, ensuring a fair, transparent, and efficient selection process is a challenge.This is where Contestia comes in. It’s an innovation management platform that has streamlined our selection process. Contestia allowed us to collect and organize applications, with a centralized portal site that makes the submission process simple for candidates.</p>
+                        <p>One of the features of Contestia is its customizable evaluation criteria. This enables our mentors to assess candidates for both the RiseUp and Amplify programs in one easy to use platform. The real-time analytics provide transparency throughout the evaluation process, ensuring that every application is fairly reviewed.</p>
+                        <hr>
+                        <p class="signature">
+                            <strong>Samantha Pidoux</strong>
+                            <small>Communities Project Manager at Money20/20</small>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -571,8 +595,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         });
 
         // Función para abrir/cerrar el Lightbox
-        $(".js-openLightBox").on("click", function () {
-            $body.toggleClass('openLB');
+        // $(".js-open-lightbox").on("click", function () {
+        //     $body.toggleClass('openLB');
+        // });
+
+        // Abrir lightbox
+        $('.js-open-lightbox').on('click', function() {
+            const targetId = $(this).data('target');
+            const $lightbox = $('#' + targetId);
+            
+            if ($lightbox.length) {
+                $lightbox.addClass('open');
+                $body.addClass('openLB')
+            }
+        });
+
+        // Cerrar lightbox al hacer clic en el botón de cierre
+        $('.js-lightbox').on('click', '.js-close-lightbox', function() {
+            $(this).closest('.js-lightbox').removeClass('open');
+            $body.removeClass('openLB');
+        });
+
+        // Cerrar lightbox al hacer clic fuera del contenido
+        $('.js-lightbox').on('click', function(e) {
+            if ($(e.target).is('.js-lightbox')) {
+            $(this).removeClass('open');
+            $body.removeClass('openLB');
+            }
         });
 
         // Función que comprueba si al menos el 10% del elemento es visible en el viewport
