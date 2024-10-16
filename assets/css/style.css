@@ -167,9 +167,6 @@ img {
   margin: 0 max(1.125rem, 1.25vw);
   padding: 1em 0;
 }
-.Page main .content {
-  max-width: 900px;
-}
 
 .header {
   background: #160f2c;
@@ -232,8 +229,8 @@ img {
   margin-right: 5px;
   color: #F394D3;
 }
-.header .languages li a span {
-  color: #F394D3;
+.header .languages li a {
+  color: #4DE3F4;
 }
 @media screen and (min-width: 960px) {
   .header .languages li a span {
@@ -253,8 +250,9 @@ img {
     content: "EN";
   }
 }
-.header .languages li a.active {
+.header .languages li a.activate {
   font-weight: bold;
+  color: #F129AD;
 }
 .header .languages li a:link, .header .languages li a:visited, .header .languages li a:hover, .header .languages li a:active {
   text-decoration: none;
@@ -448,13 +446,40 @@ main {
   background-color: #fff;
   position: relative;
 }
-@media screen and (min-width: 960px) {
-  .Page main {
-    padding-top: 50px;
-  }
-}
 main > * {
   padding: max(7vw, 1em) 0;
+}
+
+.Page main {
+  padding: 2em 0;
+  background-color: #F3E4EE;
+}
+.Page main .content {
+  max-width: 90vw;
+  margin: 1em auto;
+  padding: 15vw 0 0 0;
+}
+@media screen and (min-width: 800px) {
+  .Page main .content {
+    padding: 8vw 0 0 0;
+  }
+}
+.Page main .content .paper-content {
+  margin-top: max(7vw, 1em);
+  background-color: #fff;
+  padding: 4vw;
+  border-radius: 1vw;
+}
+.Page main .content .paper-content h2 {
+  text-align: left;
+}
+.Page main .content .paper-content h2:not(:first-child) {
+  padding-top: max(7vw, 1em);
+  margin-top: 4vw;
+}
+.Page main .content .ol-topics {
+  padding-left: 1em;
+  margin-bottom: 2em;
 }
 
 html {
@@ -472,9 +497,6 @@ h1, h2, h3, h4 {
   font-family: "Exo", sans-serif;
   font-weight: bold;
   letter-spacing: -0.2px;
-}
-.Page main h1, .Page main h2, .Page main h3, .Page main h4 {
-  margin-bottom: 1em;
 }
 
 h2 {
@@ -617,6 +639,9 @@ body h3 + p {
     max-width: 70vw;
   }
 }
+body section {
+  content-visibility: auto;
+}
 
 .welcome {
   padding: 15vw 0 0 0;
@@ -632,6 +657,7 @@ body h3 + p {
   color: #fff;
   display: grid;
   gap: 1em;
+  margin: 0;
   align-items: center;
   justify-content: space-around;
 }
@@ -654,6 +680,9 @@ body h3 + p {
 .welcome .content h2 span {
   display: block;
   white-space: nowrap;
+}
+.welcome .content h2 span.ooo-title-big {
+  font-size: 1.5em;
 }
 .welcome .content h2 span.ooo-title-small {
   font-size: 0.65em;
@@ -777,6 +806,7 @@ body h3 + p {
 .como-funciona h4 {
   font-size: max(1.5rem, 3vw);
   margin-bottom: 0.5em;
+  line-height: 1.2em;
 }
 .como-funciona ul {
   margin-top: 4vw;
@@ -1098,9 +1128,15 @@ body h3 + p {
 }
 .testimonials .card {
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 1/1;
+  min-height: 400px;
   perspective: 1000px;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .testimonials .card {
+    aspect-ratio: 4/3;
+  }
 }
 .testimonials .card .card-inner {
   position: absolute;
@@ -1204,7 +1240,6 @@ body h3 + p {
   text-align: left;
 }
 .demo .form {
-  max-width: 800px;
   margin: 1em auto;
   padding: 4vw;
   border-radius: 10px;

@@ -52,7 +52,7 @@
 				color:$_colorCorporativo2;
 			}
 			a {
-				span {color: $_colorCorporativo2;}
+				color: $_colorCorporativo3s;
 				@include respond-to-device(slg, false) { 
 					span { 
 					  position: absolute;
@@ -67,7 +67,7 @@
 					&.es::before {content: "ES"}
 					&.en::before {content: "EN"}
 				}
-				&.active{font-weight: bold;}
+				&.activate{font-weight: bold; color: $_colorCorporativo3;}
 			}
 			a:link, a:visited, a:hover, a:active {text-decoration: none;}
 		}

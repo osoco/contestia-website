@@ -15,6 +15,7 @@ body{
 			max-width: 70vw;
 		}
 	}
+	section{content-visibility: auto}
 }
 .welcome {
 	padding: 15vw 0 0 0;
@@ -27,6 +28,7 @@ body{
 		color: $_colorBlanco;
 		display: grid;
 		gap: $_padding;
+		margin: 0;
 		@include respond-to-device(xmd, false) {
 			grid-template-columns: 2fr 1fr;
 			min-height: 55svh;
@@ -43,6 +45,9 @@ body{
 			span{
 				display: block;
 				white-space: nowrap;
+				&.ooo-title-big{
+					font-size: 1.5em;
+				}
 				&.ooo-title-small{
 					font-size: .65em;
 				}
@@ -171,6 +176,7 @@ body{
 	h4{
 		font-size: max(1.5rem, 3vw);
 		margin-bottom: .5em;
+		line-height: 1.2em;
 	}
 	ul{
 		margin-top: 4vw;
@@ -474,7 +480,11 @@ body{
 	// Card
 	.card {
 		width: 100%;
-		aspect-ratio: 4/3;
+		aspect-ratio: 1/1;
+		min-height: 400px;
+		@include respond-to-device(md, false) {
+			aspect-ratio: 4/3;
+		}
 		perspective: 1000px;
 		position: relative;
 		// Inner content of the card
@@ -589,7 +599,6 @@ body{
 		}
 	}
 	.form {
-		max-width: 800px;
     	margin: $_margin auto;
 		padding: 4vw;
         border-radius: 10px;

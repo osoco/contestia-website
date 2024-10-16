@@ -1,12 +1,38 @@
 main {
 	background-color: $_colorBlanco;
-	// padding-top: 48px;		
-	@include respond-to-device(slg, false) {
-		// padding-top: 90px;
-		.Page & { padding-top: 50px;}
-	}
 	> * {
 		padding: max(7vw, $_padding) 0;
 	}
 	position: relative;
+}
+.Page{
+	main{
+		padding: calc( $_padding * 2) 0;
+		background-color: $_colorCorporativo1;
+		.content {
+			max-width: 90vw;
+			margin:$_padding auto;
+			padding: 15vw 0 0 0;
+			@include respond-to-device(xmd, false) {
+				padding: 8vw 0 0 0;
+			}
+			.paper-content{
+				margin-top:max(7vw, 1em);
+				background-color: $_colorBlanco;
+				padding: 4vw;
+				border-radius: 1vw;
+				h2{
+					text-align: left;
+					&:not(:first-child){
+						padding-top:max(7vw, 1em);
+						margin-top: 4vw;
+					}
+				}
+			}
+			.ol-topics{
+				padding-left: 1em;
+				margin-bottom: 2em;
+			}
+		}
+	}
 }

@@ -53,7 +53,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Contestia">
 <meta property="fb:app_id" content="">
-
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
 <script type="application/ld+json">
     {
         "@context": "http://schema.org/",
@@ -80,6 +80,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="../assets/css/style.css" rel="stylesheet" media="all" type="text/css">    
 <!-- ===  JS ASSETS ==== -->
 <script src="../assets/js/jquery-3.3.1.min.js"></script>
+<script src="../assets/js/contestia.min.js"></script>
     
 </head>
 <body>
@@ -95,7 +96,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- ==== header ==== -->
     <header class="header">
         <div class="content">
-    	    <h1 class="logo"><a href="/index.html"><img src="../assets/img/logoContestia.svg" alt="Contestia"></a></h1>
+    	    <h1 class="logo"><a href="#inicio"><img src="../assets/img/logoContestia.svg" alt="Contestia" loading="lazy"></a></h1>
             <button class="menu">
                 <span>Menú</span>
                 <div class="hamburger">
@@ -108,15 +109,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="navigations">
                 <ul class="languages">
                     <li><a href="/index.html" class="en" title="English"><span>English</span></a></li>
-                    <li><a href="/es/index.html" class="es active" title="Español"><span>Español</span></a></li>
+                    <li><a href="/es/index.html" class="es activate" title="Español"><span>Español</span></a></li>
                 </ul>
         		<nav class="main-menu" id="main-menu">
         			<ul>
         				<li><a href="#inicio" class="active">Inicio</a></li>
                         <li><a href="#seccion-beneficios">Beneficios</a></li>
         				<li><a href="#section-funciona">Cómo funciona</a></li>
-                        <li><a href="#seccion-uso">Casos de uso</a></li>
-        				<li><a href="#section-contacto" class="l1"><strong>Pedir una demo</strong></a></li>
+                        <li><a href="#seccion-integration">Integración</a></li>
+                        <li><a href="#seccion-testimoniales">Testimonios</a></li>
+        				<li><div class="btn js-open-lightbox" data-target="requestDemo">Pedir una demo</div></li>
         			</ul>
         		</nav>
             </div>
@@ -126,49 +128,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- ==== content ==== -->
     	<main>
     		<section class="welcome" id="inicio">
-                <div class="media">
-                    <!-- <div class="flx-embed"><div style="position:relative; height:0; padding-bottom:56.25%; width:100%"><iframe style="position:absolute; top:0; left:0; width:100%; height:100%;" src="https://media.flixel.com/cinemagraph/ruw52upfe5saqmy5s7xc?hd=true" frameborder="0" allowfullscreen allow='autoplay'></iframe></div></div> -->
-                    <!-- <div class="flx-embed"><div style="position:relative; height:0; padding-bottom:56.28%; width:100%"><iframe style="position:absolute; top:0; left:0; width:100%; height:100%;" src="https://media.flixel.com/cinemagraph/xw33fd117mjqcmcg2ke5?hd=true" frameborder="0" allowfullscreen allow='autoplay'></iframe></div></div> -->
-                    <div class="flx-embed"><div style="position:relative; height:0; padding-bottom:56.25%; width:100%"><iframe style="position:absolute; top:0; left:0; width:100%; height:100%;" src="https://media.flixel.com/cinemagraph/l4bls97oulua6bwqgojf?hd=true" frameborder="0" allowfullscreen allow='autoplay'></iframe></div></div>
-                </div>
                 <div class="content">
-                    <h2 class="t-l2">Una solución simple para la gestión de concursos complejos</h2>
-                    <p>Contestia is a platform for submission, evaluation and selection of applications. It allows to manage contests, events, recruitment and admission processes, among others use cases.</p>
-                    <div class="buttons-cta">
-                        <a href="#section-contacto" class="l1">Pedir una demo</a>
+                    <div>
+                        <dotlottie-player src="../assets/video/Maquinaria.json" 
+                            background="transparent" 
+                            speed="1" 
+                            style="width: 100%; height: 100%" 
+                            direction="1" 
+                            playMode="normal" loop autoplay></dotlottie-player>
+                    </div>
+                    <div>
+                        <h2><span>La solución</span> <span class="ooo-title-big">simple</span> <span class="ooo-title-small">para la gestión de  </span><span> concursos</span><span> complejos</span></h2>
+                        <div class="buttons-cta">
+                            <div class="btn js-open-lightbox" data-target="requestDemo">Pedir una demo</div>
+                        </div>
                     </div>
                 </div>
     		</section>
             <section class="beneficios" id="seccion-beneficios">
                 <div class="content">
-                    <h2 class="t-l2">Beneficios</h2>
+                    <h2>Beneficios</h2>
                     <p>Descubre los beneficios de nuestro software de gestión de concursos:</p>
                     <div class="beneficiosList">
-                        <div>
+                        <div class="animate-element oculto">
                             <div class="img">
-                                <img src="../assets/img/icon-clock.png" alt="">
+                                <img src="../assets/img/icon-clock.png" alt=""  loading="lazy">
                             </div>
                             <h3>Ahorra tiempo y recursos</h3>
                             <p>Nuestro software simplifica todo el proceso de gestión de concursos, desde el lanzamiento hasta la selección de ganadores, lo que te permite ahorrar tiempo y recursos valiosos.</p>
                         </div>
-                        <div>
+                        <div class="animate-element oculto">
                             <div class="img">
-                                <img src="../assets/img/icon-participa.png" alt="">
+                                <img src="../assets/img/icon-participa.png" alt="" loading="lazy">
                                 </div>
                             <h3>Aumenta la participación</h3>
                             <p>Con una interfaz intuitiva y un proceso de registro sin complicaciones, atraerás a más participantes y aumentarás la participación en tus concursos.</p>
 
                         </div>
-                        <div>
+                        <div class="animate-element oculto">
                             <div class="img">
-                                <img src="../assets/img/icon-decisipones.png" alt="">
+                                <img src="../assets/img/icon-decisipones.png" alt="" loading="lazy">
                             </div>
                             <h3>Toma decisiones informadas</h3>
                             <p>Obtén información valiosa sobre el rendimiento de tus concursos con estadísticas en tiempo real y análisis detallados, lo que te permitirá tomar decisiones informadas para futuros programas.</p>
                         </div>
-                        <div>
+                        <div class="animate-element oculto">
                             <div class="img">
-                                <img src="../assets/img/icon-adapta.png" alt="">
+                                <img src="../assets/img/icon-adapta.png" alt="" loading="lazy">
                                 </div>
                             <h3>Flexibilidad y adaptabilidad</h3>
                             <p>Nuestro software se adapta a cualquier tipo de programa o concurso, ofreciendo una solución completa y personalizable para satisfacer tus necesidades específicas.</p>
@@ -176,91 +182,264 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
                 <div class="buttons-cta">
-                    <a href="#section-contacto" class="l1">Pedir una demo</a>
+                    <div class="btn js-open-lightbox" data-target="requestDemo">Pedir una demo</div>
                 </div>
             </section>
     		<section class="como-funciona" id="section-funciona">
-                <div class="content">
-        			<h1 class="t-l2">¿Cómo funciona?</h1>
-        			<ol>
-        				<li>
-        					<h2 class="t-l3">Lanzamiento del concurso</h2>
-        					<p>Crea y personaliza tu concurso en nuestra plataforma fácil de usar.
-                            </p>
-                            <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.28 100">
-                                <path d="m437.56,5.82c.92-2.6,3.77-3.96,6.37-3.04,2.6.92,3.97,3.77,3.06,6.37-.09.27-9.35,27.4,5.18,47.88,11.51,16.23,34.76,24.45,69.1,24.45h335.1s0-9.96,0-9.96l25.9,14.96-25.9,14.96v-9.96s-335.1,0-335.1,0c-37.82,0-63.83-9.67-77.31-28.75-17.5-24.77-6.86-55.62-6.4-56.92Z"/>
-                              </svg>
-        				</li>
-        				<li>
-        					<h2 class="t-l3">Registro de participantes</h2>
-        					<p>Personaliza el formulario de registro para obtener datos adicionales relevantes para tu concurso.
-                            </p>
-                            <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.28 100">
-                                <path d="m444.71,4.37c-.92-2.6-3.77-3.96-6.37-3.04-2.6.92-3.97,3.77-3.06,6.37.09.27,9.35,27.4-5.18,47.88-11.51,16.23-34.76,24.45-69.1,24.45H25.9v-9.96L0,85.04l25.9,14.96v-9.96h335.1c37.82,0,63.83-9.67,77.31-28.75,17.5-24.77,6.86-55.62,6.4-56.92Z"/>
-                              </svg>
-        				</li>
-        				<li>
-        					<h2 class="t-l3">Seguimiento de estadísticas en tiempo real</h2>
-        					<p>Obtén información valiosa sobre el rendimiento de tu concurso mediante estadísticas en tiempo real. Realiza un seguimiento del progreso del concurso y obtén una visión clara de su éxito.</p>
-                            <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.28 100">
-                                <path d="m437.56,5.82c.92-2.6,3.77-3.96,6.37-3.04,2.6.92,3.97,3.77,3.06,6.37-.09.27-9.35,27.4,5.18,47.88,11.51,16.23,34.76,24.45,69.1,24.45h335.1s0-9.96,0-9.96l25.9,14.96-25.9,14.96v-9.96s-335.1,0-335.1,0c-37.82,0-63.83-9.67-77.31-28.75-17.5-24.77-6.86-55.62-6.4-56.92Z"/>
-                              </svg>
-        				</li>
-        				<li>
-        					<h2 class="t-l3">Gestión de rondas y evaluadores</h2>
-        					<p>Organiza y administra las rondas de evaluación de manera eficiente. Asigna tareas a los evaluadores y establece cronogramas para cada ronda.</p>
-                            <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.28 100">
-                                <path d="m444.71,4.37c-.92-2.6-3.77-3.96-6.37-3.04-2.6.92-3.97,3.77-3.06,6.37.09.27,9.35,27.4-5.18,47.88-11.51,16.23-34.76,24.45-69.1,24.45H25.9v-9.96L0,85.04l25.9,14.96v-9.96h335.1c37.82,0,63.83-9.67,77.31-28.75,17.5-24.77,6.86-55.62,6.4-56.92Z"/>
-                              </svg>
-        				</li>
-        				<li>
-        					<h2 class="t-l3">Anuncio de los resultados</h2>
-        					<p>Comunica los resultados a los participantes de manera clara y oportuna. Descargate un informe de resultados y mantén a los participantes en una base de datos segura para futuras convocatorias.</p>
-        				</li>
-        			</ol>
+                <div class="section-content-01">
+                    <div class="content">
+                        <h2>¿Cómo funciona?</h2>
+                            <h3>Lanzamiento</h3>
+                            <p>El widget se centra en proporcionar un formulario totalmente personalizable que se integra a la perfección con sus sistemas existentes. Este widget le permite personalizar todos los aspectos de su comunicación, desde la marca hasta el contenido, garantizando que su audiencia reciba mensajes a medida que resuenen. Con opciones de integración flexibles, el widget se adapta a sus necesidades específicas, mejorando el compromiso del usuario desde el principio.</p>
+                            <ul class="stack-cards js-stack-cards">
+                                <li data-theme="default" class="stack-cards__item js-stack-cards__item animate-element">
+                                <div>
+                                    <h4>Formulario totalmente personalizable</h4>
+                                    <div class="stack-card-content">
+                                        <div>
+                                            <p>Esta característica permite un control total sobre el diseño, los campos y la estética del formulario, garantizando que se alinea perfectamente con la identidad de su marca.</p>
+                                            <p>Si necesita recopilar información específica o atender a un público en particular, puede adaptar el formulario para satisfacer cualquier requisito.</p>
+                                            <p>Esta flexibilidad ayuda a crear una interfaz fácil de usar que puede conducir a mayores tasas de cumplimentación y a una recopilación de datos más precisa.</p>
+                                        </div>
+                                        <div class="stack-card-img animate-element oculto">
+                                            <dotlottie-player id="anima-addcuestion"
+                                                src="../assets/video/AddCuestion.json" 
+                                                background="transparent" 
+                                                speed="1" 
+                                                style="width: 100%; height: 100%" 
+                                                direction="1" 
+                                                playMode="scroll" loop autoplay>
+                                            </dotlottie-player>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+                    
+                                <li data-theme="default" class="stack-cards__item js-stack-cards__item animate-element">
+                                <div>
+                                    <h4>Integración a medida</h4>
+                                    <div class="stack-card-content">
+                                        <div>
+                                            <p>El formulario se conecta a la perfección con sus plataformas y flujos de trabajo existentes.</p>
+                                            <p>Esta integración está diseñada para que no suponga ningún problema, ya que es compatible con una amplia gama de API y servicios.</p>
+                                            <p>Esta coherencia entre sistemas reduce la curva de aprendizaje de tu equipo y minimiza las interrupciones, lo que se traduce en un funcionamiento más fluido y una experiencia de usuario mejorada.</p>
+                                        </div>
+                                        <div class="stack-card-img animate-element">
+                                            <img src="../assets/img/tailoredIntegration.svg" alt="" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+                    
+                                <li data-theme="default" class="stack-cards__item js-stack-cards__item animate-element">
+                                <div>
+                                    <h4>Comunicaciones personalizadas</h4>
+                                    <div class="stack-card-content">
+                                        <div>
+                                            <p>Esta función aprovecha los datos de los usuarios para personalizar cada interacción, desde el lenguaje y el tono de los mensajes hasta el momento y el canal de entrega. </p>
+                                            <p>Al adaptar las comunicaciones a las preferencias y comportamientos individuales de los usuarios, es más probable que sus mensajes resuenen, aumentando el compromiso y fomentando relaciones más sólidas. </p>
+                                            <p>Este toque personal puede mejorar significativamente la satisfacción y la fidelidad de los clientes.</p>
+                                        </div>
+                                        <div class="stack-card-img animate-element">
+                                            <img src="../assets/img/personalizedCommunications.svg" alt="" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+                            </ul>
+                    </div>
                 </div>
-                <div class="buttons-cta">
-                    <a href="#section-contacto" class="l1">Pedir una demo</a>
-                </div>
+                    <div class="section-content-02">
+                        <div class="content">
+                            <h3>RECOPILACIÓN</h3>
+                                <p>Nuestro sistema de backoffice agiliza su flujo de trabajo con la automatización, lo que permite una recopilación y gestión eficaces de los datos. Está diseñado para basarse en datos y ofrecerle información práctica para tomar decisiones con conocimiento de causa. Además, con la próxima función AI Tag Generator, podrá categorizar y analizar los datos de forma más inteligente, llevando sus operaciones al siguiente nivel.</p>
+                                <ul class="stack-cards js-stack-cards">
+                                    <li data-theme="default" class="stack-cards__item js-stack-cards__item animate-element">
+                                        <h4>Flujos de trabajo automatizados</h4>
+                                        <div class="stack-card-content">
+                                            <div>
+                                                <p>Fases totalmente personalizables que permiten diseñar e implementar flujos de trabajo que se adaptan perfectamente a los procesos únicos de creación de concursos y gestión de evaluadores. </p>
+                                                <p>Esta función te permite automatizar tareas repetitivas, dirigir los envíos a los evaluadores adecuados de forma automática y gestionar los plazos y las notificaciones sin esfuerzo. </p>
+                                                <p>Al reducir la introducción manual de datos y los posibles errores, estos flujos de trabajo garantizan que sus concursos y evaluaciones se lleven a cabo sin problemas y de forma eficiente, lo que permite a su equipo centrarse en actividades de mayor valor.</p>
+                                            </div>
+                                            <div class="stack-card-img animate-element">
+                                                <img src="../assets/img/createNewRound.svg" alt="" loading="lazy">
+                                            </div>
+                                        </div>
+                                    </li>
+                        
+                                    <li data-theme="default" class="stack-cards__item js-stack-cards__item animate-element">
+                                        <h4>Basado en datos</h4>
+                                        <div class="stack-card-content">
+                                            <div>
+                                                <p>Esta capacidad implica recopilar, analizar y utilizar datos para tomar decisiones informadas y mejorar los resultados. Con herramientas de análisis exhaustivas, puede realizar un seguimiento de las métricas de rendimiento, la participación de los usuarios y la eficiencia operativa.</p>
+                                                <p> Esta información le permite identificar tendencias, predecir resultados y ajustar estrategias en tiempo real, optimizando así la eficacia de sus concursos y garantizando que sus decisiones están respaldadas por datos sólidos.</p>
+                                            </div>
+                                            <div class="stack-card-img animate-element">
+                                                <img src="../assets/img/analytics.svg" alt="" loading="lazy">
+                                            </div>
+                                        </div>
+                                    </li>
+                        
+                                    <li data-theme="default" class="stack-cards__item js-stack-cards__item animate-element">
+                                        <h4>Próximamente - AI Tag Generator</h4>
+                                        <div class="stack-card-content">
+                                            <div>
+                                                <p>El próximo generador de etiquetas AI es un conjunto de características innovadoras para revolucionar cómo se categorizan y utilizan los datos en Contestia. </p>
+                                                <p>Esta herramienta utilizará IA para generar automáticamente etiquetas para las entradas de datos, acelerando significativamente la organización y recuperación de la información. </p>
+                                                <p>Al aprovechar los algoritmos de aprendizaje automático, el generador de etiquetas de IA proporcionará un etiquetado preciso y consciente del contexto, lo que hará que los datos sean más fáciles de gestionar y analizar.</p> 
+                                            </div>
+                                            <div class="stack-card-img animate-element">
+                                                <img src="../assets/img/tags.svg" alt="" loading="lazy">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    </ul>
+                        </div>
+                    </div>
+                    <div class="section-content-03">
+                        <div class="content">
+                            <h3>EVALUACIÓN</h3>
+                                <p>Evaapp es una potente herramienta para emparejar las candidaturas con los evaluadores adecuados. Se basa en datos para proporcionar observabilidad en el proceso de evaluación, garantizando que se seleccionen los mejores candidatos. Con información detallada a su alcance, puede tomar decisiones con confianza y precisión, mejorando la eficacia general de sus evaluaciones.</p>
+                                <ul class="stack-cards js-stack-cards">
+                                    <li data-theme="default" class="stack-cards__item js-stack-cards__item animate-element">
+                                        <h4>Acierto en el emparejamiento de solicitudes</h4>
+                                        <div class="stack-card-content">
+                                        <div>
+                                            <p>Esta función utiliza un sofisticado algoritmo para evaluar la compatibilidad de los candidatos con criterios u oportunidades específicos, mejorando la precisión de las coincidencias.</p>
+                                            <p>Tiene en cuenta varios factores, como las cualificaciones de los solicitantes, su experiencia previa y los requisitos específicos de la oportunidad, para garantizar un alto índice de éxito.</p>
+                                            <p>Este enfoque específico no sólo mejora la eficacia del proceso de selección, sino que también aumenta la satisfacción tanto de los candidatos como de los evaluadores, al alinear expectativas y capacidades.</p>
+                                        </div>
+                                        <div class="stack-card-img animate-element">
+                                            <dotlottie-player src="../assets/video/autoAssign.json" 
+                                                background="transparent" 
+                                                speed="1"
+                                                style="width: 100%; height: 100%" 
+                                                direction="1" 
+                                                playMode="normal" loop autoplay></dotlottie-player>
+                                        </div>
+                                        </div>
+                                    </li>
+                        
+                                    <li data-theme="default" class="stack-cards__item js-stack-cards__item animate-element">
+                                        <h4>Observabilidad basada en datos</h4>
+                                        <div class="stack-card-content">
+                                        <div>
+                                            <p>El seguimiento y la gestión en tiempo real le permiten seguir la actividad de los evaluadores y evaluar el rendimiento global del proceso de emparejamiento. Al integrar datos procedentes de diversos puntos de contacto, Evaapp ofrece una visión holística de las operaciones, identificando cuellos de botella y oportunidades de mejora.</p>
+                                        </div>
+                                        <div class="stack-card-img animate-element">
+                                            <img src="../assets/img/observability.svg" alt="" loading="lazy">
+                                        </div>
+                                        </div>
+                                    </li>
+                        
+                                    <li data-theme="default" class="stack-cards__item js-stack-cards__item animate-element">
+                                        <h4>Obtener información</h4>
+                                        <div class="stack-card-content">
+                                        <div>
+                                            <p>Extraer información valiosa de las calificaciones y los comentarios de los evaluadores es crucial en cada solicitud.</p>
+                                            <p>Esta función analiza los comentarios de los evaluadores para ofrecerle un conocimiento exhaustivo de los puntos fuertes y débiles de una solicitud tal y como los perciben los evaluadores.</p>
+                                        </div>
+                                        <div class="stack-card-img animate-element">
+                                            <dotlottie-player src="../assets/video/evaapp.json" 
+                                                background="transparent" 
+                                                speed="1"
+                                                style="width: 100%; height: 100%" 
+                                                direction="1" 
+                                                playMode="normal" loop autoplay></dotlottie-player>
+                                        </div>
+                                        </div>
+                                    </li>
+                                    </ul>
+                        </div>
+                    </div>
+                    <div class="buttons-cta">
+                        <div class="btn js-open-lightbox" data-target="requestDemo">Pedir una demo</div>
+                    </div>
     		</section>
-            <section class="features" id="seccion-uso">
+            <section class="integration" id="seccion-integration">
                 <div class="content">
-                    <h2 class="t-l2">Casos de uso</h2>
-                    <p>Plataforma todo en uno para gestionar todo el proceso: lanzamiento, registro, evaluación y selección de ideas.</p>
+                    <h2>Integración</h2>
                     <ul>
-                        <!-- <li>    
-                            Convocatorias abiertas
-                            
-                        </li> -->
-                        <li>
-                            <div><img src="../assets/img/birrete.png" alt=""></div>
-                            Selección de becas
-                        </li>       
-                        <li>
-                            <div><img src="../assets/img/puzzle.png" alt=""></div>
-                            Procesos de admisión
-                        </li>   
-                        <li>
-                            <div><img src="../assets/img/edit.png" alt=""></div>
-                            Call for papers de eventos
-                        </li>  
-                        <li>
-                            <div><img src="../assets/img/bombilla.png" alt=""></div>
-                            Hackathons
-                        </li> 
-                        <li>
-                            <div><img src="../assets/img/cohete.png" alt=""></div>
-                            Programas de aceleradoras de startups
-                        </li>
+                        <li><img src="../assets/img/integration/compliant.svg" loading="lazy" />  Compliant</li>
+                        <li><img src="../assets/img/integration/multi-lingua.svg" loading="lazy" /> Multi-lingual</li>
+                        <li><img src="../assets/img/integration/multiservices.svg" loading="lazy" /> Multi-device</li>
+                        <li><img src="../assets/img/integration/cloud.svg" loading="lazy" /> Cloud Hosting</li>
+                        <li><img src="../assets/img/integration/multimedia.svg" loading="lazy" /> Multimedia Submission</li>
+                        <li><img src="../assets/img/integration/multicountry.svg" loading="lazy" /> Multi-country</li>
+                        <li><img src="../assets/img/integration/evaluatorsInsigts.svg" loading="lazy" /> Evaluators Insigts</li>
+                        <li><img src="../assets/img/integration/datadrivenactions.svg" loading="lazy" /> Data driven actions</li>
                     </ul>
                 </div>
             </section>
-    		<div class="demo" id="section-contacto">
+            <section class="testimonials" id="seccion-testimoniales">
                 <div class="content">
-            	                <h2 class="t-l2">Cuéntanos tus necesidades</h2>
-            			<p>Cuéntanos qué necesitas y hablemos sobre cómo Contestia puede ayudarte, o si en tu caso no tiene sentido.</p>
-                                <p>Podemos prepararte una demo y un presupuesto personalizado sin ningún compromiso.</p>		  
-       			<form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" >
+                    <h2>Testimonios</h2>
+                    <div class="card-container">
+                        <!-- Primera fila de cards -->
+                        <div class="card animate-element">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="../assets/img/testimonio01.jpg" alt="Imagen 1">
+                                </div>
+                                <div class="card-back js-open-lightbox" data-target="testimonial-samantha">
+                                    <div>
+                                        <p class="testimonio">En Money20/20 creemos que la inclusión y la diversidad son fundamentales para impulsar la innovación en el sector de los servicios financieros. Nuestras iniciativas, RiseUp y Amplify, están diseñadas para dar a las mujeres, a las minorías y a los profesionales infrarrepresentados una voz más alta y más oportunidades de éxito.</p>
+                                        <p class="js-more-info more-info">[...]</p>
+                                        <hr>
+                                        <p class="signature"><strong>Samantha Pidoux</strong>
+                                            <small>Communities Project Manager at Money20/20</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="card animate-element">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="../assets/img/testimonio02.jpg" loading="lazy" alt="Imagen 2">
+                                </div>
+                                <div class="card-back">
+                                    <div>
+                                        <p class="testimonio"> Contestia ha sido el complemento perfecto para hacer crecer nuestro programa. Nos permitió implementar el formulario de solicitud y el proceso de evaluación sin la necesidad de conocimientos técnicos avanzados. El equipo de soporte siempre está dispuesto a ayudar y escuchar nuestras consultas para aprovechar al máximo la plataforma en función de nuestras necesidades.</p>
+                                        <hr>
+                                        <p><strong>Almudena Solera</strong>
+                                            <small>Global Head of Communities Money20/20</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="card animate-element">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="../assets/img/testimonio03.jpg" alt="Imagen 3">
+                                </div>
+                                <div class="card-back">
+                                    <div>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam similique aperiam atque error repellat asperiores tempore, fugit eveniet impedit minima. Non similique voluptates, obcaecati officiis consectetur praesentium ratione nulla! Harum.</p>
+                                        <hr>
+                                            <p><strong>Nombre Apellidos</strong>
+                                                <small>Cargo</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <a href="#fbody" class="top" title="subir" ><span>Top</span></a>
+    		
+        </main>
+        <div id="requestDemo" class="js-lightbox lightbox">
+            <div class="demo" id="section-contacto">
+                <div class="js-close-lightbox btn-close"><div>X</div></div>
+                <h2>Cuéntanos tus necesidades</h2>
+                <div class="content lightbox-content">
+                    <div class="form">
+                        <p>Cuéntanos qué necesitas y hablemos sobre cómo Contestia puede ayudarte, o si en tu caso no tiene sentido.</p>
+                        <p>Podemos prepararte una demo y un presupuesto personalizado sin ningún compromiso.</p>
+                        <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" >
                         <div>
                             <div class="organization">
                                 <label for="name-company" id="organization">Nombre o Empresa:</label>
@@ -274,16 +453,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <label for="details" id="message">Qué quieres contarnos:</label>
                                 <textarea name="message" id="details" rows="5" aria-labelledby="message"></textarea>
                             </div>
-                            <div data-netlify-recaptcha="true"></div>			    
-                         </div>      
+                            <div data-netlify-recaptcha="true"></div>
+                            </div>
                             <input class="submit" type="submit" value="Enviar">
-            			</form>	
-        			<p><a href="https://goo.gl/maps/rbLXACdvKit"  target="_blank" class="location">Estamos en Madrid,</a> así que no dudes en venir a visitarnos.</p>
-                    <p>O puedes escribirnos a: <a href="mailto:hola@contestia.es">hola@contestia.es</a></p>
-                 </div>
-    		</div>
-            <a href="#fbody" class="top" title="subir" ><span>Top</span></a>
-        </main>
+                        </form>
+                        <p><a href="https://goo.gl/maps/rbLXACdvKit"  target="_blank" class="location">Estamos en Madrid,</a> así que no dudes en venir a visitarnos.</p>
+                        <p>O puedes escribirnos a: <a href="mailto:hola@contestia.es">hola@contestia.es</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="testimonial-samantha" class="lightbox js-lightbox">
+            <div class="demo">
+                <div class="js-close-lightbox btn-close"><div>X</div></div>
+                <div class="lightbox-content">
+                    <img src="../assets/img/testimonio01.jpg" alt="Imagen 1">
+                    <div>
+                        <p>Hola, me llamo <strong>Samantha Pidoux</strong> y soy la gestora de proyectos comunitarios de <strong>Money20/20</strong>.</p>
+                        <p>En <strong>Money20/20</strong> creemos que la inclusión y la diversidad son fundamentales para impulsar la innovación en el sector de los servicios financieros. Nuestras iniciativas, RiseUp y Amplify, están diseñadas para dar a las mujeres, a las minorías y a los profesionales infrarrepresentados una voz más alta y más oportunidades de éxito.</p>
+                        <p>Administrar estos programas conlleva su propio conjunto de desafíos. Con cientos de solicitudes de profesionales talentosos de todo el mundo, garantizar un proceso de selección justo, transparente y eficiente es un reto. Aquí es donde entra <strong>Contestia</strong>. Es una plataforma de gestión de innovación que ha optimizado nuestro proceso de selección. <strong>Contestia</strong> nos permitió recopilar y organizar las solicitudes, con un portal centralizado que facilita el proceso de envío para los candidatos.</p>
+                        <p>Una de las características de <strong>Contestia</strong> es su criterio de evaluación personalizable. Esto permite a nuestros mentores evaluar a los candidatos tanto para los programas RiseUp como Amplify en una plataforma fácil de usar. Las analíticas en tiempo real brindan transparencia durante todo el proceso de evaluación, garantizando que cada solicitud sea revisada de manera justa.</p>
+                        <hr>
+                        <p class="signature">
+                            <strong>Samantha Pidoux</strong>
+                            <small>Communities Project Manager at Money20/20</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- ==== End content ==== -->
     </div>
     <!-- ==== End container ==== -->
@@ -302,76 +500,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 </footer> 
     <!-- ==== End footer ==== -->
-<script>
-$(".menu").click(function() {
-   $(this).toggleClass("toggle");
-   $(".navigations").toggleClass("toggle")
-   $(".header").toggleClass("toggle")
-});
-$(".main-menu a").click(function() {
-    $(".menu").removeClass("toggle");
-    $(".navigations").removeClass("toggle");
-    $(".header").removeClass("toggle");
-});
-
-</script>
-
-<script>
-    $(window).scroll(function(){
-        if ($(window).scrollTop() >= 300) {
-            $('header').addClass('fixed-header');
+    <script>
+        if (window.matchMedia("(min-width: 768px)").matches) {
+            var script = document.createElement('script');
+            script.src = '../assets/js/stacking-cards.js';
+            document.head.appendChild(script);
         }
-        else {
-            $('header').removeClass('fixed-header');
-        }
-
-    function getCurrentScroll() {
-    return window.pageYOffset || document.documentElement.scrollTop;
-    }
-});
-</script>
-</script>
-<script>
-$(document).ready(function () {
-    $(document).on("scroll", onScroll);
-    
-    //smoothscroll
-    $('a[href^="#"]').on('click', function (e) {
-        e.preventDefault();
-        $(document).off("scroll");
-        
-        $('a').each(function () {
-            $(this).removeClass('active');
-        })
-        $(this).addClass('active');
-      
-        var target = this.hash,
-            menu = target;
-        $target = $(target);
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top+2
-        }, 500, 'swing', function () {
-            window.location.hash = target;
-            $(document).on("scroll", onScroll);
-        });
-    });
-});
-
-function onScroll(event){
-    var scrollPos = $(document).scrollTop();
-    $('#main-menu a').each(function () {
-        var currLink = $(this);
-        var refElement = $(currLink.attr("href"));
-        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('#main-menu ul li a').removeClass("active");
-            currLink.addClass("active");
-        }
-        else{
-            currLink.removeClass("active");
-        }
-    });
-}
-</script>
+    </script>
 </div>
 </body>
 </html>
