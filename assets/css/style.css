@@ -789,7 +789,7 @@ body section {
   .use-contestia div {
     max-width: 70vw;
     margin: 0 auto;
-    gap: 1em;
+    gap: 3em;
   }
 }
 .use-contestia div img {

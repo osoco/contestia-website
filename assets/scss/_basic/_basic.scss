@@ -156,7 +156,7 @@ body{
 		@include respond-to-device(xmd, false) {
 			max-width: 70vw;
 			margin: 0 auto;
-			gap: 1em;
+			gap: 3em;
 		}
 		img{
 			aspect-ratio: 4/3;
