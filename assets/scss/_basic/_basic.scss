@@ -150,7 +150,7 @@ body{
 	padding: 1em;
 	div{
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 		align-items: center;
 		gap: 0;
 		@include respond-to-device(xmd, false) {
@@ -503,9 +503,6 @@ body{
 		width: 100%;
 		aspect-ratio: 1/1;
 		min-height: 400px;
-		@include respond-to-device(md, false) {
-			aspect-ratio: 4/3;
-		}
 		perspective: 1000px;
 		position: relative;
 		// Inner content of the card
