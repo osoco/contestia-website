@@ -146,6 +146,22 @@ body{
 		}
 	}
 }
+.use-contestia{
+	padding: 1em;
+	div{
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		align-items: center;
+		gap: 1em;
+		img{
+			aspect-ratio: 2/1;
+			filter: grayscale(100) contrast(100);
+			width: 100%;
+			height: 100%;
+			object-fit:contain;
+		}
+	}
+}
 .como-funciona{
 	--stack-cards-gap: 6vw;
 	background-color: #FFEAF8;
