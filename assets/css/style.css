@@ -639,9 +639,6 @@ body h3 + p {
     max-width: 70vw;
   }
 }
-body section {
-  content-visibility: auto;
-}
 
 .welcome {
   padding: 15vw 0 0 0;
@@ -1223,7 +1220,7 @@ body section {
 }
 .testimonials .card.oculto {
   transform: translateY(100px);
-  filter: blur(10rem);
+  filter: blur(2px);
 }
 
 .demo {

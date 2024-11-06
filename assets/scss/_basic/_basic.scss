@@ -15,7 +15,7 @@ body{
 			max-width: 70vw;
 		}
 	}
-	section{content-visibility: auto}
+	// section{content-visibility: auto}
 }
 .welcome {
 	padding: 15vw 0 0 0;
@@ -581,7 +581,7 @@ body{
 		}
 		&.oculto{
 			transform: translateY(100px);
-			filter: blur(10rem);
+			filter: blur(2px);
 		}
 	}
 
