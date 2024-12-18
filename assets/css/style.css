@@ -639,6 +639,9 @@ body h3 + p {
     max-width: 70vw;
   }
 }
+body section {
+  content-visibility: auto;
+}
 
 .welcome {
   padding: 15vw 0 0 0;
@@ -1428,4 +1431,14 @@ body h3 + p {
 
 .js-open-lightbox {
   cursor: pointer;
+}
+
+iframe.ct-video-xmas {
+  width: 100%;
+  height: 100vh;
+  padding-bottom: 0;
+}
+main:has(iframe.ct-video-xmas) {
+  background-color: #160f2c;
+  margin: 0;
 }
