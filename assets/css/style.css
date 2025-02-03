@@ -194,6 +194,7 @@ img {
   padding: 0;
   margin: 0;
   display: flex;
+  gap: 1em;
   align-items: center;
   justify-content: space-between;
 }
@@ -285,61 +286,62 @@ img {
     transition: 0.5s ease-in-out all;
   }
 }
-.header nav {
+.header nav.main-menu {
   padding: 0.5rem;
 }
-.header nav li {
+.header nav.main-menu li {
+  font-size: max(0.8rem, 1.25vw);
   display: block;
   white-space: nowrap;
 }
 @media screen and (min-width: 960px) {
-  .header nav li {
+  .header nav.main-menu li {
     display: inline-block;
   }
 }
-.header nav li + li {
+.header nav.main-menu li + li {
   margin: 0 0 0 1em;
 }
 @media screen and (max-width: 960px) {
-  .header nav li + li {
+  .header nav.main-menu li + li {
     margin: 1em 0 0 0;
   }
-  .header nav li + li:last-child {
+  .header nav.main-menu li + li:last-child {
     padding-top: 1em;
   }
 }
-.header nav a:link, .header nav a:visited, .header nav a:hover, .header nav a:active {
+.header nav.main-menu a:link, .header nav.main-menu a:visited, .header nav.main-menu a:hover, .header nav.main-menu a:active {
   text-transform: uppercase;
   text-decoration: none;
   color: #4DE3F4;
 }
 @media screen and (min-width: 960px) {
-  .header nav a:link, .header nav a:visited, .header nav a:hover, .header nav a:active {
+  .header nav.main-menu a:link, .header nav.main-menu a:visited, .header nav.main-menu a:hover, .header nav.main-menu a:active {
     padding-bottom: 8px;
   }
 }
-.header nav a:link.l1 strong, .header nav a:visited.l1 strong, .header nav a:hover.l1 strong, .header nav a:active.l1 strong {
+.header nav.main-menu a:link.l1 strong, .header nav.main-menu a:visited.l1 strong, .header nav.main-menu a:hover.l1 strong, .header nav.main-menu a:active.l1 strong {
   background-color: #F129AD;
   color: #fff;
   border-radius: 25px;
   border-color: #F129AD;
 }
-.header nav a:link.active, .header nav a:visited.active, .header nav a:hover.active, .header nav a:active.active {
+.header nav.main-menu a:link.active, .header nav.main-menu a:visited.active, .header nav.main-menu a:hover.active, .header nav.main-menu a:active.active {
   color: #F129AD;
   border-bottom: 2px solid #F129AD;
 }
-.header nav a:link.active.l1, .header nav a:visited.active.l1, .header nav a:hover.active.l1, .header nav a:active.active.l1 {
+.header nav.main-menu a:link.active.l1, .header nav.main-menu a:visited.active.l1, .header nav.main-menu a:hover.active.l1, .header nav.main-menu a:active.active.l1 {
   border-bottom: 0;
 }
-.header nav a:link.active.l1 strong, .header nav a:visited.active.l1 strong, .header nav a:hover.active.l1 strong, .header nav a:active.active.l1 strong {
+.header nav.main-menu a:link.active.l1 strong, .header nav.main-menu a:visited.active.l1 strong, .header nav.main-menu a:hover.active.l1 strong, .header nav.main-menu a:active.active.l1 strong {
   color: #fff;
   background-color: #F129AD;
   border-color: #F129AD;
 }
-.header nav a:link:hover, .header nav a:visited:hover, .header nav a:hover:hover, .header nav a:active:hover {
+.header nav.main-menu a:link:hover, .header nav.main-menu a:visited:hover, .header nav.main-menu a:hover:hover, .header nav.main-menu a:active:hover {
   border-bottom: 2px solid #F129AD;
 }
-.header nav a:link:hover.l1, .header nav a:visited:hover.l1, .header nav a:hover:hover.l1, .header nav a:active:hover.l1 {
+.header nav.main-menu a:link:hover.l1, .header nav.main-menu a:visited:hover.l1, .header nav.main-menu a:hover:hover.l1, .header nav.main-menu a:active:hover.l1 {
   border-bottom: 0;
 }
 @media screen and (min-width: 960px) {
@@ -1441,4 +1443,114 @@ iframe.ct-video-xmas {
 main:has(iframe.ct-video-xmas) {
   background-color: #160f2c;
   margin: 0;
+}
+
+.faqs-page h1 {
+  font-size: max(2.5rem, 4vw);
+  padding-bottom: 0.5em;
+}
+.faqs-page h2 {
+  text-align: left;
+  font-size: max(2rem, 3vw);
+  margin-bottom: 1em;
+}
+.faqs-page main {
+  background: #2D2F51;
+  color: #fff;
+  min-height: calc(100vh - 3.5em);
+}
+.faqs-page .faqs-menu {
+  border-bottom: 1px dashed #EDECEC;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+.faqs-page .faqs-menu li {
+  padding: 0.5em 0;
+  cursor: pointer;
+}
+.faqs-page .faqs-menu li.open, .faqs-page .faqs-menu li:hover {
+  color: #F129AD;
+}
+@media screen and (min-width: 800px) {
+  .faqs-page .faqs-menu {
+    border-bottom: none;
+  }
+}
+.faqs-page .faqs-content {
+  display: grid;
+  gap: 1em;
+}
+@media screen and (min-width: 800px) {
+  .faqs-page .faqs-content {
+    grid-template-columns: 4fr 8fr;
+  }
+}
+.faqs-page .faqs-content .faqs-menu ul {
+  position: sticky;
+  top: 8vw;
+}
+.faqs-page .js-faq-block {
+  height: 0;
+  opacity: 0;
+  transition: all 1s;
+  margin-top: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.faqs-page .js-faq-block.open {
+  pointer-events: all;
+  margin-top: -1em;
+  transition: all 1s;
+  height: initial;
+  opacity: 1;
+  z-index: 2;
+}
+.faqs-page .js-faq-block div {
+  height: 0;
+  opacity: 0;
+  transition: all 1s;
+  margin-top: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.faqs-page .js-faq-block div.open {
+  margin-top: -1em;
+  transition: all 1s;
+  height: initial;
+  opacity: 1;
+  z-index: 2;
+  pointer-events: all;
+}
+.faqs-page .js-faq-block div + h3 {
+  border-top: 1px dashed rgba(255, 255, 255, 0.3333333333);
+}
+.faqs-page .js-faq-block h3 {
+  padding-top: 1em;
+  margin-top: 1em;
+  display: flex;
+  line-height: 2em;
+  cursor: pointer;
+}
+.faqs-page .js-faq-block h3:hover {
+  color: #F129AD;
+}
+.faqs-page .js-faq-block h3.open {
+  padding-bottom: 1em;
+  color: #F129AD;
+}
+.faqs-page .js-faq-block h3.open::after {
+  transform: rotate(45deg);
+  transition: all 1s ease-in-out;
+}
+.faqs-page .js-faq-block h3::after {
+  transform: rotate(0deg);
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+  content: "+";
+  display: block;
+  margin-left: auto;
+  vertical-align: middle;
+  font-size: 2em;
+  width: 1em;
+  height: 1em;
 }
