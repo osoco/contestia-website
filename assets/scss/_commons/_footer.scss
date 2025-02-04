@@ -7,6 +7,17 @@
 	color: $_colorBlanco;
 	background: #80165C;
 	.content {	
+		display: flex;
+		justify-content: space-between;
+		div{
+			display: flex;
+			align-items: center;
+			gap: $_padding;
+		}
+		img{
+			height: 1.1em;
+			vertical-align: middle;
+		}
 		nav {
 			li {
 				margin-left: $_margin;

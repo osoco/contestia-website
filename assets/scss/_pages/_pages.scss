@@ -81,7 +81,10 @@
         .faqs-content {
             display: grid;
             gap: $_padding;
-
+            a{
+                color: $_colorLink;
+                text-decoration: underline;
+            }
             @include respond-to-device(xmd, false) {
                 grid-template-columns: 4fr 8fr;
             }

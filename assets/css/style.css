@@ -428,6 +428,19 @@ img {
   color: #fff;
   background: #80165C;
 }
+.footer .content {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .content div {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.footer .content img {
+  height: 1.1em;
+  vertical-align: middle;
+}
 .footer .content nav li {
   margin-left: 1em;
   display: inline-block;
@@ -1517,6 +1530,10 @@ main:has(iframe.ct-video-xmas) {
 .faqs-page main .faqs-content {
   display: grid;
   gap: 1em;
+}
+.faqs-page main .faqs-content a {
+  color: #F129AD;
+  text-decoration: underline;
 }
 @media screen and (min-width: 800px) {
   .faqs-page main .faqs-content {
