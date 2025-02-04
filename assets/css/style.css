@@ -1445,107 +1445,38 @@ main:has(iframe.ct-video-xmas) {
   margin: 0;
 }
 
-.faqs-page h1 {
-  font-size: max(2.5rem, 4vw);
-  padding-bottom: 0.5em;
-}
-.faqs-page h2 {
-  text-align: left;
-  font-size: max(2rem, 3vw);
-  margin-bottom: 1em;
-}
 .faqs-page main {
   background: #2D2F51;
   color: #fff;
   min-height: calc(100vh - 3.5em);
 }
-.faqs-page .faqs-menu {
-  border-bottom: 1px dashed #EDECEC;
-  padding-bottom: 1em;
+.faqs-page main h1 {
+  font-size: max(2.5rem, 4vw);
+  padding: 0.5em 0 1em;
+}
+.faqs-page main h2 {
+  text-align: left;
+  font-size: max(2rem, 3vw);
   margin-bottom: 1em;
 }
-.faqs-page .faqs-menu li {
-  padding: 0.5em 0;
-  cursor: pointer;
-}
-.faqs-page .faqs-menu li.open, .faqs-page .faqs-menu li:hover {
-  color: #F129AD;
-}
-@media screen and (min-width: 800px) {
-  .faqs-page .faqs-menu {
-    border-bottom: none;
-  }
-}
-.faqs-page .faqs-content {
-  display: grid;
-  gap: 1em;
-}
-@media screen and (min-width: 800px) {
-  .faqs-page .faqs-content {
-    grid-template-columns: 4fr 8fr;
-  }
-}
-.faqs-page .faqs-content .faqs-menu ul {
-  position: sticky;
-  top: 8vw;
-}
-.faqs-page .js-faq-block {
-  height: 0;
-  opacity: 0;
-  transition: all 1s;
-  margin-top: 0;
-  z-index: 0;
-  pointer-events: none;
-}
-.faqs-page .js-faq-block.open {
-  pointer-events: all;
-  margin-top: -1em;
-  transition: all 1s;
-  height: initial;
-  opacity: 1;
-  z-index: 2;
-}
-.faqs-page .js-faq-block div {
-  height: 0;
-  opacity: 0;
-  transition: all 1s;
-  margin-top: 0;
-  z-index: 0;
-  pointer-events: none;
-}
-.faqs-page .js-faq-block div.open {
-  margin-top: -1em;
-  transition: all 1s;
-  height: initial;
-  opacity: 1;
-  z-index: 2;
-  pointer-events: all;
-}
-.faqs-page .js-faq-block div + h3 {
-  border-top: 1px dashed rgba(255, 255, 255, 0.3333333333);
-}
-.faqs-page .js-faq-block h3 {
+.faqs-page main h3 {
   padding-top: 1em;
   margin-top: 1em;
   display: flex;
   line-height: 2em;
   cursor: pointer;
 }
-.faqs-page .js-faq-block h3:hover {
+.faqs-page main h3:hover {
   color: #F129AD;
 }
-.faqs-page .js-faq-block h3.open {
+.faqs-page main h3.open {
   padding-bottom: 1em;
   color: #F129AD;
 }
-.faqs-page .js-faq-block h3.open::after {
+.faqs-page main h3.open::after {
   transform: rotate(45deg);
-  transition: all 1s ease-in-out;
 }
-.faqs-page .js-faq-block h3::after {
-  transform: rotate(0deg);
-  transition: all 1s ease-in-out;
-  cursor: pointer;
+.faqs-page main h3::after {
   content: "+";
   display: block;
   margin-left: auto;
@@ -1553,4 +1484,72 @@ main:has(iframe.ct-video-xmas) {
   font-size: 2em;
   width: 1em;
   height: 1em;
+  transform: rotate(0deg);
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+.faqs-page main div + h3 {
+  border-top: 1px dashed rgba(255, 255, 255, 0.3333333333);
+}
+.faqs-page main .faqs-menu {
+  border-bottom: 1px dashed #EDECEC;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+.faqs-page main .faqs-menu ul {
+  position: sticky;
+  top: 8vw;
+  font-size: 1.5em;
+}
+.faqs-page main .faqs-menu li {
+  padding: 0.8em 0;
+  cursor: pointer;
+  line-height: 1em;
+}
+.faqs-page main .faqs-menu li.open, .faqs-page main .faqs-menu li:hover {
+  color: #F129AD;
+}
+@media screen and (min-width: 800px) {
+  .faqs-page main .faqs-menu {
+    border-bottom: none;
+  }
+}
+.faqs-page main .faqs-content {
+  display: grid;
+  gap: 1em;
+}
+@media screen and (min-width: 800px) {
+  .faqs-page main .faqs-content {
+    grid-template-columns: 4fr 8fr;
+  }
+}
+.faqs-page main .js-faq-block {
+  height: 0;
+  opacity: 0;
+  transition: all 1s;
+  margin-top: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.faqs-page main .js-faq-block.open {
+  pointer-events: all;
+  margin-top: -1em;
+  height: initial;
+  opacity: 1;
+  z-index: 2;
+}
+.faqs-page main .js-faq-block div {
+  height: 0;
+  opacity: 0;
+  transition: all 1s;
+  margin-top: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.faqs-page main .js-faq-block div.open {
+  margin-top: -1em;
+  height: initial;
+  opacity: 1;
+  z-index: 2;
+  pointer-events: all;
 }
