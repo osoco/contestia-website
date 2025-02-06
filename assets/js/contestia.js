@@ -8,6 +8,7 @@ $(document).ready(function () {
     const $animateElements = $(".animate-element");
     const $window = $(window);
     const $body = $('body');
+    const $document = $(document);
 
     // Función para alternar la visibilidad del menú
     function toggleMenu() {
@@ -27,13 +28,17 @@ $(document).ready(function () {
     });
 
     // Función para animar scroll a una sección
-    function smoothScrollTo(target) {
-        $('html, body').stop().animate({
-            'scrollTop': $(target).offset().top
-        }, 500, 'swing', function () {
-            window.location.hash = target;
-            $document.on("scroll", onScroll);
-        });
+    function smoothScrollTo(target, addHash = true) {
+        if ($(target).length) {
+            $('html, body').stop().animate({
+                'scrollTop': $(target).offset().top
+            }, 500, 'swing', function () {
+                if (addHash) {
+                    window.location.hash = target;
+                }
+                $document.on("scroll", onScroll);
+            });
+        }
     }
 
     // Navegación suave al hacer clic en un enlace con href="#"
@@ -43,7 +48,7 @@ $(document).ready(function () {
         $document.off("scroll");  // Desactivar la función de scroll temporalmente
 
         // Quitar la clase 'active' de todos los enlaces
-        $('a').removeClass('active');
+        $mainMenuLinks.removeClass('active');
 
         // Añadir la clase 'active' al enlace actual
         $(this).addClass('active');
@@ -52,12 +57,31 @@ $(document).ready(function () {
         smoothScrollTo(this.hash);
     });
 
-    // Función para abrir/cerrar el Lightbox
-    // $(".js-open-lightbox").on("click", function () {
-    //     $body.toggleClass('openLB');
-    // });
+    // Función para verificar si hay un hash en la URL al cargar la página
+    function checkInitialHash() {
+        if (window.location.hash) {
+            const target = window.location.hash;
+            const $targetElement = $(target);
+            if ($targetElement.length) {
+                // Desactivar el evento scroll temporalmente
+                $document.off("scroll");
 
-    // Abrir lightbox
+                // Marcar el enlace correspondiente como activo
+                $mainMenuLinks.removeClass("active");
+                $mainMenuLinks.filter(`[href="${target}"]`).addClass("active");
+
+                // Hacer scroll hasta la sección correspondiente sin cambiar el hash
+                smoothScrollTo(target, false);
+
+                // Reactivar el evento de scroll después del desplazamiento
+                setTimeout(() => {
+                    $document.on("scroll", onScroll);
+                }, 600);
+            }
+        }
+    }
+
+    // Función para abrir/cerrar el Lightbox
     $('.js-open-lightbox').on('click', function() {
         const targetId = $(this).data('target');
         const $lightbox = $('#' + targetId);
@@ -126,7 +150,9 @@ $(document).ready(function () {
         });
     }
 
+    // Ejecutar la función al cargar la página
+    checkInitialHash();
+
     // Monitorizar el scroll para cambiar la clase activa del menú
-    const $document = $(document);
     $document.on("scroll", onScroll);
 });
